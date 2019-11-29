@@ -1,2 +1,3 @@
 # LeetCode
-Solutions to Leetcode Javascript questions
+My solutions to Leetcode Javascript questions
+
