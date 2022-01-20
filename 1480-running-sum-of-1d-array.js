@@ -21,3 +21,15 @@
 
 // 1 <= nums.length <= 1000
 // -10^6 <= nums[i] <= 10^6
+
+const runningSum = (nums) => {
+	let prev = 0;
+	const sum = [];
+
+	for (const index in nums) {
+		sum[index] = nums[index] + prev;
+		prev = nums[index] + prev;
+	}
+
+	return sum;
+};
