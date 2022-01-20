@@ -39,3 +39,13 @@
 
 // 1 <= operations.length <= 100
 // operations[i] will be either "++X", "X++", "--X", or "X--".
+
+const finalValueAfterOperations = (operations) => {
+	let x = 0;
+
+	for (let operation of operations) {
+		operation === "--X" || operation === "X--" ? x-- : x++;
+	}
+
+	return x;
+};
