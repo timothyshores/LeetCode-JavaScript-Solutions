@@ -31,3 +31,6 @@
 // 2 <= n <= 100
 // 1 <= candies[i] <= 100
 // 1 <= extraCandies <= 50
+
+const kidsWithCandies = (candies, extraCandies) =>
+	candies.map((kid) => kid + extraCandies >= Math.max(...candies));
