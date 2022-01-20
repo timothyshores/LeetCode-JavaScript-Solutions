@@ -1,5 +1,5 @@
 # LeetCode
-My solutions to LeetCode Javascript questions
+My Javascript solutions to LeetCode questions
 
 LeetCode Profile: https://leetcode.com/timothyshores/
 
@@ -10,6 +10,7 @@ LeetCode Profile: https://leetcode.com/timothyshores/
 |[1431. Kids With the Greatest Number of Candies](https://leetcode.com/problems/kids-with-the-greatest-number-of-candies/)|Easy|[JavaScript](1431.%20Kids%20With%20the%20Greatest%20Number%20of%20Candies.js) 
 |[1470. Shuffle The Array](https://leetcode.com/problems/shuffle-the-array/)|Easy|[JavaScript](1470.%20Shuffle%20The%20Array.js) 
 |[1480. Running Sum of 1d Array](https://leetcode.com/problems/running-sum-of-1d-array/)|Easy|[JavaScript](1480.%20Running%20Sum%20of%201d%20Array.js) 
+|[1512. Number of Good Pairs](https://leetcode.com/problems/number-of-good-pairs/)|Easy|[JavaScript](1512.%20Number%20of%20Good%20Pairs.js) 
 |[1672. Richest Customer Wealth](https://leetcode.com/problems/richest-customer-wealth/)|Easy|[JavaScript](1672.%20Richest%20Customer%20Wealth.js) 
 |[1920. Build Array From Permutation](https://leetcode.com/problems/build-array-from-permutation/)|Easy|[JavaScript](1920.%20Build%20Array%20From%20Permutation.js) 
 |[1929. Concatenation of Array](https://leetcode.com/problems/concatenation-of-array/)|Easy|[JavaScript](1929.%20Concatenation%20of%20Array.js) 
