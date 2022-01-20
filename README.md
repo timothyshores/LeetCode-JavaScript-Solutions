@@ -1,6 +1,16 @@
 # LeetCode
-My solutions to Leetcode Javascript questions
+My solutions to LeetCode Javascript questions
 
-| Problem  | Difficulty | Solution |
-| ------------- | ------------- |
-| 771. Jewels And Stones.js  | EASY |[Solution](771. Jewels And Stones.js.md)  |
+LeetCode Profile: https://leetcode.com/timothyshores/
+
+| Problem  | Difficulty | Solution |  
+| :-------------- | :-------------- |:---- | 
+|[771. Jewels And Stones](https://leetcode.com/problems/jewels-and-stones/)|Easy|[JavaScript](771.%20Jewels%20And%20Stones.js) 
+|[1108. Defanging An IP Address](https://leetcode.com/problems/defanging-an-ip-address/)|Easy|[JavaScript](1108.%20Defanging%20An%20IP%20Address.js) 
+|[1470. Shuffle The Array](https://leetcode.com/problems/shuffle-the-array/)|Easy|[JavaScript](1470.%20Shuffle%20The%20Array.js) 
+|[1480. Running Sum of 1d Array](https://leetcode.com/problems/running-sum-of-1d-array/)|Easy|[JavaScript](1480.%20Running%20Sum%20of%201d%20Array.js) 
+|[1672. Richest Customer Wealth](https://leetcode.com/problems/richest-customer-wealth/)|Easy|[JavaScript](1672.%20Richest%20Customer%20Wealth.js) 
+|[1920. Build Array From Permutation](https://leetcode.com/problems/build-array-from-permutation/)|Easy|[JavaScript](1920.%20Build%20Array%20From%20Permutation.js) 
+|[1929. Concatenation of Array](https://leetcode.com/problems/concatenation-of-array/)|Easy|[JavaScript](1929.%20Concatenation%20of%20Array.js) 
+|[2011. Final Value of Variable After Performing Operations](https://leetcode.com/problems/final-value-of-variable-after-performing-operations/)|Easy|[JavaScript](2011.%20Final%20Value%20of%20Variable%20After%20Performing%20Operations.js) 
+|[2114. Maximum Number of Words Found In Sentences](https://leetcode.com/problems/maximum-number-of-words-found-in-sentences/)|Easy|[JavaScript](2114.%20Maximum%20Number%20of%20Words%20Found%20In%20Sentences.js)
