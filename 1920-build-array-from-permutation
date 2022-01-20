@@ -30,3 +30,13 @@
  
 
 # Follow-up: Can you solve it without using an extra space (i.e., O(1) memory)?
+
+const buildArray = nums  => {
+    let permutation = [];
+    
+    for (index in nums) {
+        permutation[index] = nums[nums[index]];
+    }
+    
+    return permutation;
+};
