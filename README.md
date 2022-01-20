@@ -7,6 +7,7 @@ LeetCode Profile: https://leetcode.com/timothyshores/
 | :-------------- | :-------------- |:---- | 
 |[771. Jewels And Stones](https://leetcode.com/problems/jewels-and-stones/)|Easy|[JavaScript](771.%20Jewels%20And%20Stones.js) 
 |[1108. Defanging An IP Address](https://leetcode.com/problems/defanging-an-ip-address/)|Easy|[JavaScript](1108.%20Defanging%20An%20IP%20Address.js) 
+|[1431. Kids With the Greatest Number of Candies](https://leetcode.com/problems/kids-with-the-greatest-number-of-candies/)|Easy|[JavaScript](1431.%20Kids%20With%20the%20Greatest%20Number%20of%20Candies.js) 
 |[1470. Shuffle The Array](https://leetcode.com/problems/shuffle-the-array/)|Easy|[JavaScript](1470.%20Shuffle%20The%20Array.js) 
 |[1480. Running Sum of 1d Array](https://leetcode.com/problems/running-sum-of-1d-array/)|Easy|[JavaScript](1480.%20Running%20Sum%20of%201d%20Array.js) 
 |[1672. Richest Customer Wealth](https://leetcode.com/problems/richest-customer-wealth/)|Easy|[JavaScript](1672.%20Richest%20Customer%20Wealth.js) 
