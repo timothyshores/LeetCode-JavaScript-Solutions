@@ -21,3 +21,26 @@
 // 1 <= n <= 500
 // nums.length == 2n
 // 1 <= nums[i] <= 10^3
+
+const shuffle = (nums, n) => {
+	let pointerAtX = true;
+	let pointer = 0;
+	let shuffled = [];
+
+	const pushX = () => {
+		shuffled = [...shuffled, nums[pointer]];
+		pointer++;
+	};
+
+	const pushY = () => {
+		shuffled = [...shuffled, nums[n]];
+		n++;
+	};
+
+	for (const num of nums) {
+		pointerAtX ? pushX() : pushY();
+		pointerAtX = !pointerAtX;
+	}
+
+	return shuffled;
+};
