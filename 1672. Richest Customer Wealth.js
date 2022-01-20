@@ -30,3 +30,6 @@
 // n == accounts[i].length
 // 1 <= m, n <= 50
 // 1 <= accounts[i][j] <= 100
+
+const maximumWealth = (accounts) =>
+	Math.max(...accounts.map((account) => account.reduce((a, b) => a + b, 0)));
