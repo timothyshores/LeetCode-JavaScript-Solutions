@@ -21,3 +21,15 @@
 
 // 1 <= nums.length <= 100
 // 1 <= nums[i] <= 100
+
+const numIdenticalPairs = (nums) => {
+	let pairs = 0;
+
+	for (let pointer1 = 0; pointer1 < nums.length; pointer1++) {
+		for (let pointer2 = pointer1 + 1; pointer2 < nums.length; pointer2++) {
+			if (nums[pointer1] === nums[pointer2]) pairs++;
+		}
+	}
+
+	return pairs;
+};
