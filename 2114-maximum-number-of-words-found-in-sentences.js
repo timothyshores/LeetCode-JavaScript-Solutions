@@ -27,3 +27,6 @@
 // sentences[i] consists only of lowercase English letters and ' ' only.
 // sentences[i] does not have leading or trailing spaces.
 // All the words in sentences[i] are separated by a single space.
+
+const mostWordsFound = (sentences) =>
+	Math.max(...sentences.map((sentence) => sentence.split(" ").length));
