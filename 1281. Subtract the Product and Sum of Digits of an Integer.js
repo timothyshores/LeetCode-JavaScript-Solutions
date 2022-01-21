@@ -21,3 +21,12 @@
 
 // 1 <= n <= 10^5
 
+const subtractProductAndSum = (n) => {
+	let arr = [];
+
+	for (let num of n.toString()) {
+		arr.push(Number(num));
+	}
+
+	return arr.reduce((a, b) => a * b) - arr.reduce((a, b) => a + b);
+};
