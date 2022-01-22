@@ -19,3 +19,13 @@
 // s consists of only lowercase English letters.
 // 0 <= indices[i] < n
 // All values of indices are unique.
+
+const restoreString = (s, indices) => {
+	const letters = [];
+
+	for (const i in s) {
+		letters[indices[i]] = s[i];
+	}
+
+	return letters.join("");
+};
