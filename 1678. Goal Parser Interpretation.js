@@ -2,8 +2,6 @@
 
 // Given the string command, return the Goal Parser's interpretation of command.
 
- 
-
 // Example 1:
 
 // Input: command = "G()(al)"
@@ -21,9 +19,18 @@
 
 // Input: command = "(al)G(al)()()G"
 // Output: "alGalooG"
- 
 
 // Constraints:
 
 // 1 <= command.length <= 100
 // command consists of "G", "()", and/or "(al)" in some order.
+
+const interpret = (command) => {
+	if (command[0] === "G") return "G" + interpret(command.substring(1));
+	if (command[0] === "(") {
+		if (command[1] === ")") return "o" + interpret(command.substring(2));
+		if (command[1] === "a") return "al" + interpret(command.substring(4));
+	}
+
+	return command;
+};
