@@ -18,3 +18,21 @@
 // 1 <= ui, vi <= n
 // ui != vi
 // The given edges represent a valid star graph.
+
+const findCenter = (edges) => {
+	let counter = {};
+
+	for (let edge of edges) {
+		for (let node of edge) {
+			if (!counter[node]) {
+				counter[node] = 1;
+			} else {
+				counter[node]++;
+			}
+		}
+	}
+
+	return Object.keys(counter).reduce((a, b) =>
+		counter[a] > counter[b] ? a : b
+	);
+};
