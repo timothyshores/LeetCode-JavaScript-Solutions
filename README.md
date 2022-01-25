@@ -16,6 +16,7 @@ LeetCode Profile: https://leetcode.com/timothyshores/
 |[1528. Shuffle String](https://leetcode.com/problems/shuffle-string/)|Easy|[JavaScript](1528.%20Shuffle%20String) 
 |[1672. Richest Customer Wealth](https://leetcode.com/problems/richest-customer-wealth/)|Easy|[JavaScript](1672.%20Richest%20Customer%20Wealth.js) 
 |[1678. Goal Parser Interpretation](https://leetcode.com/problems/goal-parser-interpretation/)|Easy|[JavaScript](1678.%20Goal%20Parser%20Interpretation.js) 
+|[1791. Find Center of Star Graph](https://leetcode.com/problems/find-center-of-star-graph/)|Easy|[JavaScript](1791. Find Center of Star Graph.js) 
 |[1859. Sorting the Sentence](https://leetcode.com/problems/sorting-the-sentence/)|Easy|[JavaScript](1859.%20Sorting%20the%20Sentence) 
 |[1920. Build Array From Permutation](https://leetcode.com/problems/build-array-from-permutation/)|Easy|[JavaScript](1920.%20Build%20Array%20From%20Permutation.js) 
 |[1929. Concatenation of Array](https://leetcode.com/problems/concatenation-of-array/)|Easy|[JavaScript](1929.%20Concatenation%20of%20Array.js) 
