@@ -24,3 +24,6 @@
 // 1 <= word1[i].length, word2[i].length <= 103
 // 1 <= sum(word1[i].length), sum(word2[i].length) <= 103
 // word1[i] and word2[i] consist of lowercase letters.
+
+const arrayStringsAreEqual = (word1, word2) =>
+	word1.join("") === word2.join("");
