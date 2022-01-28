@@ -17,6 +17,11 @@
 // 1 <= sentence.length <= 1000
 // sentence consists of lowercase English letters.
 
+// First solution
 const alphabets = "abcdefghijklmnopqrstuvwxyz".split("");
 const checkIfPangram = (sentence) =>
 	alphabets.every((char) => sentence.toLowerCase().includes(char));
+
+// Second Solution
+const checkIfPangram = (sentence) =>
+	[...new Set(sentence.split(""))].length === 26;
