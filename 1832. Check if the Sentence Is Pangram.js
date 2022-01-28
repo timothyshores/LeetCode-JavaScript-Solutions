@@ -23,5 +23,4 @@ const checkIfPangram = (sentence) =>
 	alphabets.every((char) => sentence.toLowerCase().includes(char));
 
 // Second Solution
-const checkIfPangram = (sentence) =>
-	[...new Set(sentence.split(""))].length === 26;
+const checkIfPangram = (sentence) => new Set(sentence).size === 26;
