@@ -24,3 +24,11 @@
 // 1 <= words.length <= 100
 // 1 <= words[i].length <= 100
 // words[i] consists only of lowercase English letters.
+
+const firstPalindrome = (words) => {
+	for (word of words) {
+		if (word === word.split("").reverse().join("")) return word;
+	}
+
+	return "";
+};
