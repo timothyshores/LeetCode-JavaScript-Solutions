@@ -6,6 +6,7 @@ LeetCode Profile: https://leetcode.com/timothyshores/
 | Problem  | Difficulty | Solution |  
 | :-------------- | :-------------- |:---- | 
 |[771. Jewels And Stones](https://leetcode.com/problems/jewels-and-stones/)|Easy|[JavaScript](771.%20Jewels%20And%20Stones.js) 
+|[938. Range Sum of BST](https://leetcode.com/problems/range-sum-of-bst/)|Medium|[JavaScript](938.%20Range%20Sum%20of%20BST.js) 
 |[1108. Defanging An IP Address](https://leetcode.com/problems/defanging-an-ip-address/)|Easy|[JavaScript](1108.%20Defanging%20An%20IP%20Address.js) 
 |[1281.  Subtract the Product and Sum of Digits of an Integer](https://leetcode.com/problems/subtract-the-product-and-sum-of-digits-of-an-integer/)|Easy|[JavaScript](1281.%20Subtract%20the%20Product%20and%20Sum%20of%20Digits%20of%20an%20Integer) 
 |[1365. How Many Numbers Are Smaller Than the Current Number](https://leetcode.com/problems/how-many-numbers-are-smaller-than-the-current-number/)|Easy|[JavaScript](1365.%20How%20Many%20Numbers%20Are%20Smaller%20Than%20the%20Current%20Number) 
