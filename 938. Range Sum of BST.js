@@ -17,3 +17,23 @@
 // 1 <= Node.val <= 105
 // 1 <= low <= high <= 105
 // All Node.val are unique.
+
+const rangeSumBST = (root, low, high) => {
+	let visited = [],
+		queue = [],
+		current = root;
+
+	queue.push(current);
+
+	while (queue.length) {
+		current = queue.shift();
+		visited.push(current.val);
+
+		if (current.left) queue.push(current.left);
+		if (current.right) queue.push(current.right);
+	}
+
+	return visited
+		.filter((num) => num >= low && num <= high)
+		.reduce((a, b) => a + b);
+};
