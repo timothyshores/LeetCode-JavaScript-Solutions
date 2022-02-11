@@ -25,5 +25,6 @@ LeetCode Profile: https://leetcode.com/timothyshores/
 |[1929. Concatenation of Array](https://leetcode.com/problems/concatenation-of-array/)|Easy|[JavaScript](1929.%20Concatenation%20of%20Array.js) 
 |[2006. Count Number of Pairs With Absolute Difference K](https://leetcode.com/problems/count-number-of-pairs-with-absolute-difference-k/)|Easy|[JavaScript](2006.%2Count%2Number%2of%2Pairs%2With%2Absolute%2Difference%2K.js) 
 |[2011. Final Value of Variable After Performing Operations](https://leetcode.com/problems/final-value-of-variable-after-performing-operations/)|Easy|[JavaScript](2011.%20Final%20Value%20of%20Variable%20After%20Performing%20Operations.js) 
+|[2103. Rings and Rods](https://leetcode.com/problems/rings-and-rods/)|Easy|[JavaScript](2103.%20Rings%20and%20Rods.js)
 |[2108. Find First Palindromic String in the Array](https://leetcode.com/problems/find-first-palindromic-string-in-the-array/)|Easy|[JavaScript](2108.%20Find%20First%20Palindromic%20String%20in%20the%20Array.js)
 |[2114. Maximum Number of Words Found In Sentences](https://leetcode.com/problems/maximum-number-of-words-found-in-sentences/)|Easy|[JavaScript](2114.%20Maximum%20Number%20of%20Words%20Found%20In%20Sentences.js)
