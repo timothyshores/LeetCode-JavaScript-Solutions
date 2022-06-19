@@ -3,6 +3,27 @@
 // Return false if there all arguments are unique
 // See test cases for examples
 
+const areThereDuplicates = (...args) => {
+	const unqiueArgs = new Set();
+
+	// Iterate through the args. Linear O(n) time complexity
+	for (const arg of args) {
+		// If arg is in the set
+		if (unqiueArgs.has(arg)) {
+			// Then arg is a duplicate and return true
+			return true;
+		}
+		// Else current arg is NOT in the set
+		else {
+			// Add arg to the unqiueArgs set. Linear O(n) space complexity.
+			unqiueArgs.add(arg);
+		}
+	}
+
+	// If loop finished without finding any duplicates then all arguements are unique
+	return false;
+};
+
 console.log(areThereDuplicates(1)); // returns false
 console.log(areThereDuplicates(1, 1)); // returns true
 console.log(areThereDuplicates(1, 2)); // returns false
