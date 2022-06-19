@@ -18,3 +18,26 @@
 // Constraints:
 //     1 <= arr.length <= 1000
 //     -1000 <= arr[i] <= 1000
+
+/**
+ * @param {number[]} arr
+ * @return {boolean}
+ */
+
+const uniqueOccurrences = (arr) => {
+	// Store the counts of each number in an object
+	const counts = {};
+
+	// Loop through arr in linear O(n) time complexity
+	for (num of arr) {
+		// Increment the counts value for a given number if the key exists
+		// Or initialize the counts value to 1 for a new unique number
+		counts[num] = (counts[num] || 0) + 1;
+	}
+
+	// Create a set with only the unique number of occurances in counts values
+	const uniqueFrequencyCounts = new Set(Object.values(counts));
+
+	// Compare the number of values in the counts object with the size of uniqueFrequencyCounts
+	return Object.values(counts).length === uniqueFrequencyCounts.size;
+};
