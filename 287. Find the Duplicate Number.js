@@ -23,3 +23,17 @@
 
 //     How can we prove that at least one duplicate number must exist in nums?
 //     Can you solve the problem in linear runtime complexity?
+
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+
+const findDuplicate = (nums) => {
+	const uniqueNums = new Set();
+
+	for (let num of nums) {
+		if (uniqueNums.has(num)) return num;
+		uniqueNums.add(num);
+	}
+};
