@@ -20,7 +20,7 @@ const areThereDuplicates = (...args) => {
 		}
 	}
 
-	// If loop finished without finding any duplicates then all arguements are unique
+	// If loop finished without finding any duplicates then all arguments are unique
 	return false;
 };
 
