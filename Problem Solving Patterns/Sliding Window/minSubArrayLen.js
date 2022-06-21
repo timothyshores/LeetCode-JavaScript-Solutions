@@ -3,8 +3,29 @@
 // Return the minimum length of a contiguous subarray where the sum is >= second parameter integer
 // Return 0 if a contiguous subarray with sum >= second parameter integer does NOT exist
 
+function minSubArrayLen(nums, sum) {
+	let currentSum = 0;
+	let left = 0;
+	let right = 0;
+	let minLength = Infinity;
 
+	while (left < nums.length) {
+		if (currentSum < sum && right < nums.length) {
+			currentSum += nums[right];
+			right++;
+		} else if (currentSum >= sum) {
+			minLength = Math.min(minLength, right - left);
+			currentSum -= nums[left];
+			left++;
+		} else {
+			break;
+		}
+	}
 
+	return minLength !== Infinity ? minLength : 0;
+}
+
+// Test Cases should all return true
 console.log(minSubArrayLen([1], 2) === 0);
 console.log(minSubArrayLen([2, 1, 6, 5, 4], 9) === 2);
 console.log(minSubArrayLen([2, 3, 1, 2, 4, 3], 7) === 2);
