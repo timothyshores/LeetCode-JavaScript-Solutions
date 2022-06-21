@@ -15,3 +15,10 @@
 // Constraints:
 // 1 <= nums.length <= 105
 // -109 <= nums[i] <= 109
+
+/**
+ * @param {number[]} nums
+ * @return {boolean}
+ */
+
+const containsDuplicate = (nums) => new Set(nums).size !== nums.length;
