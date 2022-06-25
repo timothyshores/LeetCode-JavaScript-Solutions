@@ -5,14 +5,14 @@ LeetCode Profile: https://leetcode.com/timothyshores/
 
 | Problem  | Difficulty | Solution |  
 | :-------------- | :-------------- |:---- | 
-
+|[3. Longest Substring Without Repeating Characters.js](https://leetcode.com/problems/longest-substring-without-repeating-characters/)|Medium|[JavaScript](3.%20Longest%20Substring%20Without%20Repeating%20Characters.js)
 |[217. Contains Duplicate](https://leetcode.com/problems/contains-duplicate/)|Easy|[JavaScript](217.%20Contains%20Duplicate.js)
 |[242. Valid Anagram](https://leetcode.com/problems/valid-anagram/)|Easy|[JavaScript](242.%20Valid%20Anagram.js)
 |[287. Find the Duplicate Number.js](https://leetcode.com/problems/find-the-duplicate-number/)|Medium|[JavaScript](287.%20Find%20the%20Duplicate%20Number.js)
 |[771. Jewels And Stones](https://leetcode.com/problems/jewels-and-stones/)|Easy|[JavaScript](771.%20Jewels%20And%20Stones.js) 
 |[938. Range Sum of BST](https://leetcode.com/problems/range-sum-of-bst/)|Medium|[JavaScript](938.%20Range%20Sum%20of%20BST.js) 
 |[1108. Defanging An IP Address](https://leetcode.com/problems/defanging-an-ip-address/)|Easy|[JavaScript](1108.%20Defanging%20An%20IP%20Address.js) 
-|[1207. 1207. Unique Number of Occurrences](https://leetcode.com/problems/unique-number-of-occurrences/)|Easy|[JavaScript](1207.%20Unique%20Number%20of%20Occurrences.js)
+|[1207. Unique Number of Occurrences](https://leetcode.com/problems/unique-number-of-occurrences/)|Easy|[JavaScript](1207.%20Unique%20Number%20of%20Occurrences.js)
 |[1281. Subtract the Product and Sum of Digits of an Integer](https://leetcode.com/problems/subtract-the-product-and-sum-of-digits-of-an-integer/)|Easy|[JavaScript](1281.%20Subtract%20the%20Product%20and%20Sum%20of%20Digits%20of%20an%20Integer.js)
 |[1365. How Many Numbers Are Smaller Than the Current Number](https://leetcode.com/problems/how-many-numbers-are-smaller-than-the-current-number/)|Easy|[JavaScript](1365.%20How%20Many%20Numbers%20Are%20Smaller%20Than%20the%20Current%20Number.js)
 |[1431. Kids With the Greatest Number of Candies](https://leetcode.com/problems/kids-with-the-greatest-number-of-candies/)|Easy|[JavaScript](1431.%20Kids%20With%20the%20Greatest%20Number%20of%20Candies.js) 
