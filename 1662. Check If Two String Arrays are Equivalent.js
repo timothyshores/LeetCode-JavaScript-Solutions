@@ -9,12 +9,12 @@
 // word1 represents string "ab" + "c" -> "abc"
 // word2 represents string "a" + "bc" -> "abc"
 // The strings are the same, so return true.
-// Example 2:
 
+// Example 2:
 // Input: word1 = ["a", "cb"], word2 = ["ab", "c"]
 // Output: false
-// Example 3:
 
+// Example 3:
 // Input: word1  = ["abc", "d", "defg"], word2 = ["abcddefg"]
 // Output: true
 

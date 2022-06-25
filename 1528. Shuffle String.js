@@ -13,7 +13,6 @@
 // Explanation: After shuffling, each character remains in its position.
 
 // Constraints:
-
 // s.length == indices.length == n
 // 1 <= n <= 100
 // s consists of only lowercase English letters.
