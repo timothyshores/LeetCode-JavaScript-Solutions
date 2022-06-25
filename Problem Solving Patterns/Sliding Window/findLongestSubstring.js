@@ -7,7 +7,24 @@
  * @return {number}
  */
 const findLongestSubstring = (str) => {
+	let left = 0;
+	let right = 0;
+	let set = new Set(); // use a set to keep track of the letters in the current window
+	let maxSubstringLength = 0;
 
+	while (right < str.length) {
+		let rightChar = str[right];
+		if (!set.has(rightChar)) {
+			set.add(rightChar);
+			maxSubstringLength = Math.max(maxSubstringLength, set.size);
+			right++;
+		} else {
+			set.delete(str[left]);
+			left++;
+		}
+	}
+
+	return maxSubstringLength;
 };
 
 // Test Cases should all return true
