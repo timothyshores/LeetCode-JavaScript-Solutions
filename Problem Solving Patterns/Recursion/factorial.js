@@ -17,7 +17,15 @@
 // Output:
 // Explanation 5 * 4 * 3 * 2 * 1 = 120
 
-const factorial = (num) => {};
+/**
+ * Returns the factorial of num
+ * @param {number} num a positive integer
+ * @return {number} the factorial of num
+ */
+const factorial = (num) => {
+	if (num === 1) return 1;
+	return num * factorial(num - 1);
+};
 
 // ALl test cases return true
 console.log(factorial(1) === 1);
