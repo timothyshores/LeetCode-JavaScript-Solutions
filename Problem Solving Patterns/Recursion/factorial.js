@@ -1,6 +1,6 @@
 // Write a function called factorial
 // Input is a positive integer called num
-// return the factorial of a number
+// Return the factorial of a number
 
 // Example 1:
 // Input: num = 2
@@ -12,7 +12,7 @@
 // Output: 6
 // Explanation 3 * 2 * 1 = 6
 
-// Example 5:
+// Example 3:
 // Input: num = 5
 // Output:
 // Explanation 5 * 4 * 3 * 2 * 1 = 120
