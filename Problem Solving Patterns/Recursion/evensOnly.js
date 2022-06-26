@@ -1,6 +1,6 @@
 // Write a function called evensOnly
 // Input is an array of integers
-// Return an array containing only even numbers 
+// Return an array containing only even numbers
 
 // Example 1:
 // Input: arr = [2]
@@ -16,6 +16,21 @@
 // Input: arr = [1, 2, 3, 4, 5]
 // Output: [2, 4]
 // Explanation Only 2 & 4 are even while 1, 3 & 5 are all odd
+
+/**
+ * Returns an array with only event numbers
+ * @param {Number[]} arr an array of numbers
+ * @return {Number[]} arr with even numbers only and no odd numbers
+ */
+const evensOnly = (arr) => {
+	const evens = [];
+
+	if (arr.length === 0) return [];
+	if (arr[0] % 2 === 0) evens.push(arr[0]);
+
+	const [, ...remainingArr] = arr;
+	return [...evens, ...evensOnly(remainingArr)];
+};
 
 // Test Cases
 console.log(evensOnly([1])); //returns []
