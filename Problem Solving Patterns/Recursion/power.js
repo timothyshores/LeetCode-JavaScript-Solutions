@@ -17,7 +17,17 @@
 // Output: 27
 // Explanation 3 multiplied by itself 3 times or 3 * 3 * 3 = 27
 
-
+/**
+ * Returns an base raised to the power of exponent
+ * @param {number} base a positive integer that will be raised to the power of exponent
+ * * @param {number} exponent a positive integer the number of times that base is multiplied by itself
+ * @return {number} the result of multiplying base times itself exponent number of times
+ */
+const power = (base, exponent) => {
+	if (exponent === 0) return 1;
+	if (exponent === 1) return base;
+	return base * power(base, exponent - 1);
+};
 
 // ALl test cases return true
 console.log(power(2, 0) === 1);
