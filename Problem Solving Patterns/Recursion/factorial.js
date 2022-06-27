@@ -23,11 +23,13 @@
  * @return {number} the factorial of num
  */
 const factorial = (num) => {
-	if (num === 1) return 1;
+	if (num < 0) return 0;
+	if (num <= 1) return 1;
 	return num * factorial(num - 1);
 };
 
 // ALl test cases return true
+console.log(factorial(0) === 1);
 console.log(factorial(1) === 1);
 console.log(factorial(2) === 2);
 console.log(factorial(3) === 6);
