@@ -16,6 +16,19 @@ const maxDigits = (nums) => {
 	return maxDigit;
 };
 
+const radixSort = (nums) => {
+	for (let i = 0; i < maxDigits(nums); i++) {
+		let digits = Array.from({ length: 10 }, () => []);
+		for (let num of nums) {
+			let digit = getDigit(num, i);
+			digits[digit] = [...digits[digit], num];
+		}
+		nums = digits.flat();
+	}
+
+	return nums;
+};
+
 // All Test Cases return true
 console.log(getDigit(12345, 0) === 5);
 console.log(getDigit(12345, 1) === 4);
