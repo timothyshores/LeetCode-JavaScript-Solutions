@@ -16,3 +16,22 @@ class Node {
 		this.next = null;
 	}
 }
+
+/**
+ * @classdesc Singly Linked List
+ *
+ * @name SinglyLinkedList
+ * @class
+ */
+class SinglyLinkedList {
+	/**
+	 * Create a new Singly Linked List
+	 *
+	 * @constructs SinglyLinkedList
+	 */
+	constructor() {
+		this.head = null;
+		this.tail = null;
+		this.length = 0;
+	}
+}
