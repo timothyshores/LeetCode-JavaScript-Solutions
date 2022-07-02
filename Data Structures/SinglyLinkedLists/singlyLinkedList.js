@@ -34,4 +34,13 @@ class SinglyLinkedList {
 		this.tail = null;
 		this.length = 0;
 	}
+
+	/**
+	 * Returns true if the Linked List is empty or false if the Linked List has one or more nodes
+	 *
+	 * @returns {boolean} returns true if the Linked List is empty or false if the Linked List has one or more nodes
+	 */
+	isEmpty() {
+		return this.length === 0;
+	}
 }
