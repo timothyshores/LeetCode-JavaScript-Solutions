@@ -67,3 +67,32 @@ class SinglyLinkedList {
 		return this;
 	}
 }
+
+// All Test Cases Return true
+let sll = new SinglyLinkedList();
+console.log(sll.length == 0);
+console.log(sll.head == null);
+console.log(sll.tail == null);
+
+console.log(sll.push("1"));
+console.log(sll.length === 1);
+console.log("head", sll.head.value == 1);
+console.log("tail", sll.tail.value == 1);
+console.log("tail", sll.tail.next == null);
+
+console.log(sll.push("2"));
+console.log(sll.length === 2);
+console.log(sll.head.value == 1);
+console.log(sll.tail.value == 2);
+console.log(sll.tail.next == null);
+console.log(sll.head.next.value == 2);
+console.log(sll.head.next.next == null);
+
+console.log(sll.push("3"));
+console.log(sll.length === 3);
+console.log(sll.head.value == 1);
+console.log(sll.tail.value == 3);
+console.log(sll.tail.next == null);
+console.log(sll.head.next.value == 2);
+console.log(sll.head.next.next.value == 3);
+console.log(sll.head.next.next.next === null);
