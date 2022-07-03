@@ -142,3 +142,32 @@ class SinglyLinkedList {
 		return originalHead;
 	}
 }
+
+// Call shift on an empty Singly Linked List returns undefined
+let emptySLL = new SinglyLinkedList();
+console.log(emptySLL.shift() === undefined);
+
+// Remove the head node from a Singly Linked List with 1 node
+let oneNodeSLL = new SinglyLinkedList();
+oneNodeSLL.push(1);
+console.log(oneNodeSLL.shift().value === 1);
+console.log(oneNodeSLL.isEmpty());
+
+// Remove the head node from a Singly Linked List with 2 nodes
+let twoNodesSLL = new SinglyLinkedList();
+twoNodesSLL.push(1);
+twoNodesSLL.push(2);
+console.log(twoNodesSLL.shift().value === 1);
+console.log(twoNodesSLL.hasOneNode());
+console.log(twoNodesSLL.head.value === 2);
+console.log(twoNodesSLL.tail.value === 2);
+
+// Remove the head node from a Singly Linked List with 3 nodes
+let threeNodesSLL = new SinglyLinkedList();
+threeNodesSLL.push(1);
+threeNodesSLL.push(2);
+threeNodesSLL.push(3);
+console.log(threeNodesSLL.shift().value === 1);
+console.log(threeNodesSLL.hasMultipleNodes());
+console.log(threeNodesSLL.head.value === 2);
+console.log(threeNodesSLL.tail.value === 3);
