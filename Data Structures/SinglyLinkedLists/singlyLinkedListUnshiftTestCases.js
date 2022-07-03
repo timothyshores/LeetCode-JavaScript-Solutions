@@ -168,3 +168,26 @@ class SinglyLinkedList {
 		return this;
 	}
 }
+
+// Call shift on an empty Singly Linked List returns undefined
+let emptySLL = new SinglyLinkedList();
+emptySLL.unshift(1);
+console.log(emptySLL.hasOneNode());
+console.log(emptySLL.head.value === 1);
+console.log(emptySLL.tail.value === 1);
+
+let oneNodeSLL = new SinglyLinkedList();
+oneNodeSLL.push(2);
+oneNodeSLL.unshift(1);
+console.log(oneNodeSLL.hasMultipleNodes());
+console.log(oneNodeSLL.head.value === 1);
+console.log(oneNodeSLL.tail.value === 2);
+
+let twoNodeSLL = new SinglyLinkedList();
+twoNodeSLL.push(2);
+twoNodeSLL.push(3);
+twoNodeSLL.unshift(1);
+console.log(twoNodeSLL.length === 3);
+console.log(twoNodeSLL.head.value === 1);
+console.log(twoNodeSLL.tail.value === 3);
+console.log(twoNodeSLL.head.next.value === 2);
