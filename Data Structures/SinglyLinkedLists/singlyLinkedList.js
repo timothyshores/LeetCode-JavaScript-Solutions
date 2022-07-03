@@ -126,4 +126,19 @@ class SinglyLinkedList {
 			}
 		}
 	}
+
+	/**
+	 * Remove the head of the Singly Linked List
+	 *
+	 * @return the head of the Singly Linked List
+	 */
+	shift() {
+		// If Singly Linked List is empty return undefined
+		if (this.isEmpty()) return undefined;
+		// Singly Linked List is NOT empty set new head to head.next, decrement length and return original head
+		const originalHead = this.head;
+		this.head = originalHead.next;
+		this.length--;
+		return originalHead;
+	}
 }
