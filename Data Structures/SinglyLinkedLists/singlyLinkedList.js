@@ -141,4 +141,30 @@ class SinglyLinkedList {
 		this.length--;
 		return originalHead;
 	}
+
+	/**
+	 * Add new head node to the Singly Linked List
+	 *
+	 * @param {any} value will be stored in the new head node in the Singly Linked List
+	 * @return the Singly Linked List
+	 */
+	unshift(value) {
+		// Create newHead node with value passed into unshift method
+		const newHead = new Node(value);
+
+		// If Singly Linked List is empty return set head and tail to newHead
+		if (this.isEmpty()) {
+			this.head = newHead;
+			this.tail = newHead;
+		}
+		// Else set newHead to point to current head and update head to newHead
+		if (this.hasOneNode() || this.hasMultipleNodes()) {
+			newHead.next = this.head;
+			this.head = newHead;
+		}
+
+		// Increment length and return the Singly Linked List
+		this.length++;
+		return this;
+	}
 }
