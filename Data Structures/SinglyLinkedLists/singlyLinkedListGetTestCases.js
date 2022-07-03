@@ -167,4 +167,26 @@ class SinglyLinkedList {
 		this.length++;
 		return this;
 	}
+
+	/**
+	 * Get a node in the Singly Linked List given an index
+	 *
+	 * @param {number} index of the specified node
+	 * @return node at position index in the Singly Linked List
+	 */
+	get(index) {
+		// If Singly Linked List is empty return undefined
+		if (this.isEmpty()) return undefined;
+
+		// If index is less than 0 or greater than or equal to the Singly Linked List length return null
+		if (index < 0 || index >= this.length) return null;
+
+		// If Singly Linked List is NOT empty return the node at the given index
+		let nodeAtIndex = this.head;
+		for (let i = 0; i < index; i++) {
+			nodeAtIndex = nodeAtIndex.next;
+		}
+
+		return nodeAtIndex;
+	}
 }
