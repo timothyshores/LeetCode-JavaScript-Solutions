@@ -88,7 +88,7 @@ class SinglyLinkedList {
 	/**
 	 * Remove the tail of the Singly Linked List
 	 *
-	 * @return
+	 * @return the tail of the Singly Linked List
 	 */
 	pop() {
 		switch (true) {
