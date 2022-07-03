@@ -190,3 +190,38 @@ class SinglyLinkedList {
 		return nodeAtIndex;
 	}
 }
+
+// All Test Cases return true
+let emptySLL = new SinglyLinkedList();
+console.log(emptySLL.get(0) === undefined);
+
+let oneNodeSLL = new SinglyLinkedList();
+oneNodeSLL.push(1);
+console.log(oneNodeSLL.get(0).value === 1);
+console.log(oneNodeSLL.get(-1) === null);
+console.log(oneNodeSLL.get(1) === null);
+console.log(oneNodeSLL.get(2) === null);
+
+let twoNodeSLL = new SinglyLinkedList();
+twoNodeSLL.push(1);
+twoNodeSLL.push(2);
+console.log(twoNodeSLL.get(0).value === 1);
+console.log(twoNodeSLL.get(1).value === 2);
+
+let threeNodeSLL = new SinglyLinkedList();
+threeNodeSLL.push(1);
+threeNodeSLL.push(2);
+threeNodeSLL.push(3);
+console.log(threeNodeSLL.get(0).value === 1);
+console.log(threeNodeSLL.get(1).value === 2);
+console.log(threeNodeSLL.get(2).value === 3);
+
+let fourNodeSLL = new SinglyLinkedList();
+fourNodeSLL.push(1);
+fourNodeSLL.push(2);
+fourNodeSLL.push(3);
+fourNodeSLL.push(4);
+console.log(fourNodeSLL.get(0).value === 1);
+console.log(fourNodeSLL.get(1).value === 2);
+console.log(fourNodeSLL.get(2).value === 3);
+console.log(fourNodeSLL.get(3).value === 4);
