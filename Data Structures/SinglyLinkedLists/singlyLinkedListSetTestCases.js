@@ -189,4 +189,25 @@ class SinglyLinkedList {
 
 		return nodeAtIndex;
 	}
+
+	/**
+	 * Set a specific node's value in the Singly Linked List
+	 *
+	 * @param {number} index of the specified node
+	 * @param {any} value to be set at the specified node
+	 * @return
+	 */
+	set(index, value) {
+		// Create variable node and set it to the node at index passed into set method
+		const setNode = this.get(index);
+
+		// If a node is found at the index passed into the set method set value and return true
+		if (setNode) {
+			setNode.value = value;
+			return true;
+		}
+
+		// When node was NOT found at at the index passed into the set method return false
+		return false;
+	}
 }
