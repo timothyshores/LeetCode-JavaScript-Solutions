@@ -243,4 +243,35 @@ class SinglyLinkedList {
 		this.length++;
 		return true;
 	}
+
+	/**
+	 * Remove a node at a specific index in the Singly Linked List
+	 *
+	 * @param {number} index of the node to be removed
+	 * @return
+	 */
+	remove(index) {
+		// If index is less than 0 or greater than or equal to the Singly Linked List length return undefined
+		if (index < 0 || index >= this.length) return undefined;
+
+		// If index is 0 call shift method and remove the head node
+		if (index === 0) return this.shift();
+
+		// If index is the Singly Linked List's length - 1 call pop method and remove the tail node
+		if (index === this.length - 1) return this.pop();
+
+		// Create variable previousNode and set it to the previous node before removedNode
+		const previousNode = this.get(index - 1);
+
+		// Create variable removedNode and set it to the next node after previousNode
+		const removedNode = previousNode.next;
+
+		// Create variable nextNode and set it to the next node after removedNode
+		const nextNode = removedNode.next;
+
+		// Point previous node to nextNode, decrement length and return the removed node
+		previousNode.next = nextNode;
+		this.length--;
+		return removedNode;
+	}
 }
