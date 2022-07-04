@@ -248,7 +248,7 @@ class SinglyLinkedList {
 	 * Remove a node at a specific index in the Singly Linked List
 	 *
 	 * @param {number} index of the node to be removed
-	 * @return
+	 * @return the removed node
 	 */
 	remove(index) {
 		// If index is less than 0 or greater than or equal to the Singly Linked List length return undefined
