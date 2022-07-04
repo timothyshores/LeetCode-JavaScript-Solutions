@@ -195,7 +195,7 @@ class SinglyLinkedList {
 	 *
 	 * @param {number} index of the specified node
 	 * @param {any} value to be set at the specified node
-	 * @return
+	 * @return {boolean} returns true if a node was found and its value was updated
 	 */
 	set(index, value) {
 		// Create variable node and set it to the node at index passed into set method
@@ -211,3 +211,36 @@ class SinglyLinkedList {
 		return false;
 	}
 }
+
+// All Test Cases return true
+const emptySLL = new SinglyLinkedList();
+console.log(emptySLL.set(0, "Test set with empty SLL") === false);
+
+const oneNodeSLL = new SinglyLinkedList();
+oneNodeSLL.push(1);
+console.log(oneNodeSLL.set(0, "Set single node") === true);
+console.log(oneNodeSLL.head.value === "Set single node");
+console.log(oneNodeSLL.tail.value === "Set single node");
+console.log(oneNodeSLL.set(1, "Set index 1") === false);
+console.log(oneNodeSLL.set(-1, "Set index -1") === false);
+console.log(oneNodeSLL.set(1000000, "Set high index") === false);
+
+const twoNodeSLL = new SinglyLinkedList();
+twoNodeSLL.push(1);
+twoNodeSLL.push(2);
+console.log(twoNodeSLL.set(0, "Head") === true);
+console.log(twoNodeSLL.set(1, "Tail") === true);
+console.log(twoNodeSLL.head.value === "Head");
+console.log(twoNodeSLL.tail.value === "Tail");
+console.log(twoNodeSLL.set(2, "Set index out of range") === false);
+
+const threeNodeSLL = new SinglyLinkedList();
+threeNodeSLL.push(1);
+threeNodeSLL.push(2);
+threeNodeSLL.push(3);
+console.log(threeNodeSLL.set(0, 2));
+console.log(threeNodeSLL.set(1, 4));
+console.log(threeNodeSLL.set(2, 6));
+console.log(threeNodeSLL.head.value === 2);
+console.log(threeNodeSLL.tail.value === 6);
+console.log(threeNodeSLL.head.next.value === 4);
