@@ -212,13 +212,13 @@ class SinglyLinkedList {
 	}
 
 	/**
-	 * Inert a node node at a specific index in the Singly Linked List
+	 * Insert a new node with the value passed into the insert method at the specified index
 	 *
-	 * @param {number} index of the new node
+	 * @param {number} index of the new node to be inserted into
 	 * @param {any} value of the new node
 	 * @return {boolean} returns true if a node was found and its value was updated
 	 */
-	set(index, value) {
+	insert(index, value) {
 		// If index is less than 0 or greater than the Singly Linked List length return false
 		if (index < 0 || index > this.length) return false;
 
@@ -228,7 +228,7 @@ class SinglyLinkedList {
 		// If index is equal to length of the Singly Linked List push new node to the tail and return true
 		if (index === this.length) return !!this.push(value);
 
-		// Create newNode node with value passed into set method
+		// Create newNode node with value passed into insert method
 		const newNode = new Node(value);
 
 		// Create variable previousNode and set it to the previous node before newNode
