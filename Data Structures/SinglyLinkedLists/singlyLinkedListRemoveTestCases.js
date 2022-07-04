@@ -275,3 +275,38 @@ class SinglyLinkedList {
 		return removedNode;
 	}
 }
+
+// All Test Cases return true
+const emptySLL = new SinglyLinkedList();
+console.log(emptySLL.remove(0) === undefined);
+console.log(emptySLL.remove(1) === undefined);
+console.log(emptySLL.remove(-1) === undefined);
+
+const oneNodeSLL = new SinglyLinkedList();
+oneNodeSLL.push(1);
+console.log(oneNodeSLL.remove(1) === undefined);
+console.log(oneNodeSLL.remove(-1) === undefined);
+console.log(oneNodeSLL.remove(10000) === undefined);
+console.log(oneNodeSLL.remove(0).value === 1);
+console.log(oneNodeSLL.isEmpty() === true);
+
+const twoNodeSLL = new SinglyLinkedList();
+twoNodeSLL.push(1);
+twoNodeSLL.push(2);
+console.log(twoNodeSLL.remove(1).value === 2);
+console.log(twoNodeSLL.hasOneNode() === true);
+console.log(twoNodeSLL.remove(0).value === 1);
+console.log(oneNodeSLL.isEmpty() === true);
+
+const threeNodeSLL = new SinglyLinkedList();
+threeNodeSLL.push(1);
+threeNodeSLL.push(2);
+threeNodeSLL.push(3);
+console.log(threeNodeSLL.remove(1).value === 2);
+console.log(threeNodeSLL.hasMultipleNodes());
+console.log(threeNodeSLL.head.value === 1);
+console.log(threeNodeSLL.tail.value === 3);
+console.log(threeNodeSLL.remove(0).value === 1);
+console.log(threeNodeSLL.hasOneNode() === true);
+console.log(threeNodeSLL.remove(0).value === 3);
+console.log(threeNodeSLL.isEmpty() === true);
