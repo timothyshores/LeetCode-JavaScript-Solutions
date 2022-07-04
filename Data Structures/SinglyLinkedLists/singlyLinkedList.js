@@ -189,4 +189,58 @@ class SinglyLinkedList {
 
 		return nodeAtIndex;
 	}
+
+	/**
+	 * Set a specific node's value in the Singly Linked List
+	 *
+	 * @param {number} index of the specified node
+	 * @param {any} value to be set at the specified node
+	 * @return {boolean} returns true if a node was found and its value was updated
+	 */
+	set(index, value) {
+		// Create variable node and set it to the node at index passed into set method
+		const setNode = this.get(index);
+
+		// If a node is found at the index passed into the set method set value and return true
+		if (setNode) {
+			setNode.value = value;
+			return true;
+		}
+
+		// When node was NOT found at at the index passed into the set method return false
+		return false;
+	}
+
+	/**
+	 * Inert a node node at a specific index in the Singly Linked List
+	 *
+	 * @param {number} index of the new node
+	 * @param {any} value of the new node
+	 * @return {boolean} returns true if a node was found and its value was updated
+	 */
+	set(index, value) {
+		// If index is less than 0 or greater than the Singly Linked List length return false
+		if (index < 0 || index > this.length) return false;
+
+		// If index is 0 call unshift and push new node to the head and return true
+		if (index === 0) return !!this.unshift(value);
+
+		// If index is equal to length of the Singly Linked List push new node to the tail and return true
+		if (index === this.length) return !!this.push(value);
+
+		// Create newNode node with value passed into set method
+		const newNode = new Node(value);
+
+		// Create variable previousNode and set it to the previous node before newNode
+		const previousNode = this.get(index - 1);
+
+		// Create variable nextNode and set it to the following node after previousNode
+		const nextNode = previousNode.next;
+
+		// Point previousNode to newNode, point newNode to nextNode, increment length and return true
+		previousNode.next = newNode;
+		newNode.next = nextNode;
+		this.length++;
+		return true;
+	}
 }
