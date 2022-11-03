@@ -274,4 +274,51 @@ class SinglyLinkedList {
 		this.length--;
 		return removedNode;
 	}
+
+	/**
+	 * Reverse the Singly Linked List in placed
+	 *
+	 * @return
+	 */
+	reverse() {
+		// Set the original head as the new tail
+		// Get the next node after the head. Let's call this node2
+		// Set node2's next node to the new tail which was the original head
+		// Move on to node2 and repeat until we reach the original tail
+
+		// Scenario 1: SLL is empty
+		if (this.isEmpty()) return "SLL is empty";
+
+		//Scenario 2: SLL has only one node
+		if (this.hasOneNode()) return this;
+
+		//Scenario 2: SLL has only one node
+		if (this.length === 2) {
+			const originalHead = this.head;
+			const originalTail = this.tail;
+			this.tail = originalHead;
+			this.tail.next = null;
+
+			this.head = originalTail;
+			this.head.next = this.tail;
+			return this;
+		}
+	}
 }
+
+let empty = new SinglyLinkedList();
+console.log(empty);
+console.log(empty.reverse());
+
+let oneNode = new SinglyLinkedList();
+console.log(oneNode);
+oneNode.push("1");
+console.log(oneNode.reverse());
+
+let twoNode = new SinglyLinkedList();
+console.log(twoNode);
+twoNode.push("1");
+console.log(twoNode);
+twoNode.push("2");
+console.log(twoNode);
+console.log(twoNode.reverse());
