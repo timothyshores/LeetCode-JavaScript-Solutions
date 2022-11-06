@@ -281,11 +281,6 @@ class SinglyLinkedList {
 	 * @return
 	 */
 	reverse() {
-		// Set the original head as the new tail
-		// Get the next node after the head. Let's call this node2
-		// Set node2's next node to the new tail which was the original head
-		// Move on to node2 and repeat until we reach the original tail
-
 		// Scenario 1: SLL is empty
 		if (this.isEmpty()) return "SLL is empty";
 
@@ -304,42 +299,40 @@ class SinglyLinkedList {
 			return this;
 		}
 
-		//Scenario 2: SLL has three nodes
-		if (this.length === 3) {
-			// Keep track of previous, current and next nodes
-			let previous = this.head;
-			let current = previous.next;
-			let next = current.next;
+		// Keep track of previous, current and next nodes
+		let previous = this.head;
+		let current = previous.next;
+		let next = current.next;
 
-			// Swap the original head and tail
-			const originalHead = this.head;
-			const originalTail = this.tail;
-			this.head = originalTail;
-			this.tail = originalHead;
-			this.tail.next = null;
+		// Swap the original head and tail
+		const originalHead = this.head;
+		const originalTail = this.tail;
+		this.head = originalTail;
+		this.tail = originalHead;
+		this.tail.next = null;
 
-			// might need to change this
-			while (previous != this.head) {
-				current.next = previous;
+		// might need to change this
+		while (previous != this.head) {
+			current.next = previous;
 
-				previous = current;
-				current = next;
-			}
-
-			return this;
+			previous = current;
+			current = next;
+			if (next.next) next = next.next;
 		}
+
+		return this;
 	}
 }
 
-let empty = new SinglyLinkedList();
+const empty = new SinglyLinkedList();
 console.log(empty);
 console.log(empty.reverse());
 
-let oneNode = new SinglyLinkedList();
+const oneNode = new SinglyLinkedList();
 oneNode.push("1");
 console.log(oneNode.reverse());
 
-let twoNode = new SinglyLinkedList();
+const twoNode = new SinglyLinkedList();
 twoNode.push("1");
 twoNode.push("2");
 console.log(twoNode);
@@ -351,7 +344,7 @@ console.log(twoNode.head.next.value == 1); // true
 console.log(twoNode.tail.value == 1); // true
 console.log(twoNode.tail.next == null); // true
 
-let threeNode = new SinglyLinkedList();
+const threeNode = new SinglyLinkedList();
 threeNode.push("1");
 threeNode.push("2");
 threeNode.push("3");
@@ -368,3 +361,17 @@ console.log(threeNode.head.next.value == 2); // true
 console.log(threeNode.head.next.next.value == 1); // true
 console.log(threeNode.tail.value == 1); // true
 console.log(threeNode.tail.next == null); // true
+
+let fourNode = new SinglyLinkedList();
+fourNode.push("1");
+fourNode.push("2");
+fourNode.push("3");
+fourNode.push("4");
+
+console.log(fourNode.reverse());
+console.log(fourNode.head.value == 4); // true
+console.log(fourNode.head.next.value == 3); // true
+console.log(fourNode.head.next.next.value == 2); // true
+console.log(fourNode.head.next.next.next.value == 1); // true
+console.log(fourNode.tail.value == 1); // true
+console.log(fourNode.tail.next == null); // true
