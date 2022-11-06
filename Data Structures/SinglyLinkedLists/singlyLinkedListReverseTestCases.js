@@ -278,7 +278,7 @@ class SinglyLinkedList {
 	/**
 	 * Reverse the Singly Linked List in placed
 	 *
-	 * @return
+	 * @return the SLL reversed in place
 	 */
 	reverse() {
 		// Scenario 1: SLL is empty
