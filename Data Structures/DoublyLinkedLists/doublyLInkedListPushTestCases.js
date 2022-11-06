@@ -12,7 +12,6 @@ class DoublyLinkedList {
 		this.tail = null;
 		this.length = 0;
 	}
-
 	/**
 	 * Returns true if the Doubly Linked List (DLL) is empty
 	 *
