@@ -292,7 +292,7 @@ class SinglyLinkedList {
 		//Scenario 2: SLL has only one node
 		if (this.hasOneNode()) return this;
 
-		//Scenario 2: SLL has only one node
+		//Scenario 2: SLL has two nodes
 		if (this.length === 2) {
 			const originalHead = this.head;
 			const originalTail = this.tail;
@@ -303,6 +303,31 @@ class SinglyLinkedList {
 			this.head.next = this.tail;
 			return this;
 		}
+
+		//Scenario 2: SLL has three nodes
+		if (this.length === 3) {
+			// Keep track of previous, current and next nodes
+			let previous = this.head;
+			let current = previous.next;
+			let next = current.next;
+
+			// Swap the original head and tail
+			const originalHead = this.head;
+			const originalTail = this.tail;
+			this.head = originalTail;
+			this.tail = originalHead;
+			this.tail.next = null;
+
+			// might need to change this
+			while (previous != this.head) {
+				current.next = previous;
+
+				previous = current;
+				current = next;
+			}
+
+			return this;
+		}
 	}
 }
 
@@ -311,14 +336,35 @@ console.log(empty);
 console.log(empty.reverse());
 
 let oneNode = new SinglyLinkedList();
-console.log(oneNode);
 oneNode.push("1");
 console.log(oneNode.reverse());
 
 let twoNode = new SinglyLinkedList();
-console.log(twoNode);
 twoNode.push("1");
-console.log(twoNode);
 twoNode.push("2");
 console.log(twoNode);
+console.log(twoNode.head.value == 1); // true
+console.log(twoNode.head.next.value == 2); // true
 console.log(twoNode.reverse());
+console.log(twoNode.head.value == 2); // true
+console.log(twoNode.head.next.value == 1); // true
+console.log(twoNode.tail.value == 1); // true
+console.log(twoNode.tail.next == null); // true
+
+let threeNode = new SinglyLinkedList();
+threeNode.push("1");
+threeNode.push("2");
+threeNode.push("3");
+
+console.log(threeNode.head.value == 1); // true
+console.log(threeNode.head.next.value == 2); // true
+console.log(threeNode.head.next.next.value == 3); // true
+console.log(threeNode.tail.value == 3); // true
+console.log(threeNode.tail.next == null); // true
+
+console.log(threeNode.reverse());
+console.log(threeNode.head.value == 3); // true
+console.log(threeNode.head.next.value == 2); // true
+console.log(threeNode.head.next.next.value == 1); // true
+console.log(threeNode.tail.value == 1); // true
+console.log(threeNode.tail.next == null); // true
