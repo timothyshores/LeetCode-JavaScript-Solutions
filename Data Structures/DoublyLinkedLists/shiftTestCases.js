@@ -108,3 +108,42 @@ class DoublyLinkedList {
 		return originalHead;
 	}
 }
+
+// All Test Cases Return true
+const DLL = new DoublyLinkedList();
+
+// Pop an empty DLL returns undefined
+console.log(DLL.shift() == undefined);
+
+// Push the value 1 into the empty DLL
+console.log(DLL.push("1"));
+
+// Pop the head and verify that it returns 1, head and tail are null and length is 0
+console.log(DLL.shift().val == 1);
+console.log(DLL.head === null);
+console.log(DLL.tail === null);
+console.log(DLL.length === 0);
+
+// Push values 1, 2 and then 3 into the DLL
+console.log(DLL.push("1"));
+console.log(DLL.push("2"));
+console.log(DLL.push("3"));
+console.log(DLL.head.val == 1);
+console.log(DLL.tail.val == 3);
+console.log(DLL.tail.next == null);
+console.log(DLL.tail.prev.val == 2);
+console.log(DLL.head.next.val == 2);
+console.log(DLL.head.next.next.val == 3);
+console.log(DLL.tail.prev.prev.val == 1);
+
+// Call shift on the DLL, verify it returns 1, verify new head is 2 and tail is still 3 with length 2
+console.log(DLL.shift().val == 1);
+console.log(DLL.head.val == 2);
+console.log(DLL.tail.val == 3);
+console.log(DLL.length === 2);
+
+// Call shift the DLL again, verify it returns 2, verify new head and tail is 3 and length is 1
+console.log(DLL.shift());
+console.log(DLL.head.val == 3);
+console.log(DLL.tail.val == 3);
+console.log(DLL.length === 1);
