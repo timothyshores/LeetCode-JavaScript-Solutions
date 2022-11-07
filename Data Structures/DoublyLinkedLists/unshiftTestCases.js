@@ -121,11 +121,12 @@ class DoublyLinkedList {
 		if (this.isEmpty()) {
 			this.head = newHead;
 			this.tail = newHead;
+		} else {
+			newHead.next = this.head;
+			this.head.prev = newHead;
+			this.head = newHead;
 		}
 
-		newHead.next = this.head;
-		this.head.prev = newHead;
-		this.head = newHead;
 		this.length++;
 		return this;
 	}
@@ -139,11 +140,16 @@ console.log(unshiftDLL.unshift(3));
 console.log(unshiftDLL.hasOneNode()); // true
 console.log(unshiftDLL.head.val === 3); // true
 console.log(unshiftDLL.tail.val === 3); // true
+console.log(unshiftDLL.head.prev === null); // true
+console.log(unshiftDLL.tail.next === null);
 
 console.log(unshiftDLL.unshift(2));
 console.log(unshiftDLL.hasMultipleNodes()); // true
 console.log(unshiftDLL.head.val === 2); // true
 console.log(unshiftDLL.tail.val === 3); // true
+console.log(unshiftDLL.head.prev === null); //true
+console.log(unshiftDLL.head.next.val === 3); // true
+console.log(unshiftDLL.tail.next === null); // true
 
 console.log(unshiftDLL.unshift(1)); // true
 console.log(unshiftDLL.length === 3); // true

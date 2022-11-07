@@ -121,11 +121,12 @@ class DoublyLinkedList {
 		if (this.isEmpty()) {
 			this.head = newHead;
 			this.tail = newHead;
+		} else {
+			newHead.next = this.head;
+			this.head.prev = newHead;
+			this.head = newHead;
 		}
 
-		newHead.next = this.head;
-		this.head.prev = newHead;
-		this.head = newHead;
 		this.length++;
 		return this;
 	}
