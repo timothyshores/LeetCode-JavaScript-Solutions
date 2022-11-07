@@ -85,4 +85,27 @@ class DoublyLinkedList {
 		this.length--;
 		return originalTail;
 	}
+
+	/**
+	 * Remove the head node from the DLL
+	 *
+	 * @return The original head node from the DLL
+	 */
+	shift() {
+		if (this.isEmpty()) return undefined;
+
+		const originalHead = this.head;
+
+		if (this.hasOneNode()) {
+			this.head = null;
+			this.tail = null;
+		} else {
+			this.head = originalHead.next;
+			this.head.prev = null;
+			originalHead.next = null;
+		}
+
+		this.length--;
+		return originalHead;
+	}
 }
