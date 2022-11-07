@@ -108,4 +108,25 @@ class DoublyLinkedList {
 		this.length--;
 		return originalHead;
 	}
+
+	/**
+	 * Add a new head node to the DLL
+	 *
+	 * @param {any} value to be stored in the new head node in the  DLL
+	 * @return The original head node from the DLL
+	 */
+	unshift(value) {
+		const newHead = new Node(value);
+
+		if (this.isEmpty()) {
+			this.head = newHead;
+			this.tail = newHead;
+		}
+
+		newHead.next = this.head;
+		this.head.prev = newHead;
+		this.head = newHead;
+		this.length++;
+		return this;
+	}
 }
