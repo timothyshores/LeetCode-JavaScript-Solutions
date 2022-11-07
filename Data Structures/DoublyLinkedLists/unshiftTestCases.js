@@ -130,3 +130,24 @@ class DoublyLinkedList {
 		return this;
 	}
 }
+
+// All test cases return true
+
+const unshiftDLL = new DoublyLinkedList();
+
+console.log(unshiftDLL.unshift(3));
+console.log(unshiftDLL.hasOneNode()); // true
+console.log(unshiftDLL.head.val === 3); // true
+console.log(unshiftDLL.tail.val === 3); // true
+
+console.log(unshiftDLL.unshift(2));
+console.log(unshiftDLL.hasMultipleNodes()); // true
+console.log(unshiftDLL.head.val === 2); // true
+console.log(unshiftDLL.tail.val === 3); // true
+
+console.log(unshiftDLL.unshift(1)); // true
+console.log(unshiftDLL.length === 3); // true
+console.log(unshiftDLL.head.val === 1); // true
+console.log(unshiftDLL.tail.val === 3); // true
+console.log(unshiftDLL.head.next.val === 2); // true
+console.log(unshiftDLL.tail.prev.val === 2); // true
