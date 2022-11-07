@@ -86,3 +86,36 @@ class DoublyLinkedList {
 		return originalTail;
 	}
 }
+
+// All Test Cases Return true
+let popTests = new DoublyLinkedList();
+
+// Pop an empty DLL returns undefined
+console.log(popTests.pop() == undefined);
+
+// Push the value 1 into the empty DLL
+console.log(popTests.push("1"));
+console.log(popTests);
+console.log(popTests.head.val == 1);
+console.log(popTests.tail.val == 1);
+
+// Pop the tail and verify that it returns 1, head and tail are null and length is 0
+console.log(popTests.pop().val == 1);
+console.log(popTests.head === null);
+console.log(popTests.tail === null);
+console.log(popTests.length === 0);
+
+// Push values 1 and then 2 into the DLL
+console.log(popTests.push("1"));
+console.log(popTests.push("2"));
+console.log(popTests.head.val == 1);
+console.log(popTests.tail.val == 2);
+console.log(popTests.tail.next == null);
+console.log(popTests.tail.prev.val == 1);
+console.log(popTests.head.next.val == 2);
+
+// Pop off the tail, verify it returns 2, verify both head and tail value is 1 and length is 1
+console.log(popTests.pop().val == 2);
+console.log(popTests.head.val == 1);
+console.log(popTests.tail.val == 1);
+console.log(popTests.length === 1);
