@@ -161,3 +161,35 @@ class DoublyLinkedList {
 		return node;
 	}
 }
+
+// All test cases return true
+const getTest = new DoublyLinkedList();
+
+// Calling get with negative, zero and positive indices in an empty DLL returns null
+console.log(getTest.get(-1) === null);
+console.log(getTest.get(-10) === null);
+console.log(getTest.get(0) === null);
+console.log(getTest.get(1) === null);
+console.log(getTest.get(10) === null);
+
+// Push the numbers 1 through 5 into the DLL
+getTest.push(1);
+getTest.push(2);
+getTest.push(3);
+getTest.push(4);
+getTest.push(5);
+
+// Call get on indices 0 to 4 returns true
+console.log(getTest.get(0).val === 1);
+console.log(getTest.get(1).val === 2);
+console.log(getTest.get(2).val === 3);
+console.log(getTest.get(3).val === 4);
+console.log(getTest.get(4).val === 5);
+
+// Call get with out of range indices returns null
+console.log(getTest.get(5) === null);
+console.log(getTest.get(6) === null);
+console.log(getTest.get(10) === null);
+console.log(getTest.get(-1) === null);
+console.log(getTest.get(-2) === null);
+console.log(getTest.get(-10) === null);
