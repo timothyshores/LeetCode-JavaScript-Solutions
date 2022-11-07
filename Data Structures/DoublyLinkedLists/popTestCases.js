@@ -65,7 +65,7 @@ class DoublyLinkedList {
 	/**
 	 * Remove the tail node from the DLL
 	 *
-	 * @return The value in the removed tail node
+	 * @return The removed tail node
 	 */
 	pop() {
 		// If DLL is empty return undefined

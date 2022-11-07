@@ -61,4 +61,28 @@ class DoublyLinkedList {
 		this.length++;
 		return this;
 	}
+
+	/**
+	 * Remove the tail node from the DLL
+	 *
+	 * @return The removed tail node
+	 */
+	pop() {
+		// If DLL is empty return undefined
+		if (this.isEmpty()) return undefined;
+
+		const originalTail = this.tail;
+
+		if (this.hasOneNode()) {
+			this.head = null;
+			this.tail = null;
+		} else {
+			this.tail = originalTail.prev;
+			this.tail.next = null;
+			originalTail.prev = null;
+		}
+
+		this.length--;
+		return originalTail;
+	}
 }
