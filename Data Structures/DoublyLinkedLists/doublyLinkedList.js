@@ -130,4 +130,34 @@ class DoublyLinkedList {
 		this.length++;
 		return this;
 	}
+
+	/**
+	 * Return the value of the node at the given index
+	 *
+	 * @param {any} index of the node in the DLL
+	 * @return The node at the given index in the DLL
+	 */
+	get(index) {
+		if (index < 0 || index >= this.length) return null;
+
+		let node;
+
+		if (index <= this.length / 2) {
+			node = this.head;
+
+			for (let i = 0; i < index; i++) {
+				node = node.next;
+			}
+		}
+
+		if (index > this.length / 2) {
+			node = this.tail;
+
+			for (let i = this.length - 1; i > index; i--) {
+				node = node.prev;
+			}
+		}
+
+		return node;
+	}
 }
