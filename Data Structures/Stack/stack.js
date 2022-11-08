@@ -46,3 +46,16 @@ class Stack {
 		return firstNode.value;
 	}
 }
+
+// All test cases return true
+const stack = new Stack();
+
+console.log(stack.push(1) === 1);
+console.log(stack.push(2) === 2);
+console.log(stack.push(3) === 3);
+
+console.log(stack.first.value === 3); // true
+console.log(stack.first.next.value === 2); // true
+console.log(stack.first.next.next.value === 1); // true
+console.log(stack.last.value === 1); // true
+console.log(stack.size === 3); // true
