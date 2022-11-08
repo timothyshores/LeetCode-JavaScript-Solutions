@@ -187,7 +187,9 @@ class DoublyLinkedList {
 	 * @return The node at the given index in the DLL
 	 */
 	insert(index, value) {
-		if (this.isEmpty() || index == this.length) {
+		if (index < 0 || index > this.length) {
+			return false;
+		} else if (index === this.length) {
 			// If DLL is empty set newNode as head and tail
 			this.push(value);
 		} else if (index === 0) {
