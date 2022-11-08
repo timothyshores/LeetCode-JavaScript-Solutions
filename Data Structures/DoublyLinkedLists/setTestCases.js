@@ -179,3 +179,33 @@ class DoublyLinkedList {
 		return false;
 	}
 }
+
+// All test cases return true
+const setTest = new DoublyLinkedList();
+
+// Set nodes that don't exist return false
+console.log(setTest.set(0, 1) === false); // true
+console.log(setTest.set(-1, 1) === false); // true
+console.log(setTest.set(1, 1) === false); // true
+
+setTest.push(1);
+console.log(setTest.head.val === 1); // true
+console.log(setTest.tail.val === 1); // true
+
+console.log(setTest.set(0, 0)); // true
+console.log(setTest.head.val === 0); // true
+console.log(setTest.tail.val === 0); // true
+
+console.log(setTest.set(0, 2)); // true
+console.log(setTest.head.val === 2); // true
+console.log(setTest.tail.val === 2); // true
+
+setTest.push(2);
+setTest.push(3);
+console.log(setTest.tail.val === 3); // true
+console.log(setTest.head.next.val === 2); // true
+
+console.log(setTest.set(2, 2)); // true
+console.log(setTest.tail.val === 2); // true
+console.log(setTest.set(1, 1)); // true
+console.log(setTest.head.next.val === 1); // true
