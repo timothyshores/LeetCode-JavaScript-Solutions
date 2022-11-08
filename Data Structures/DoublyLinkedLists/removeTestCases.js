@@ -187,7 +187,9 @@ class DoublyLinkedList {
 	 * @return The node at the given index in the DLL
 	 */
 	insert(index, value) {
-		if (this.isEmpty() || index == this.length) {
+		if (index < 0 || index > this.length) {
+			return false;
+		} else if (index === this.length) {
 			// If DLL is empty set newNode as head and tail
 			this.push(value);
 		} else if (index === 0) {
@@ -216,5 +218,42 @@ class DoublyLinkedList {
 		}
 
 		return this;
+	}
+
+	/**
+	 * Remove a node and at a given index
+	 *
+	 * @param {any} index of the node in the DLL to be removed
+	 * @return the removed node
+	 */
+	remove(index) {
+		if (index < 0 || index >= this.length) {
+			return false;
+		} else if (index === this.length - 1) {
+			// Call pop to remove the tail node
+			return this.pop();
+		} else if (index === 0) {
+			// Call pop method to remove the head node
+			return this.shift();
+		} else {
+			// Get the previous node before the node to be removed, node to be removed and the next node
+			let prevNode = this.get(index - 1);
+			let nodeToBeRemoved = prevNode.next;
+			let nextNode = nodeToBeRemoved.next;
+
+			// Set next and previous of the node to be removed to null
+			nodeToBeRemoved.prev = null;
+			nodeToBeRemoved.next = null;
+
+			// Connect the previous node's .next to the next node after the node to be delete
+			prevNode.next = nextNode;
+
+			// Connect the next node's .prev to the previous node before the node to be deleted
+			nextNode.prev = prevNode;
+
+			// Decrement the length and return the deleted node
+			this.length--;
+			return nodeToBeRemoved;
+		}
 	}
 }
