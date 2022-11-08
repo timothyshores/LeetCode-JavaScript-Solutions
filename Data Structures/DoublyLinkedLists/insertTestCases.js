@@ -187,7 +187,9 @@ class DoublyLinkedList {
 	 * @return The node at the given index in the DLL
 	 */
 	insert(index, value) {
-		if (this.isEmpty() || index == this.length) {
+		if (index < 0 || index > this.length) {
+			return false;
+		} else if (index === this.length) {
 			// If DLL is empty set newNode as head and tail
 			this.push(value);
 		} else if (index === 0) {
@@ -200,7 +202,7 @@ class DoublyLinkedList {
 			// Need to get the previous node at the current index
 			let prevNode = this.get(index - 1);
 			// Also need to get the next node at the current index
-			let nextNode = this.get(index);
+			let nextNode = prevNode.next;
 
 			// Set the previous node's .next to the new node
 			prevNode.next = newNode;
@@ -221,6 +223,15 @@ class DoublyLinkedList {
 
 // All test cases return true
 const insertTest = new DoublyLinkedList();
+
+// Call insert on negative indices or indices greater than the length of the DLL returns false
+console.log(insertTest.insert(-1, 1) === false); // true
+console.log(insertTest.insert(-2, 1) === false); // true
+console.log(insertTest.insert(-10, 1) === false); // true
+console.log(insertTest.insert(1, 1) === false); // true
+console.log(insertTest.insert(2, 1) === false); // true
+console.log(insertTest.insert(10, 1) === false); // true
+console.log(insertTest.insert(100, 1) === false); // true
 
 // Create new head node with value 1
 console.log(insertTest.insert(0, 1));

@@ -200,7 +200,7 @@ class DoublyLinkedList {
 			// Need to get the previous node at the current index
 			let prevNode = this.get(index - 1);
 			// Also need to get the next node at the current index
-			let nextNode = this.get(index);
+			let nextNode = prevNode.next;
 
 			// Set the previous node's .next to the new node
 			prevNode.next = newNode;
