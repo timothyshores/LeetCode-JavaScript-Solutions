@@ -59,3 +59,21 @@ console.log(stack.first.next.value === 2); // true
 console.log(stack.first.next.next.value === 1); // true
 console.log(stack.last.value === 1); // true
 console.log(stack.size === 3); // true
+
+console.log(stack.pop() === 3); // true
+console.log(stack.pop() === 2); // true
+console.log(stack.pop() === 1); // true
+
+console.log(stack.push("a") === 1);
+console.log(stack.push("b") === 2);
+console.log(stack.push("c") === 3);
+
+console.log(stack.first.value === "c"); // true
+console.log(stack.first.next.value === "b"); // true
+console.log(stack.first.next.next.value === "a"); // true
+console.log(stack.last.value === "a"); // true
+console.log(stack.size === 3); // true
+
+console.log(stack.pop() === "c"); // true
+console.log(stack.pop() === "b"); // true
+console.log(stack.pop() === "a"); // true
