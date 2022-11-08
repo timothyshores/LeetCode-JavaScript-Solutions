@@ -257,3 +257,47 @@ class DoublyLinkedList {
 		}
 	}
 }
+
+// All test cases return true
+const removeTest = new DoublyLinkedList();
+
+// Call remove on a node that does not exist in the DLL returns false
+console.log(removeTest.remove(0) === false); // true
+console.log(removeTest.remove(1) === false); // true
+console.log(removeTest.remove(-1) === false); // true
+console.log(removeTest.remove(5) === false); // true
+console.log(removeTest.remove(-5) === false); // true
+console.log(removeTest.remove(10) === false); // true
+console.log(removeTest.remove(-10) === false); // true
+
+// Push 1 to the empty DLL and then remove it and check that it returns 1 with length 0
+console.log(removeTest.push(1));
+console.log(removeTest.remove(0).val === 1); // true
+console.log(removeTest.length === 0); // true
+
+// Push 1 then 2 to the empty DLL and then remove the tail
+console.log(removeTest.push(1));
+console.log(removeTest.push(2));
+console.log(removeTest.remove(1).val === 2); // true
+console.log(removeTest.head.val === 1); // true
+console.log(removeTest.tail.val === 1); // true
+console.log(removeTest.head.prev === null); // true
+console.log(removeTest.head.next === null); // true
+console.log(removeTest.tail.next === null); // true
+console.log(removeTest.tail.prev === null); // true
+console.log(removeTest.length === 1); // true
+
+// Push 2 and then 3 then remove the middle node
+console.log(removeTest.push(2));
+console.log(removeTest.push(3));
+console.log(removeTest.head.val === 1); // true
+console.log(removeTest.tail.val === 3); // true
+console.log(removeTest.head.next.val === 2); // true
+console.log(removeTest.tail.prev.val === 2); // true
+console.log(removeTest.tail.prev.prev.val === 1); // true
+console.log(removeTest.head.next.next.val === 3); // true
+console.log(removeTest.remove(1).val === 2); // true
+console.log(removeTest.head.val === 1); // true
+console.log(removeTest.tail.val === 3); // true
+console.log(removeTest.head.next.val === 3); // true
+console.log(removeTest.tail.prev.val === 1); // true
