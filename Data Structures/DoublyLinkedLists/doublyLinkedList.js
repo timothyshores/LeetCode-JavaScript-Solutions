@@ -160,4 +160,22 @@ class DoublyLinkedList {
 
 		return node;
 	}
+
+	/**
+	 * Updates the value of the node at the given index
+	 *
+	 * @param {any} index of the node in the DLL
+	 * @param {any} value to be set in the given node
+	 * @return The node at the given index in the DLL
+	 */
+	set(index, value) {
+		let nodeAtIndex = this.get(index);
+
+		if (nodeAtIndex) {
+			nodeAtIndex.val = value;
+			return true;
+		}
+
+		return false;
+	}
 }
