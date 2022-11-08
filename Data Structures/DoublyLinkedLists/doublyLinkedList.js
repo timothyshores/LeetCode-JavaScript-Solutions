@@ -178,4 +178,43 @@ class DoublyLinkedList {
 
 		return false;
 	}
+
+	/**
+	 * Create a new node and insert it at the given index
+	 *
+	 * @param {any} index of the node in the DLL
+	 * @param {any} value to be set in the given node
+	 * @return The node at the given index in the DLL
+	 */
+	insert(index, value) {
+		if (this.isEmpty() || index == this.length) {
+			// If DLL is empty set newNode as head and tail
+			this.push(value);
+		} else if (index === 0) {
+			// If index is 0 use unshift to add new head node
+			this.unshift(value);
+		} else {
+			// Create new node with the value passed into the method
+			const newNode = new Node(value);
+
+			// Need to get the previous node at the current index
+			let prevNode = this.get(index - 1);
+			// Also need to get the next node at the current index
+			let nextNode = this.get(index);
+
+			// Set the previous node's .next to the new node
+			prevNode.next = newNode;
+			// Set the new node's .prev to the previous node
+			newNode.prev = prevNode;
+
+			// Set the next node's .prev to the new node
+			nextNode.prev = newNode;
+			// Set the new node's .next to the next node
+			newNode.next = nextNode;
+
+			this.length++;
+		}
+
+		return this;
+	}
 }

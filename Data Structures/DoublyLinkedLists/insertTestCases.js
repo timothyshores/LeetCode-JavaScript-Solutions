@@ -190,7 +190,7 @@ class DoublyLinkedList {
 		if (this.isEmpty() || index == this.length) {
 			// If DLL is empty set newNode as head and tail
 			this.push(value);
-		} else if (index == 0) {
+		} else if (index === 0) {
 			// If index is 0 use unshift to add new head node
 			this.unshift(value);
 		} else {
@@ -224,8 +224,8 @@ const insertTest = new DoublyLinkedList();
 
 // Create new head node with value 1
 console.log(insertTest.insert(0, 1));
-console.log(insertTest.head.val == 1); // true
 console.log(insertTest.length === 1); // true
+console.log(insertTest.head.val == 1); // true
 
 // Create new head node with value 0
 // 0 <-> 1
@@ -261,13 +261,13 @@ console.log(insertTest.length === 4); // true
 // Create node with value 5 after the head node
 // 0 <-> 100 <-> 1  <-> 5 <-> 2
 console.log(insertTest.insert(3, 5));
-console.log(insertTest.head.val === 0);
-console.log(insertTest.head.next.val === 100);
-console.log(insertTest.head.next.next.val === 1);
-console.log(insertTest.head.next.next.next.val === 5);
-console.log(insertTest.head.next.next.next.next.val === 2);
-console.log(insertTest.tail.prev.prev.prev.prev.val === 0);
-console.log(insertTest.tail.prev.prev.prev.val === 100);
-console.log(insertTest.tail.prev.prev.val === 1);
-console.log(insertTest.tail.prev.val === 5);
-console.log(insertTest.tail.val === 2);
+console.log(insertTest.head.val === 0); // true
+console.log(insertTest.head.next.val === 100); // true
+console.log(insertTest.head.next.next.val === 1); // true
+console.log(insertTest.head.next.next.next.val === 5); // true
+console.log(insertTest.head.next.next.next.next.val === 2); // true
+console.log(insertTest.tail.prev.prev.prev.prev.val === 0); // true
+console.log(insertTest.tail.prev.prev.prev.val === 100); // true
+console.log(insertTest.tail.prev.prev.val === 1); // true
+console.log(insertTest.tail.prev.val === 5); // true
+console.log(insertTest.tail.val === 2); // true
