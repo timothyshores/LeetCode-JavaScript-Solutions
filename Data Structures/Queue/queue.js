@@ -69,3 +69,22 @@ console.log(queue.enqueue(3) === 3); // true
 console.log(queue.first.next.next.value === 3); // true
 console.log(queue.last.value === 3); // true
 console.log(queue.size === 3); // true
+
+console.log(queue.dequeue() === 1); // true
+console.log(queue.first.next.value === 3); // true
+console.log(queue.first.value === 2); // true
+console.log(queue.last.value === 3); // true
+console.log(queue.size === 2); // true
+
+console.log(queue.dequeue() === 2); // true
+console.log(queue.first === queue.last); // true
+console.log(queue.first.value === 3); // true
+console.log(queue.last.value === 3); // true
+console.log(queue.size === 1); // true
+console.log(queue.hasOneNode()); // true
+
+console.log(queue.dequeue() === 3); // true
+console.log(queue.first === null); // true
+console.log(queue.last === null); // true
+console.log(queue.size === 0); // true
+console.log(queue.isEmpty()); // true
