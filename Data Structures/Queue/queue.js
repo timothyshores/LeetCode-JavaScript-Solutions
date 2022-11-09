@@ -29,3 +29,25 @@ class Queue {
 		return ++this.size;
 	}
 }
+
+// All test cases return true
+const queue = new Queue();
+
+console.log(queue.first === null); // true
+console.log(queue.last === null); // true
+console.log(queue.size === 0); // true
+
+console.log(queue.enqueue(1) === 1); // true
+console.log(queue.first.value === 1); // true
+console.log(queue.last.value === 1); // true
+console.log(queue.size === 1); // true
+
+console.log(queue.enqueue(2) === 2); // true
+console.log(queue.first.next.value === 2); // true
+console.log(queue.last.value === 2); // true
+console.log(queue.size === 2); // true
+
+console.log(queue.enqueue(3) === 3); // true
+console.log(queue.first.next.next.value === 3); // true
+console.log(queue.last.value === 3); // true
+console.log(queue.size === 3); // true
