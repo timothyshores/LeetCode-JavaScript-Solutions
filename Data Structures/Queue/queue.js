@@ -28,6 +28,24 @@ class Queue {
 
 		return ++this.size;
 	}
+
+	dequeue() {
+		const fistNodeValue = this.first.value;
+
+		if (this.isEmpty()) {
+			return null;
+		} else if (this.hasOneNode()) {
+			this.first = null;
+			this.last = null;
+		} else {
+			const secondNode = this.first.next;
+			this.first.next = null;
+			this.first = secondNode;
+		}
+
+		this.size--;
+		return fistNodeValue;
+	}
 }
 
 // All test cases return true
