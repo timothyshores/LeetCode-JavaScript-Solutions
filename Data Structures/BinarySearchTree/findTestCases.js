@@ -11,6 +11,12 @@ class BinarySearchTree {
 		this.root = null;
 	}
 
+	/**
+	 * Insert a node into the BST with the value passed in as a parameter
+	 *
+	 * @param {any} value of the node in the BST
+	 * @return The node inserted into the BST
+	 */
 	insert(value) {
 		let node = new Node(value);
 
@@ -43,6 +49,12 @@ class BinarySearchTree {
 		return this;
 	}
 
+	/**
+	 * Find the node with a given value in the BST
+	 *
+	 * @param {any} value that method is looking for in the BST
+	 * @return Returns node with a given node if value is in the BST else return false
+	 */
 	find(value) {
 		// Start at the root node
 		let currentNode = this.root;
@@ -52,8 +64,8 @@ class BinarySearchTree {
 
 		// If there is a root
 		while (true) {
-			// Compare the value we're look for to the value of the root if the values are equal return true
-			if (value === currentNode.value) return true;
+			// Compare the value we're look for to the value of the root if the values are equal return currentNode
+			if (value === currentNode.value) return currentNode;
 
 			// If the value we're looking for is greater than value of the root
 			if (value > currentNode.value) {
@@ -133,10 +145,10 @@ console.log(bst.find(29)); // true;
 // Insert 50 as the left child of 65
 //          41
 //         /   \
-//       /      \
-//     20        65
-//    /  \      /
-//  11    29  50
+//       /       \
+//     20         65
+//    /  \       /
+//  11    29   50
 
 bst.insert(50);
 console.log(bst.find(50)); // true;
@@ -144,10 +156,10 @@ console.log(bst.find(50)); // true;
 // Insert 91 as the left child of 65
 //          41
 //         /   \
-//       /      \
-//     20        65
-//    /  \      /  \
-//  11    29  50    91
+//       /       \
+//     20         65
+//    /  \       /  \
+//  11    29   50    91
 
 bst.insert(91);
 console.log(bst.find(91)); // true;
