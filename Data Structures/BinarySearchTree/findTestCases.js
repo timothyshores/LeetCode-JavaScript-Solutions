@@ -42,4 +42,26 @@ class BinarySearchTree {
 
 		return this;
 	}
+
+    find(value) {
+
+    // Start at the root
+    // Check if there's a root
+        // If there's no root then the search is completed
+        // If there is a root
+            // Compare the value we're look for to the value of the root
+                // If the values are equal
+                    // Return the root node
+                // If the values are NOT equal
+                    // Compare the value we're searching for to the value of the root
+                        // If the value we're looking for is greater than value of the root
+                            // Check if the root has a right child node
+                                // If the right child node exists then we rinse and repeat
+                                // If the right child node does NOT exist then end the search
+                        // If the value we're looking for is less than value of the root
+                                // Check if the root has a left child node
+                                // If the left child node exists then we rinse and repeat
+                                // If the left child node does NOT exist then end the search
+        
+    }
 }
