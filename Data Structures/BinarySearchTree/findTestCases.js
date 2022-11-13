@@ -11,6 +11,12 @@ class BinarySearchTree {
 		this.root = null;
 	}
 
+	/**
+	 * Insert a node into the BST with the value passed in as a parameter
+	 *
+	 * @param {any} value of the node in the BST
+	 * @return The node inserted into the BST
+	 */
 	insert(value) {
 		let node = new Node(value);
 
@@ -43,6 +49,12 @@ class BinarySearchTree {
 		return this;
 	}
 
+	/**
+	 * Search for a value in the BST
+	 *
+	 * @param {any} value that method is looking for in the BST
+	 * @return Returns true if a node with a specific value is in the BST else returns false
+	 */
 	find(value) {
 		// Start at the root node
 		let currentNode = this.root;
