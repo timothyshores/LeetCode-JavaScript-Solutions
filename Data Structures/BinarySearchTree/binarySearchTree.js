@@ -28,12 +28,14 @@ class BinarySearchTree {
 						currentNode.right = node;
 						break;
 					}
-				} else {
+				} else if (value < currentNode.value) {
 					if (currentNode.left) currentNode = currentNode.left;
 					else {
 						currentNode.left = node;
 						break;
 					}
+				} else {
+					return undefined;
 				}
 			}
 		}

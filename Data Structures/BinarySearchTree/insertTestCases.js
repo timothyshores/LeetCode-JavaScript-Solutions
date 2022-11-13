@@ -28,12 +28,14 @@ class BinarySearchTree {
 						currentNode.right = node;
 						break;
 					}
-				} else {
+				} else if (value < currentNode.value) {
 					if (currentNode.left) currentNode = currentNode.left;
 					else {
 						currentNode.left = node;
 						break;
 					}
+				} else {
+					return undefined;
 				}
 			}
 		}
@@ -45,8 +47,14 @@ class BinarySearchTree {
 // Initialize and instantiate new binary search tree called bst
 const bst = new BinarySearchTree();
 
-// Insert 2 and verify that the root is 2 and has no left nor right children
+// Insert 2 and verify that the root is 2 with no child nodes
 bst.insert(2);
+console.log(bst.root.value === 2); // true
+console.log(bst.root.left === null); // true
+console.log(bst.root.right === null); // true
+
+// Insert 2 again returns undefined and 2 is still the root node with no child nodes
+console.log(bst.insert(2) === undefined); // true
 console.log(bst.root.value === 2); // true
 console.log(bst.root.left === null); // true
 console.log(bst.root.right === null); // true
