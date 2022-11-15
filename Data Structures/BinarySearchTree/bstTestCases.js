@@ -130,3 +130,47 @@ class BinarySearchTree {
 		return visitedNodes;
 	}
 }
+
+const tree = new BinarySearchTree();
+
+tree.insert(10);
+
+//       10
+
+tree.insert(6);
+
+//       10
+//      /
+//     6
+
+tree.insert(15);
+
+//       10
+//      /  \
+//     6    15
+
+tree.insert(3);
+
+//       10
+//      /  \
+//     6    15
+//    /
+//   3
+
+tree.insert(8);
+
+//       10
+//      /  \
+//     6    15
+//    / \
+//   3   8
+
+tree.insert(20);
+
+//       10
+//      /  \
+//     6    15
+//    / \     \
+//   3   8    20
+
+console.log(tree.breadthFirstSearch()); // [10, 6, 15, 3, 8, 20]
