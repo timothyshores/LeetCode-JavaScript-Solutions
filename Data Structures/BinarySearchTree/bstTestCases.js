@@ -92,4 +92,41 @@ class BinarySearchTree {
 			}
 		}
 	}
+
+	/**
+	 * Traverse the BST using breadth first search algorithm
+	 *
+	 * @return Returns an array in breadth first search order
+	 */
+	breadthFirstSearch() {
+		// Create a helper queue for nodes to be visited
+		const unvisitedNodes = [];
+
+		// Create a pointer and set to the root node
+		let currentNode = this.root;
+
+		// Add the root to the helper queue
+		unvisitedNodes.push(currentNode);
+
+		// Create another queue for nodes that have been visited in the BSF
+		const visitedNodes = [];
+
+		// Start a loop that keeps going until the helper queue is empty
+		while (unvisitedNodes?.length) {
+			// Dequeue the front head node from the queue and update pointer variable
+			currentNode = unvisitedNodes.shift();
+
+			// Push the value of that node into the other queue that keeps track of the visited nows
+			visitedNodes.push(currentNode.value);
+
+			// If there's a left properly on the current node then add it to the queue
+			if (currentNode.left) unvisitedNodes.push(currentNode.left);
+
+			// If there's a right properly on the current node then add it to the queue
+			if (currentNode.right) unvisitedNodes.push(currentNode.right);
+		}
+
+		// Return the final array
+		return visitedNodes;
+	}
 }
