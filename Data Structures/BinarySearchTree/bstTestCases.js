@@ -50,7 +50,7 @@ class BinarySearchTree {
 	}
 
 	/**
-	 * Find the node with a given value in the BST 
+	 * Find the node with a given value in the BST
 	 *
 	 * @param {any} value that method is looking for in the BST
 	 * @return Returns node with a given node if value is in the BST else return false
@@ -78,6 +78,7 @@ class BinarySearchTree {
 					return false;
 				}
 			}
+
 			// If the value we're looking for is less than value of the root
 			if (value < currentNode.value) {
 				// Check if the root has a left child node
