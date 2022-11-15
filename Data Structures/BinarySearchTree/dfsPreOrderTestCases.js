@@ -129,4 +129,31 @@ class BinarySearchTree {
 		// Return the final array
 		return visitedNodes;
 	}
+
+	/**
+	 * Traverse the BST using depth first search preorder
+	 *
+	 * @return Returns an array in depth first search preorder
+	 */
+	dfsPreorder() {
+		// Create variable to keep track of the visited nodes
+		const visited = [];
+
+		// Create recursive helper function that takes in a node as an input
+		const traverse = (node) => {
+			// Add the node to the list our visited notes
+			visited.push(node.value);
+
+			// If there's a left child node call the helper function
+			if (node.left) traverse(node.left);
+
+			// If there's a right child node call the helper function
+			if (node.right) traverse(node.right);
+		};
+
+		// Call helper function with the root node
+		traverse(this.root);
+
+		return visited;
+	}
 }
