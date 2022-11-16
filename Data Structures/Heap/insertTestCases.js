@@ -36,3 +36,16 @@ class MaxBinaryHeap {
 		return val;
 	}
 }
+
+const heap = new MaxBinaryHeap();
+
+console.log(heap.insert(41)); // [41]
+console.log(heap.insert(39)); // [41, 39]
+console.log(heap.insert(33)); // [41, 39, 33]
+console.log(heap.insert(18)); // [41, 39, 33, 18]
+console.log(heap.insert(27)); // [41, 39, 33, 18, 27]
+console.log(heap.insert(12)); // [41, 39, 33, 18, 27, 12]
+console.log(heap.insert(55)); // [55, 39, 41, 18, 27, 12, 33]
+console.log(heap.insert(1)); // [55, 39, 41, 18, 27, 12, 33, 1]
+console.log(heap.insert(45)); // [55, 45, 41, 39, 27, 12, 33, 1, 18]
+console.log(heap.insert(199)); // [199, 55, 41, 39, 45, 12, 33, 1, 18, 27]
