@@ -37,3 +37,13 @@ class MaxBinaryHeap {
 		return this.values;
 	}
 }
+
+const heap = new MaxBinaryHeap();
+
+console.log(heap.insert(41)); // [41]
+console.log(heap.insert(39)); // [41, 39]
+console.log(heap.insert(33)); // [41, 39, 33]
+console.log(heap.insert(18)); // [41, 39, 33, 18]
+console.log(heap.insert(27)); // [41, 39, 33, 18, 27]
+console.log(heap.insert(12)); // [41, 39, 33, 18, 27, 12]
+console.log(heap.insert(55)); // [55, 39, 41, 18, 27, 12, 33]
