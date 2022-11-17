@@ -21,7 +21,7 @@ class MaxBinaryHeap {
 		// If parent node's value is less than the newly inserted value then bubble up
 		while (parentNodeValue < insertedValue) {
 			// Swap parent and child nodes in values array
-			[val[childIndex], val[parentIndex]] = [val[parentIndex], val[childIndex]];
+			this.swap(childIndex, parentIndex);
 
 			// Update child node to the current parent node index
 			childIndex = parentIndex;
@@ -36,13 +36,25 @@ class MaxBinaryHeap {
 		return val;
 	}
 
+	swap(index1, index2) {
+		[
+			([this.values[index1], this.values[index2]] = [
+				this.values[index2],
+				this.values[index1],
+			]),
+		];
+	}
+
 	extractMax() {
+		// Add variable val for better readability than this.values
 		const val = this.values;
 
-		let lastIndex = val.length - 1;
+		// Handle edge cases where this.values is either empty or one element
+		if (val.length === 0) return;
+		if (val.length === 1) return val.pop();
 
 		// Swap the first and last element in this.values;
-		[([val[0], val[lastIndex]] = [val[lastIndex], val[0]])];
+		this.swap(0, val.length - 1);
 
 		// Call .pop() on this.values to return the last element or the node with the largest value in the BMH
 		const maxValue = this.values.pop();
@@ -83,28 +95,27 @@ class MaxBinaryHeap {
 			// If the left child's value is greater than the parent value and the right child value
 			if (leftChildValue > parentValue && leftChildValue > rightChildValue) {
 				// Swap parent node with left child node and update parent index
-				val[parentIndex] = leftChildValue;
-				val[leftChildIndex] = parentValue;
+				this.swap(parentIndex, leftChildIndex);
 				parentIndex = leftChildIndex;
 			}
 			// If the right child's value is greater than the parent value and the left child value
 			if (rightChildValue > parentValue && rightChildValue > leftChildValue) {
 				// Swap parent node with right child node and update parent index
-				val[parentIndex] = rightChildValue;
-				val[rightChildIndex] = parentValue;
+				this.swap(parentIndex, rightChildIndex);
 				parentIndex = rightChildIndex;
 			}
 
+			// Recalculate new left and right child indexes by calling the approbate helper function
 			leftChildIndex = getLeftChildIndex(parentIndex);
 			rightChildIndex = getRightChildIndex(parentIndex);
 
+			// Set new left and right child values
 			leftChildValue = val[leftChildIndex];
 			rightChildValue = val[rightChildIndex];
 
+			// Set largest child by calling getLargestChildValue helper function
 			largestChildValue = getLargestChildValue();
 		}
-
-		console.log(val);
 
 		// Return the root
 		return maxValue;
@@ -119,5 +130,11 @@ console.log(heap.insert(33)); // [41, 39, 33]
 console.log(heap.insert(18)); // [41, 39, 33, 18]
 console.log(heap.insert(27)); // [41, 39, 33, 18, 27]
 console.log(heap.insert(12)); // [41, 39, 33, 18, 27, 12]
+console.log(heap.insert(55)); // [55, 39, 41, 18, 27, 12, 33]
 
+console.log(heap.extractMax()); // 55
 console.log(heap.extractMax()); // 41
+console.log(heap.extractMax()); // 39
+console.log(heap.extractMax()); // 33
+console.log(heap.extractMax()); // 27
+console.log(heap.extractMax()); // 27
