@@ -4,6 +4,7 @@ class MaxBinaryHeap {
 	}
 
 	insert(insertedValue) {
+		// Add variable val for better readability than this.values
 		const val = this.values;
 
 		// Push value to the end of values array
