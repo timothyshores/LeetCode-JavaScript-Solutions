@@ -175,3 +175,56 @@ class PriorityQueue {
 	}
 }
 
+// All test cases return true
+
+const pq = new PriorityQueue();
+
+console.log(pq.dequeue() === undefined); // true
+
+pq.enqueue("First", 3);
+
+let { value: v1, priority: p1 } = pq.dequeue();
+
+console.log(v1 === "First"); // true
+console.log(p1 === 3); // true
+
+pq.enqueue("First", 3);
+pq.enqueue("Second", 2);
+
+let { value: v2, priority: p2 } = pq.dequeue();
+
+console.log(v2 === "Second"); // true
+console.log(p2 === 2); // true
+
+pq.enqueue("Second", 2);
+pq.enqueue("Third", 1);
+
+let { value: v3, priority: p3 } = pq.dequeue();
+
+console.log(v3 === "Third"); // true
+console.log(p3 === 1); // true
+
+pq.enqueue("Third", 1);
+pq.enqueue("Fourth", 0);
+
+let { value: v4, priority: p4 } = pq.dequeue();
+
+console.log(v4 === "Fourth"); // true
+console.log(p4 === 0); // true
+
+let { value: v5, priority: p5 } = pq.dequeue();
+
+console.log(v5 === "Third"); // true
+console.log(p5 === 1); // true
+
+let { value: v6, priority: p6 } = pq.dequeue();
+
+console.log(v6 === "Second"); // true
+console.log(p6 === 2); // true
+
+let { value: v7, priority: p7 } = pq.dequeue();
+
+console.log(v7 === "First"); // true
+console.log(p7 === 3); // true
+
+console.log(pq.dequeue() === undefined); // true
