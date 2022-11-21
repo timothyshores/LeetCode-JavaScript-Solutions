@@ -1,0 +1,1 @@
+// Create a function called hash the accepts two arguments. The first argument is a string and the second argument is the length of an array. The function should return an index between 0 and length - 1.
