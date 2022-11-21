@@ -7,13 +7,12 @@ class HashTable {
 		let total = 0;
 
 		for (let i = 0; i < Math.min(key.length, 100); i++) {
-			let char = key[i];
-			let value = char.charCodeAt(0) - 96;
-			total *= 31 + (value % this.keyMap.length);
+			total *= 31 + ((key[i].charCodeAt(0) - 96) % this.keyMap.length);
 		}
 
 		return total;
 	}
+
 	set(key, value) {
 		this.keyMap[this.hash(key)].push([key, value]);
 	}
@@ -22,6 +21,14 @@ class HashTable {
 		let index = this.hash(key);
 		let keyValuePair = this.keyMap[index].find((arr) => arr[0] === key);
 		return this.keyMap[index] && keyValuePair ? keyValuePair[1] : null;
+	}
+
+	keys() {
+		return [...new Set(this.keyMap.flat().map(([key]) => key))];
+	}
+
+	values() {
+		return [...new Set(this.keyMap.flat().map(([, value]) => value))];
 	}
 }
 
@@ -41,3 +48,6 @@ console.log(ht.get("plum")); // #DDA0DD
 console.log(ht.get("plu")); // null
 console.log(ht.get("pl")); // null
 console.log(ht.get("p")); // null
+
+console.log(ht.keys());
+console.log(ht.values());
