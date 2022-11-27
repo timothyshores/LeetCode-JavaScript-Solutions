@@ -5,14 +5,14 @@ LeetCode Profile: https://leetcode.com/timothyshores/
 
 | Problem  | Difficulty | Solution |  
 | :-------------- | :-------------- |:---- | 
-|[1. Two Sum.js](https://leetcode.com/problems/two-sum/)|Easy|[JavaScript](1.%20Two%20Sum.js)
-|[3. Longest Substring Without Repeating Characters.js](https://leetcode.com/problems/longest-substring-without-repeating-characters/)|Medium|[JavaScript](3.%20Longest%20Substring%20Without%20Repeating%20Characters.js)
-|[121. Best Time to Buy and Sell Stock.js](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)|Easy|[JavaScript](121.%20Best%20Time%20to%20Buy%20and%20Sell Stock.js)
+|[1. Two Sum](https://leetcode.com/problems/two-sum/)|Easy|[JavaScript](1.%20Two%20Sum.js)
+|[3. Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/)|Medium|[JavaScript](3.%20Longest%20Substring%20Without%20Repeating%20Characters.js)
+|[121. Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)|Easy|[JavaScript](121.%20Best%20Time%20to%20Buy%20and%20Sell Stock.js)
 |[217. Contains Duplicate](https://leetcode.com/problems/contains-duplicate/)|Easy|[JavaScript](217.%20Contains%20Duplicate.js)
 |[242. Valid Anagram](https://leetcode.com/problems/valid-anagram/)|Easy|[JavaScript](242.%20Valid%20Anagram.js)
-|[287. Find the Duplicate Number.js](https://leetcode.com/problems/find-the-duplicate-number/)|Medium|[JavaScript](287.%20Find%20the%20Duplicate%20Number.js)
+|[287. Find the Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/)|Medium|[JavaScript](287.%20Find%20the%20Duplicate%20Number.js)
 |[771. Jewels And Stones](https://leetcode.com/problems/jewels-and-stones/)|Easy|[JavaScript](771.%20Jewels%20And%20Stones.js) 
-|[896. Monotonic Array.js](https://leetcode.com/problems/monotonic-array/)|Easy|[JavaScript](896.%20Monotonic%20Array.js)
+|[896. Monotonic Array](https://leetcode.com/problems/monotonic-array/)|Easy|[JavaScript](896.%20Monotonic%20Array.js)
 |[938. Range Sum of BST](https://leetcode.com/problems/range-sum-of-bst/)|Medium|[JavaScript](938.%20Range%20Sum%20of%20BST.js) 
 |[1108. Defanging An IP Address](https://leetcode.com/problems/defanging-an-ip-address/)|Easy|[JavaScript](1108.%20Defanging%20An%20IP%20Address.js) 
 |[1207. Unique Number of Occurrences](https://leetcode.com/problems/unique-number-of-occurrences/)|Easy|[JavaScript](1207.%20Unique%20Number%20of%20Occurrences.js)
@@ -23,6 +23,7 @@ LeetCode Profile: https://leetcode.com/timothyshores/
 |[1480. Running Sum of 1d Array](https://leetcode.com/problems/running-sum-of-1d-array/)|Easy|[JavaScript](1480.%20Running%20Sum%20of%201d%20Array.js) 
 |[1512. Number of Good Pairs](https://leetcode.com/problems/number-of-good-pairs/)|Easy|[JavaScript](1512.%20Number%20of%20Good%20Pairs.js) 
 |[1528. Shuffle String](https://leetcode.com/problems/shuffle-string/)|Easy|[JavaScript](1528.%20Shuffle%20String.js) 
+|[1572. Matrix Diagonal Sum](https://leetcode.com/problems/matrix-diagonal-sum/)|Easy|[JavaScript](1572.%20Matrix%20Diagonal%20Sum.js)
 |[1662. Check If Two String Arrays are Equivalent](https://leetcode.com/problems/check-if-two-string-arrays-are-equivalent/)|Easy|[JavaScript](1662.%20Check%20If%20Two%20String%20Arrays%20are%20Equivalent.js) 
 |[1672. Richest Customer Wealth](https://leetcode.com/problems/richest-customer-wealth/)|Easy|[JavaScript](1672.%20Richest%20Customer%20Wealth.js) 
 |[1678. Goal Parser Interpretation](https://leetcode.com/problems/goal-parser-interpretation/)|Easy|[JavaScript](1678.%20Goal%20Parser%20Interpretation.js) 

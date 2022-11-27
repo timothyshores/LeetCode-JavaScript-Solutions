@@ -25,4 +25,17 @@
  * @param {number[][]} mat
  * @return {number}
  */
-const diagonalSum = (matrix) => {};
+const diagonalSum = (matrix) => {
+	let sum = 0;
+
+	for (let i = 0; i < matrix.length; i++) {
+		if (i === matrix.length - 1 - i) {
+			sum += matrix[i][i];
+		} else {
+			sum += matrix[i][i];
+			sum += matrix[i][matrix.length - 1 - i];
+		}
+	}
+
+	return sum;
+};
