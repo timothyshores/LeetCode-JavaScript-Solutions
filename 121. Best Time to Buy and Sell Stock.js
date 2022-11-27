@@ -14,3 +14,21 @@
 // Input: prices = [7,6,4,3,1]
 // Output: 0
 // Explanation: In this case, no transactions are done and the max profit = 0.
+
+/**
+ * @param {number[]} prices
+ * @return {number}
+ */
+const maxProfit = (prices) => {
+	if (prices.length < 2) return 0;
+
+	let maxProfit = 0;
+	let currentMin = Infinity;
+
+	for (currentPrice of prices) {
+		currentMin = Math.min(currentMin, currentPrice);
+		maxProfit = Math.max(maxProfit, currentPrice - currentMin);
+	}
+
+	return maxProfit > 0 ? maxProfit : 0;
+};
