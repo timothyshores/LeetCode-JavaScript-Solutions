@@ -7,7 +7,9 @@ LeetCode Profile: https://leetcode.com/timothyshores/
 | :-------------- | :-------------- |:---- | 
 |[1. Two Sum](https://leetcode.com/problems/two-sum/)|Easy|[JavaScript](1.%20Two%20Sum.js)
 |[3. Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/)|Medium|[JavaScript](3.%20Longest%20Substring%20Without%20Repeating%20Characters.js)
-|[121. Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)|Easy|[JavaScript](121.%20Best%20Time%20to%20Buy%20and%20Sell Stock.js)
+|[121. Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)|Easy|[JavaScript](121.%20Best%20Time%20to%20Buy%20and%20Sell%20Stock.js)
+|[125. Valid Palindrome](https://leetcode.com/problems/valid-palindrome/)|Easy|[JavaScript](125.%20Valid Palindrome.js)
+|[136. Single Number](https://leetcode.com/problems/single-number/)|Easy|[JavaScript](136.%2Single%2Number.js)
 |[217. Contains Duplicate](https://leetcode.com/problems/contains-duplicate/)|Easy|[JavaScript](217.%20Contains%20Duplicate.js)
 |[242. Valid Anagram](https://leetcode.com/problems/valid-anagram/)|Easy|[JavaScript](242.%20Valid%20Anagram.js)
 |[287. Find the Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/)|Medium|[JavaScript](287.%20Find%20the%20Duplicate%20Number.js)
