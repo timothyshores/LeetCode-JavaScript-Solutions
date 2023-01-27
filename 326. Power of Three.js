@@ -26,4 +26,8 @@ Constraints: -231 <= n <= 231 - 1
  * @param {number} n
  * @return {boolean}
  */
-const isPowerOfThree = (n) => {};
+const isPowerOfThree = (n) => {
+    if (n === 1) return true;
+    if (n < 1) return false;
+    return isPowerOfThree(n / 3);
+};
