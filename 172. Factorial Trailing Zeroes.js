@@ -29,4 +29,12 @@ Follow up: Could you write a solution that works in logarithmic time complexity?
  * @param {number} n
  * @return {number}
  */
-const trailingZeroes = (n) => {};
+const trailingZeroes = (n) => {
+	let numZeroes = 0;
+
+	for (let i = 5; i <= n; i *= 5) {
+		numZeroes += Math.floor(n / i);
+	}
+
+	return numZeroes;
+};
