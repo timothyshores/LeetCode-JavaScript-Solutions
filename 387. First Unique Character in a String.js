@@ -24,4 +24,22 @@ Constraints:
  * @param {string} s
  * @return {number}
  */
-const firstUniqChar = (s) => {};
+const firstUniqChar = (s) => {
+	// Use built in JS object to store character frequency counter
+	const charCount = {};
+
+	// Iterate through each character in string s
+	for (const char of s) {
+		// Set key as the current character and value to it's frequency count in s
+		charCount[char] = (charCount[char] || 0) + 1;
+	}
+
+	// Iterate through each character in string s again
+	for (let i = 0; i < s.length; i++) {
+		// If the current character is unique return the current index
+		if (charCount[s[i]] === 1) return i;
+	}
+
+	// If no characters in s are unique return -1
+	return -1;
+};
