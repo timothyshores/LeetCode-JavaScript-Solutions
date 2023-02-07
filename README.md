@@ -17,6 +17,7 @@ LeetCode Profile: https://leetcode.com/timothyshores/
 |[242. Valid Anagram](https://leetcode.com/problems/valid-anagram/)|Easy|[JavaScript](242.%20Valid%20Anagram.js)
 |[287. Find the Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/)|Medium|[JavaScript](287.%20Find%20the%20Duplicate%20Number.js)
 |[326. Power of Three](https://leetcode.com/problems/power-of-three/)|Easy|[JavaScript](326.%20Power%20of%20Three.js)
+|[345. Reverse Vowels of a String](https://leetcode.com/problems/reverse-vowels-of-a-string/)|Easy|[JavaScript](345.%20Reverse%20Vowels%20of%20a%20String.js)
 |[387. First Unique Character in a String](https://leetcode.com/problems/first-unique-character-in-a-string/)|Easy|[JavaScript](387.%20First%20Unique%20Character%20in%20a%20String.js)
 |[509. Fibonacci Number](https://leetcode.com/problems/fibonacci-number/)|Easy|[JavaScript](509.%20Fibonacci%20Number.js)
 |[771. Jewels And Stones](https://leetcode.com/problems/jewels-and-stones/)|Easy|[JavaScript](771.%20Jewels%20And%20Stones.js)
