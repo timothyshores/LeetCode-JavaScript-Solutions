@@ -16,7 +16,7 @@
 // S and J will consist of letters and have length at most 50.
 // The characters in J are distinct.
 
-var numJewelsInStones = function(J, S) {
+var numJewelsInStonesSolution1 = function(J, S) {
 	let jewels = 0;
 
 	for (const jewel of J) {
@@ -24,4 +24,17 @@ var numJewelsInStones = function(J, S) {
 	}
 
 	return jewels;
+};
+
+/**
+ * @param {string} jewels
+ * @param {string} stones
+ * @return {number}
+ */
+const numJewelsInStonesSolution2 = (jewels, stones) => {
+    // Spread jewels string into an array and convert to a set
+    const jewelsSet = new Set([...jewels])
+
+    // Spread stones string into an array, only keep stones in jewelsSet and return filtered array length 
+    return [...stones].filter(stone => jewelsSet.has(stone)).length;
 };
