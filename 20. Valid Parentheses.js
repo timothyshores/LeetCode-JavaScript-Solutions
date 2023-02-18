@@ -32,4 +32,15 @@ Constraints:
  * @param {string} s
  * @return {boolean}
  */
-const isValid = (s) => {};
+const isValid = (s) => {
+	const stack = [];
+
+	for (const char of s) {
+		if (char === "(" || char === "{" || char === "[") stack.push(char);
+		if (char === ")" && stack.pop() !== "(") return false;
+		if (char === "}" && stack.pop() !== "{") return false;
+		if (char === "]" && stack.pop() !== "[") return false;
+	}
+
+	return stack.length === 0;
+};
