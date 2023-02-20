@@ -39,28 +39,33 @@ Constraints:
 - At most 3 * 104 calls will be made to push, pop, top, and getMin.
 
 */
-var MinStack = function () {};
 
-/**
- * @param {number} val
- * @return {void}
- */
-MinStack.prototype.push = function (val) {};
+class MinStack {
+	constructor() {
+		this.stack = [];
+	}
 
-/**
- * @return {void}
- */
-MinStack.prototype.pop = function () {};
+	push(val) {
+		this.stack.push({
+			value: val,
+			// if stack is empty set min to the first value being pushed into the stack
+			// when stack is NOT empty set new min to either the new value being pushed onto the stack or the previous min which ever is smaller
+			min: this.stack.length === 0 ? val : Math.min(val, this.getMin()),
+		});
+	}
 
-/**
- * @return {number}
- */
-MinStack.prototype.top = function () {};
+	pop() {
+		return this.stack.pop();
+	}
 
-/**
- * @return {number}
- */
-MinStack.prototype.getMin = function () {};
+	top() {
+		return this.stack[this.stack.length - 1].value;
+	}
+
+	getMin() {
+		return this.stack[this.stack.length - 1].min;
+	}
+}
 
 /**
  * Your MinStack object will be instantiated and called as such:
