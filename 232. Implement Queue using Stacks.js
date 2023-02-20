@@ -67,29 +67,46 @@ class Stack {
 	}
 }
 
-var MyQueue = function () {};
+class MyQueue {
+	constructor() {
+		this.stack1 = new Stack();
+		this.stack2 = new Stack();
+	}
 
-/**
- * @param {number} x
- * @return {void}
- */
-MyQueue.prototype.push = function (x) {};
+	push(val) {
+		this.stack1.push(val);
+	}
 
-/**
- * @return {number}
- */
-MyQueue.prototype.pop = function () {};
+	pop() {
+		this._moveFromS1ToS2();
+		const removed = this.stack2.pop();
+		this._resetFromS2ToS1();
+		return removed;
+	}
 
-/**
- * @return {number}
- */
-MyQueue.prototype.peek = function () {};
+	peek() {
+		this._moveFromS1ToS2();
+		const frontElement = this.stack2.peek();
+		this._resetFromS2ToS1();
+		return frontElement;
+	}
 
-/**
- * @return {boolean}
- */
-MyQueue.prototype.empty = function () {};
+	empty() {
+		return this.stack1.isEmpty();
+	}
 
+	_moveFromS1ToS2() {
+		while (!this.stack1.isEmpty()) {
+			this.stack2.push(this.stack1.pop());
+		}
+	}
+
+	_resetFromS2ToS1() {
+		while (!this.stack2.isEmpty()) {
+			this.stack1.push(this.stack2.pop());
+		}
+	}
+}
 /**
  * Your MyQueue object will be instantiated and called as such:
  * var obj = new MyQueue()
