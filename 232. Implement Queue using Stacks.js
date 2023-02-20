@@ -41,6 +41,32 @@ Follow-up: Can you implement the queue such that each operation is amortized O(1
 
 */
 
+class Stack {
+	constructor() {
+		this.stack = [];
+	}
+
+	push(val) {
+		this.stack.push(val);
+	}
+
+	pop() {
+		return this.stack.pop();
+	}
+
+	peek() {
+		return this.stack[this.stack.length - 1];
+	}
+
+	isEmpty() {
+		return this.stack.length === 0;
+	}
+
+	size() {
+		return this.stack.length;
+	}
+}
+
 var MyQueue = function () {};
 
 /**
