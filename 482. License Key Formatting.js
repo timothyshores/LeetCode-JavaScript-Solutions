@@ -30,7 +30,6 @@ Constraints:
 */
 
 /*
-
 Background info
 - String s is a license key only letters, numbers and dashs
 - Integer k
@@ -74,4 +73,37 @@ Add a dash follwed by the first k characters of string s
  * @param {number} k
  * @return {string}
  */
-const licenseKeyFormatting = (s, k) => {};
+const licenseKeyFormatting = (s, k) => {
+	// clean input string remove dashes and convert string to uppercase letters
+	s = s.replaceAll("-", "").toUpperCase();
+
+	// If cleaned up s string length is less than k, return the formatted license key string s
+	if (s.length < k) return s;
+
+	// create first and remaining parts of the cleaned input string
+	let start = s.substring(0, s.length % k);
+	let remaining = s.substring(s.length % k);
+
+	// Set start as the first one or two parts
+	if (start) {
+		// If start is one or more characters add a dash and the first k characters from the remaining string
+		start += "-" + remaining.substring(0, k);
+	} else {
+		// When start is an empty string set it to the first k characters from the remaining string
+		start = remaining.substring(0, k);
+	}
+
+	// Update remaining string by dropping the first k characters
+	remaining = remaining.substring(k);
+
+	// Create the remaining parts of the reformattted license key
+	while (remaining.length) {
+		// Add a dash and the first k characters from the remaining string
+		start += "-" + remaining.substring(0, k);
+		// Update remaining string by dropping the first k characters
+		remaining = remaining.substring(k);
+	}
+
+    // return reformatted license key
+	return start;
+};
