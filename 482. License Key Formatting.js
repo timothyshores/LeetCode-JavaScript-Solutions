@@ -29,9 +29,49 @@ Constraints:
 
 */
 
+/*
+
+Background info
+- String s is a license key only letters, numbers and dashs
+- Integer k
+- n number of dashs and n + 1 groups
+
+Problem
+- Want to reform string s into groups of k characters
+
+Requirements
+- Each group MUST contain exactly k characters except for the first group
+- First group can be shorter than k characters but most contain at least 1 characters
+- Need to have a dash between two groups
+- All lowercase letters must be converted to uppervase
+
+Subproblems
+
+1. Need to clean up the input string 
+
+Remove the dashes from string s using s = s.replace('-', '');
+Convert all lowercase letters to uppercase letters using s = s.toUpperCase();
+
+2. Need to figure out the length of the first group
+
+Probably use the modulo operator
+
+total alphanumberic characters % k
+Ex 1: 8 % 2 === 0
+Ex 2: 5 % 2 === 1
+
+Make this first modulo operation an initial for loop then add + "-"
+
+3. Need to add dashes between groups
+
+Have a for loop from size of the first group until the end of string s
+Add a dash follwed by the first k characters of string s
+
+*/
+
 /**
  * @param {string} s
  * @param {number} k
  * @return {string}
  */
-var licenseKeyFormatting = function (s, k) {};
+const licenseKeyFormatting = (s, k) => {};
