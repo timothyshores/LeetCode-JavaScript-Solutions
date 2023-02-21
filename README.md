@@ -21,6 +21,7 @@ LeetCode Profile: https://leetcode.com/timothyshores/
 |[326. Power of Three](https://leetcode.com/problems/power-of-three/)|Easy|[JavaScript](326.%20Power%20of%20Three.js)
 |[345. Reverse Vowels of a String](https://leetcode.com/problems/reverse-vowels-of-a-string/)|Easy|[JavaScript](345.%20Reverse%20Vowels%20of%20a%20String.js)
 |[387. First Unique Character in a String](https://leetcode.com/problems/first-unique-character-in-a-string/)|Easy|[JavaScript](387.%20First%20Unique%20Character%20in%20a%20String.js)
+|[482. License Key Formatting](https://leetcode.com/problems/license-key-formatting/)|Easy|[JavaScript](482.%20License%20Key%20Formatting.js)
 |[509. Fibonacci Number](https://leetcode.com/problems/fibonacci-number/)|Easy|[JavaScript](509.%20Fibonacci%20Number.js)
 |[771. Jewels And Stones](https://leetcode.com/problems/jewels-and-stones/)|Easy|[JavaScript](771.%20Jewels%20And%20Stones.js)
 |[796. Rotate String](https://leetcode.com/problems/rotate-string/)|Easy|[JavaScript](796.%20Rotate%20String.js)
