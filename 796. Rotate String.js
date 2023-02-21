@@ -27,4 +27,14 @@ Constraints:
  * @param {string} goal
  * @return {boolean}
  */
-const rotateString = (s, goal) => {};
+const rotateString = (s, goal) => {
+	if (s.length !== goal.length) return false;
+	if (s == "" && goal == "") return true;
+
+	for (const char of s) {
+		if (s == goal) return true;
+		s = s.substring(1) + s[0];
+	}
+
+	return false;
+};

@@ -23,6 +23,7 @@ LeetCode Profile: https://leetcode.com/timothyshores/
 |[387. First Unique Character in a String](https://leetcode.com/problems/first-unique-character-in-a-string/)|Easy|[JavaScript](387.%20First%20Unique%20Character%20in%20a%20String.js)
 |[509. Fibonacci Number](https://leetcode.com/problems/fibonacci-number/)|Easy|[JavaScript](509.%20Fibonacci%20Number.js)
 |[771. Jewels And Stones](https://leetcode.com/problems/jewels-and-stones/)|Easy|[JavaScript](771.%20Jewels%20And%20Stones.js)
+|[796. Rotate String](https://leetcode.com/problems/rotate-string/)|Easy|[JavaScript](796.%20Rotate%20String.js)
 |[836. Rectangle Overlap](https://leetcode.com/problems/rectangle-overlap/description/)|Easy|[JavaScript](836.%20Rectangle%20Overlap.js)
 |[896. Monotonic Array](https://leetcode.com/problems/monotonic-array/)|Easy|[JavaScript](896.%20Monotonic%20Array.js)
 |[938. Range Sum of BST](https://leetcode.com/problems/range-sum-of-bst/)|Medium|[JavaScript](938.%20Range%20Sum%20of%20BST.js) 
