@@ -35,4 +35,13 @@ Constraints:
  * @param {TreeNode} root
  * @return {number}
  */
-const minDepth = (root) => {};
+const minDepth = (root) => {
+    const left = root?.left;
+    const right = root?.right;
+
+    if (!root) return 0;
+    if (!left) return minDepth(right) + 1;
+    if (!right) return minDepth(left) + 1;
+    
+    return Math.min(minDepth(left), minDepth(right)) + 1;
+};
