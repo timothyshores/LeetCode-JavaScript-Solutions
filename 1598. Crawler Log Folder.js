@@ -89,4 +89,26 @@ Example Line By Line Execution and Logic
  * @param {string[]} logs
  * @return {number}
  */
-const minOperations = (logs) => {};
+const minOperations = (logs) => {
+	// Initialize a counter called depth to track current level relative to main root directory
+	let depth = 0;
+
+	// Iterate through the logs input array starting from index 0 to logs.length - 1
+	for (const log of logs) {
+		switch (log) {
+			case "../":
+				// Move to the parent folder unless you are already in the main folder then remain in the same folder
+				if (depth > 0) depth--;
+				break;
+			case "./":
+				// Remain in the same folder.
+				break;
+			default:
+				// Move to child folder which is guaranteed to always exist
+				depth++;
+		}
+	}
+
+	// Return the current depth level after adjusting the depth counter for ever element in the logs input array
+	return depth;
+};
