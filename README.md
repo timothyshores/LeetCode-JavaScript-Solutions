@@ -13,6 +13,7 @@ LeetCode Profile: https://leetcode.com/timothyshores/
 |[121. Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)|Easy|[JavaScript](121.%20Best%20Time%20to%20Buy%20and%20Sell%20Stock.js)
 |[125. Valid Palindrome](https://leetcode.com/problems/valid-palindrome/)|Easy|[JavaScript](125.%20Valid Palindrome.js)
 |[136. Single Number](https://leetcode.com/problems/single-number/)|Easy|[JavaScript](136.%20Single%20Number.js)
+|[144. Binary Tree Preorder Traversal](https://leetcode.com/problems/binary-tree-preorder-traversal/)|Easy|[JavaScript](144.%20Binary%20Tree%20Preorder%20Traversal.js)
 |[155. Min Stack](https://leetcode.com/problems/min-stack/)|Medium|[JavaScript](155.%20Min%20Stack.js)
 |[172. Factorial Trailing Zeroes](https://leetcode.com/problems/factorial-trailing-zeroes/)|Medium|[JavaScript](172.%20Factorial%20Trailing%20Zeroes.js)
 |[217. Contains Duplicate](https://leetcode.com/problems/contains-duplicate/)|Easy|[JavaScript](217.%20Contains%20Duplicate.js)
