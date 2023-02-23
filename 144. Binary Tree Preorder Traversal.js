@@ -68,4 +68,31 @@ High Level Approach
  * @param {Node} root
  * @return {number[]}
  */
-const preorderTraversal = (root) => {};
+const preorderTraversal = (root) => {
+	// Handle edge case where root node is null or undefined
+	if (!root) return [];
+
+	// Initialize an empty array to stores the preorder traversal of the root nodes' values
+	const nodeValues = [];
+
+	// Create an empty stack and push root to it
+	const nodeStack = [root];
+
+	// Continue iterating through the binary tree until all nodes have been visited
+	while (nodeStack.length) {
+		// Pop the top element from nodeStack and destructure the binary tree node
+		const { val, right, left } = nodeStack.pop();
+
+		// Add current node's value to nodeValues
+		nodeValues.push(val);
+
+		// Push right child first to place under left child element in nodeStack
+		if (right) nodeStack.push(right);
+
+		// Push left child last to top of stack to pop off first from nodeStack
+		if (left) nodeStack.push(left);
+	}
+
+	// Return preorder traversal of the root nodes' values
+	return nodeValues;
+};
