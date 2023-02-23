@@ -24,6 +24,38 @@ Follow up: Recursive solution is trivial, could you do it iteratively ?
 
 */
 
+/*
+
+Prompt
+
+    Given a root node of a binary tree return an array of the preorder traversal
+
+    Do NOT traverse the tree using recursion. 
+
+    Use a stack to store nodes as you traverse the tree in preorder fashion.
+
+Questions
+
+    What is preorder traversal?
+
+    A preorder traversal is start at the root
+    Visit it's left child
+    If the left child node has another left child continue visiting the left child node until it has no left child node
+    Go back up to it's parent node 
+    Check if it has a right child node, if it does then visit it
+    Continue going up parent nodes until you're at the root node and then explore the right side of the tree
+    Visit the root node's right child node and then continue through the left child nodes until there are no more left child nodes
+    Go up a node and if there's a right child node visit that right child node
+    Continue going up and then down the right until all nodes have been visited
+
+High Level Approach
+
+    Want to visit each node in the following order Root, Left, Right
+    We'll need to use a stack to keep track of nodes
+    We'll also need to store the order of the nodes that we visited in another array
+
+*/
+
 /**
  * Definition for a binary tree node.
  * function Node(val, left, right) {
