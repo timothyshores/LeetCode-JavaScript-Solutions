@@ -25,6 +25,7 @@ LeetCode Profile: https://leetcode.com/timothyshores/
 |[387. First Unique Character in a String](https://leetcode.com/problems/first-unique-character-in-a-string/)|Easy|[JavaScript](387.%20First%20Unique%20Character%20in%20a%20String.js)
 |[482. License Key Formatting](https://leetcode.com/problems/license-key-formatting/)|Easy|[JavaScript](482.%20License%20Key%20Formatting.js)
 |[509. Fibonacci Number](https://leetcode.com/problems/fibonacci-number/)|Easy|[JavaScript](509.%20Fibonacci%20Number.js)
+|[589. N-ary Tree Preorder Traversal](https://leetcode.com/problems/n-ary-tree-preorder-traversal/)|Easy|[JavaScript](589.%20N-ary%20Tree%20Preorder%20Traversal.js)
 |[771. Jewels And Stones](https://leetcode.com/problems/jewels-and-stones/)|Easy|[JavaScript](771.%20Jewels%20And%20Stones.js)
 |[796. Rotate String](https://leetcode.com/problems/rotate-string/)|Easy|[JavaScript](796.%20Rotate%20String.js)
 |[836. Rectangle Overlap](https://leetcode.com/problems/rectangle-overlap/description/)|Easy|[JavaScript](836.%20Rectangle%20Overlap.js)
