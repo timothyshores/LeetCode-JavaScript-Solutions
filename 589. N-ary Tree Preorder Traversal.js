@@ -24,7 +24,7 @@ Follow up: Recursive solution is trivial, could you do it iteratively?
 */
 
 /**
- * // Definition for a Node.
+ * Definition for a Node.
  * function Node(val, children) {
  *    this.val = val;
  *    this.children = children;
@@ -35,4 +35,33 @@ Follow up: Recursive solution is trivial, could you do it iteratively?
  * @param {Node|null} root
  * @return {number[]}
  */
-const preorder = (root) => {};
+const preorder = (root) => {
+	// Handle edge case where root node is null or undefined
+	if (!root) return [];
+
+	// Initialize an empty array to stores the preorder traversal of the root nodes' values
+	const nodeValues = [];
+
+	// Create an empty stack and push root to it
+	const nodeStack = [root];
+
+	// Continue iterating through the binary tree until all nodes have been visited
+	while (nodeStack.length) {
+		// Pop the top element from nodeStack and destructure the binary tree node
+		const { val, children } = nodeStack.pop();
+
+		// Add current node's value to nodeValues
+		nodeValues.push(val);
+
+		// Reverse the children array
+		children.reverse();
+
+		// Push the last childNode into nodeStack, then the second to last, ..., third, second and first childNode
+		for (let childNode of children) {
+			nodeStack.push(childNode);
+		}
+	}
+
+	// Return preorder traversal of the root nodes' values
+	return nodeValues;
+};
