@@ -43,10 +43,30 @@ const numSmallerByFrequency = (queries, words) => {
     Look at the first character
     Create a while loop
     Return the count of the first character in the sorted string 
-    
 
+    */
+
+	const countSmallestChar = (str) => {
+		const sortedString = [...str].sort().join("");
+		let count = 0;
+
+		while (sortedString[count] === sortedString[0]) count++;
+
+		return count;
+	};
+
+	/*
+    
     Subproblem 2: 
     Create a new array, store the count of the lexicographically smallest character in words array and sort in descending order
+
+    */
+
+	const wordsCount = words
+		.map((word) => countSmallestChar(word))
+        .sort((a, b) => b - a);
+    
+	/*
 
     Subproblem 3:
     Create an array that stores the number of words in words such that f(queries[i]) < f(W) for each W in words.
@@ -59,6 +79,21 @@ const numSmallerByFrequency = (queries, words) => {
     Count the number of elements in wordsCount that are greater than queryCount
     Push this count into the results array
     Return the results array 
-
+    
     */
+
+	const results = [];
+
+	for (const query of queries) {
+		const queryCount = countSmallestChar(query);
+		let index = 0;
+
+		while (queryCount < wordsCount[index]) {
+			index++;
+		}
+
+		results.push(index);
+	}
+
+	return results;
 };
