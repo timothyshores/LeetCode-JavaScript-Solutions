@@ -31,4 +31,34 @@ Constraints:
  * @param {string[]} words
  * @return {number[]}
  */
-const numSmallerByFrequency = (queries, words) => {};
+const numSmallerByFrequency = (queries, words) => {
+	/*
+
+    Subproblem 1: 
+    Create helper function that takes in a string and returns the count of frequency of the lexicographically smallest character
+
+    Use a built in sorting method the string str
+    Time complexity O(N log N) log linear time
+    Space complexity O(1)
+    Look at the first character
+    Create a while loop
+    Return the count of the first character in the sorted string 
+    
+
+    Subproblem 2: 
+    Create a new array, store the count of the lexicographically smallest character in words array and sort in descending order
+
+    Subproblem 3:
+    Create an array that stores the number of words in words such that f(queries[i]) < f(W) for each W in words.
+
+    Create an array called results
+    Iterate through queries input array
+    Call helper function to get the the count of the lexicographically smallest character
+    Store this in a variable called queryCount
+    Iterate through the wordsCount array using a while loop
+    Count the number of elements in wordsCount that are greater than queryCount
+    Push this count into the results array
+    Return the results array 
+
+    */
+};
