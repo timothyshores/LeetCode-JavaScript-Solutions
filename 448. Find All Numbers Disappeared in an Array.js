@@ -40,4 +40,13 @@ Space time complexity
  * @param {number[]} nums
  * @return {number[]}
  */
-const findDisappearedNumbers = (nums) => {};
+const findDisappearedNumbers = (nums) => {
+	const set = new Set(nums);
+	const result = [];
+
+	for (let num = 1; num <= nums.length; num++) {
+		if (!set.has(num)) result.push(num);
+	}
+
+	return result;
+};
