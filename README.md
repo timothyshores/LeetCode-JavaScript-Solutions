@@ -7,6 +7,7 @@ LeetCode Profile: https://leetcode.com/timothyshores/
 | :-------------- | :-------------- |:---- | 
 |[1. Two Sum](https://leetcode.com/problems/two-sum/)|Easy|[JavaScript](1.%20Two%20Sum.js)
 |[3. Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/)|Medium|[JavaScript](3.%20Longest%20Substring%20Without%20Repeating%20Characters.js)
+|[38. Count and Say](https://leetcode.com/problems/count-and-say/)|Medium|[JavaScript](38.%20Count%20and%20Say.js)
 |[50. Pow(x, n)](https://leetcode.com/problems/powx-n/)|Medium|[JavaScript](50.%20Pow(x,n).js)
 |[83. Remove Duplicates from Sorted List](https://leetcode.com/problems/remove-duplicates-from-sorted-list/)|Easy|[JavaScript](83.%20Remove%20Duplicates%20from%20Sorted%20List.js)
 |[111. Minimum Depth of Binary Tree](https://leetcode.com/problems/minimum-depth-of-binary-tree/)|Easy|[JavaScript](111.%20Minimum%20Depth%20of%20Binary%20Tree.js)
@@ -31,7 +32,8 @@ LeetCode Profile: https://leetcode.com/timothyshores/
 |[836. Rectangle Overlap](https://leetcode.com/problems/rectangle-overlap/description/)|Easy|[JavaScript](836.%20Rectangle%20Overlap.js)
 |[896. Monotonic Array](https://leetcode.com/problems/monotonic-array/)|Easy|[JavaScript](896.%20Monotonic%20Array.js)
 |[938. Range Sum of BST](https://leetcode.com/problems/range-sum-of-bst/)|Medium|[JavaScript](938.%20Range%20Sum%20of%20BST.js) 
-|[1108. Defanging An IP Address](https://leetcode.com/problems/defanging-an-ip-address/)|Easy|[JavaScript](1108.%20Defanging%20An%20IP%20Address.js) 
+|[1108. Defanging An IP Address](https://leetcode.com/problems/defanging-an-ip-address/)|Easy|[JavaScript](1108.%20Defanging%20An%20IP%20Address.js)
+|[1170. Compare Strings by Frequency of the Smallest Character](https://leetcode.com/problems/compare-strings-by-frequency-of-the-smallest-character/description/)|Medium|[JavaScript](1170.%20Compare%20Strings%20by%20Frequency%20of%20the%20Smallest%20Character.js)
 |[1207. Unique Number of Occurrences](https://leetcode.com/problems/unique-number-of-occurrences/)|Easy|[JavaScript](1207.%20Unique%20Number%20of%20Occurrences.js)
 |[1281. Subtract the Product and Sum of Digits of an Integer](https://leetcode.com/problems/subtract-the-product-and-sum-of-digits-of-an-integer/)|Easy|[JavaScript](1281.%20Subtract%20the%20Product%20and%20Sum%20of%20Digits%20of%20an%20Integer.js)
 |[1365. How Many Numbers Are Smaller Than the Current Number](https://leetcode.com/problems/how-many-numbers-are-smaller-than-the-current-number/)|Easy|[JavaScript](1365.%20How%20Many%20Numbers%20Are%20Smaller%20Than%20the%20Current%20Number.js)

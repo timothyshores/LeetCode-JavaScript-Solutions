@@ -78,4 +78,59 @@ High Level Approach
  * @param {number} n
  * @return {string}
  */
-const countAndSay = (n) => {};
+const countAndSay = (n) => {
+	const countAndSay = (n) => {
+		// Base case
+		if (n === 1) return "1";
+
+		// Need to check the previous response from count and say 1
+		const previousCountAndSay = countAndSay(n - 1);
+		const previousCountAndSayLength = previousCountAndSay.length;
+
+		// Create and initialize an empty results string, create lag and lead pointers set to 0 and 1 respectively
+		let result = "";
+		let lagIndex = 0;
+		let leadIndex = 1;
+
+		// Iterate through the previous reponse after calling
+		while (lagIndex < previousCountAndSayLength) {
+			// Store the lag and lead values and initialize current number count to 1
+			let lagNumber = previousCountAndSay[lagIndex];
+			let leadNumber = previousCountAndSay[leadIndex];
+			let count = 1;
+
+			// When the characters are different
+			if (lagNumber !== leadNumber) {
+				// Add the string '1' and the current number at lag index to results string
+				result += "1" + lagNumber;
+			}
+
+			// When the same character appears two times in a row
+			while (lagNumber === leadNumber) {
+				// Move the lead pointer one index to the right
+				leadIndex++;
+				// Increment the count
+				count++;
+				// Update leadNumber
+				leadNumber = previousCountAndSay[leadIndex];
+
+				// When the lag pointer gets to a different number or reaches the end of the string
+				if (
+					lagNumber !== leadNumber ||
+					leadIndex === previousCountAndSayLength
+				) {
+					// Add the current count as a string and the current number at lag index to results string
+					result += count.toString() + lagNumber;
+					break;
+				}
+			}
+
+			// Move lag index to the current location of lead index
+			lagIndex = leadIndex;
+			// Set new leadIndex position to be
+			leadIndex = lagIndex + 1;
+		}
+
+		return result;
+	};
+};
