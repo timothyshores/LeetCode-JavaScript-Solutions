@@ -21,6 +21,21 @@ Follow up: Could you do it without extra space and in O(n) runtime? You may assu
 
 */
 
+/* 
+
+Approach
+    Create an empty results array
+    Create a new set of the input nums array
+    Loop from 1 to N
+    If the current number is NOT in the set then push into results array
+    Return the results array
+
+Space time complexity
+    Time: O(N) to create the set and iterate through the array
+    Space: O(N) store nums in the set and the final results array
+
+/*
+
 /**
  * @param {number[]} nums
  * @return {number[]}
