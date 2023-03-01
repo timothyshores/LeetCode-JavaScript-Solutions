@@ -57,3 +57,42 @@ If we do NOT find a number that's greater than the current number
 Return results array
 
 */
+
+/**
+ * @param {number[]} nums1
+ * @param {number[]} nums2
+ * @return {number[]}
+ */
+const nextGreaterElement = (nums1, nums2) => {
+	const results = [];
+	const nums2Indices = {};
+
+	// Set the key as the numbers in nums2 and value as the index to improve time complexity
+	for (let i = 0; i < nums2.length; i++) {
+		nums2Indices[nums2[i]] = i;
+	}
+
+	// Iterate through nums1
+	for (const num of nums1) {
+		// For every number in nums1 we'll get the index of the number in nums2
+		const nums2Index = nums2Indices[num];
+
+		// Iterate starting at that index + 1 until we reach the end of nums2
+		for (let j = nums2Index + 1; j <= nums2.length; j++) {
+			// If we find a number in nums2 that's greater than the current number in nums1
+			if (num < nums2[j]) {
+				// Push it into our results and break out of the loop
+				results.push(nums2[j]);
+				break;
+			}
+			// If we reach the end of the nums2 array and did NOT find a greater number
+			if (j >= nums2.length - 1) {
+				// Push -1 into our results array and break out of the loop
+				results.push(-1);
+				break;
+			}
+		}
+	}
+
+	return results;
+};
