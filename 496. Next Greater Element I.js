@@ -34,3 +34,26 @@ Constraints:
 Follow up: Could you find an O(nums1.length + nums2.length) solution?
 
 */
+
+/*
+
+Prompt summary
+
+Want to find the next greater element in nums2 for every number in nums1
+Return the first greater element to the right in nums2
+If every number to the right is less equal or equal to return 0
+
+Approach 1:
+Initialize an empty results array
+Create a hashmap
+Set the key as the numbers in nums2 and value as the index to improve time complexity
+Iterate through nums1
+For every number in nums1 we'll get the index of the number in nums2
+Iterate starting at that index + 1 until we reach the end of nums2
+If we find a number in nums2 that's greater than the current number in nums1
+    Push it into our results and break out of the loop
+If we do NOT find a number that's greater than the current number 
+    Push -1 into our results array
+Return results array
+
+*/
