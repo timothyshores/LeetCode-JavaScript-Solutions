@@ -39,6 +39,45 @@ Constraints:
 
 */
 
+/*
+
+EXPLORE
+
+We want to find balanced parentheses in a given input string s
+We want to remove the outermost parentheses and then combined any results
+
+Examples
+removeOuterParentheses('()'); // ''
+removeOuterParentheses('(())'); // '()'
+removeOuterParentheses('(()())'); // '()()'
+removeOuterParentheses('((()))'); // '(())'
+removeOuterParentheses('(()()())'); // '()()()'
+removeOuterParentheses('((()()))'); // '(()())'
+removeOuterParentheses('((()()()))'); // '(()()())'
+
+BRAINSTORM
+Use iteration and either a counter or a stack
+
+Approach 1: 
+Use a counter
+Add 1 to the count for opening parenthesis
+Subtract 1 from the count for closing parenthesis
+Add opening and closing parenthesis to the results string based on the count
+
+Time complexity: O(N) where N is the number of elements in string s
+Space complexity: O(N) to store the result string and count
+
+Approach 2: 
+Use a stack
+Push to the stack if we encounter an opening parenthesis
+Pop from the stack if we see a closing parenthesis
+Add opening and closing parenthesis to the results string  based on the stack length
+
+Time complexity: O(N) where N is the number of elements in string s
+Space complexity: O(N) to store the result string and stack
+
+*/
+
 /**
  * @param {string} s
  * @return {string}
