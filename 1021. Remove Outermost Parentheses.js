@@ -82,4 +82,15 @@ Space complexity: O(N) to store the result string and stack
  * @param {string} s
  * @return {string}
  */
-const removeOuterParenthesesCounter = (s) => {};
+const removeOuterParenthesesCounter = (s) => {
+	let counter = 0;
+	let result = "";
+
+	for (const char of s) {
+		if (char === ")") counter--;
+		if (counter > 0) result += char;
+		if (char === "(") counter++;
+	}
+
+	return result;
+};
