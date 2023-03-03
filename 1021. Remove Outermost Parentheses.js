@@ -94,3 +94,24 @@ const removeOuterParenthesesCounter = (s) => {
 
 	return result;
 };
+
+/**
+ * @param {string} s
+ * @return {string}
+ */
+const removeOuterParenthesesStack = (s) => {
+	const stack = [];
+	let result = "";
+
+	for (const char of s) {
+		if (char === "(") {
+			result += stack.length ? char : "";
+			stack.push(char);
+		} else {
+			stack.pop();
+			result += stack.length ? char : "";
+		}
+	}
+
+	return result;
+};
