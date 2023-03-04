@@ -90,4 +90,36 @@ Write your algorithm */
  * @param {number} c
  * @return {number[][]}
  */
-const matrixReshape = (mat, r, c) => {};
+const matrixReshape = (mat, r, c) => {
+	// If total number of elements in mat does not equal r x c return original array
+	if (mat.length * mat[0].length !== r * c) return mat;
+
+	// Create empty 2D array with r rows and c columns
+	const result = Array(r)
+		.fill()
+		.map(() => Array(c).fill(0));
+
+	// Create counter variable for current row and column
+	let row = 0;
+	let column = 0;
+
+	// Iterate through the subarrays of mat input array
+	for (const subarray of mat) {
+		// Iterate through the elements of each sub array
+		for (const element of subarray) {
+			// Set the value of the current row and column to the current element
+			result[row][column] = element;
+			// Increment the column counter
+			column++;
+			// When we reached the end of the current row
+			if (column === c) {
+				// Increment the row pointer to the next row
+				row++;
+				// Reset the column pointer to 0
+				column = 0;
+			}
+		}
+	}
+
+	return result;
+};
