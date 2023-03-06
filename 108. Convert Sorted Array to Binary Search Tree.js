@@ -34,7 +34,8 @@ Constraints:
  * @param {number[]} nums
  * @return {TreeNode}
  */
-const sortedArrayToBST = (nums) => {
+// Recursion with helper function
+const sortedArrayToBSTWithHelperFunction = (nums) => {
 	const createBST = (start, end) => {
 		if (start > end) return null;
 
@@ -48,4 +49,18 @@ const sortedArrayToBST = (nums) => {
 	};
 
 	return createBST(0, nums.length - 1);
+};
+
+// Recursive solution with slice
+const sortedArrayToBSTUsingSlice = (nums) => {
+	if (nums.length === 1) return new TreeNode(nums[0]);
+	if (nums.length === 0) return null;
+
+	const middle = Math.floor(nums.length / 2);
+	const node = new TreeNode(nums[middle]);
+
+	node.left = sortedArrayToBST(nums.slice(0, middle));
+	node.right = sortedArrayToBST(nums.slice(middle + 1, nums.length));
+
+	return node;
 };
