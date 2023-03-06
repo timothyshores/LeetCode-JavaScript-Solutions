@@ -34,4 +34,18 @@ Constraints:
  * @param {number[]} nums
  * @return {TreeNode}
  */
-const sortedArrayToBST = (nums) => {};
+const sortedArrayToBST = (nums) => {
+	const createBST = (start, end) => {
+		if (start > end) return null;
+
+		const mid = Math.floor((start + end) / 2);
+		const root = new TreeNode(nums[mid]);
+
+		root.left = createBST(start, mid - 1);
+		root.right = createBST(mid + 1, end);
+
+		return root;
+	};
+
+	return createBST(0, nums.length - 1);
+};
