@@ -52,6 +52,30 @@ Space Complexity: O(log N) for the recursive call stack
 
 PLAN
 
+Approach 1:
+
+    If the root node is null create a new TreeNode with val and return the new TreeNode
+
+    Create a pointer variable and set it to the root node
+
+    The value that's beging inserted will be either less than or greater than the current node's value
+
+        Insert a value that's less than the current node's value
+            If current node has a left child node
+                Set current node pointer to the current node's left child node
+            Else current node does NOT have a left child node
+                Create a new TreeNode with the value passed into the function
+                Set the current node's left child property to the new TreeNode
+                Return the root node
+
+        Insert a value that's greater than the current node's value
+            If current node has a right child node
+                Set current node pointer to the current node's right child node
+            Else current node does NOT have a right child node
+                Create a new TreeNode with the value passed into the function
+                Set the current node's right child property to the new TreeNode
+                Return the root node
+
 */
 
 /**
