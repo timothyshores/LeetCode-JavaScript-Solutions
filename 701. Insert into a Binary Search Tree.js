@@ -29,6 +29,31 @@ Constraints:
 
 */
 
+/*
+
+EXPLORE
+
+Want to insert new node in a BST
+
+BRAINSTORM
+
+Could use either iterative or recursion to insert the new node
+
+Both O(log N) time complexity
+Recursion is O(log N) space while iterative is O(1)
+
+Approach 1: Iterative while loop
+Time Complexity: O(log N) if binary tree is balanced else O(N) if BST is a linked list
+Space Complexity: O(1) need to store current node pointer in memeory
+
+Approach 1: Recursive
+Time Complexity: O(log N) if binary tree is balanced else O(N) if BST is a linked list
+Space Complexity: O(log N) for the recursive call stack
+
+PLAN
+
+*/
+
 /**
  * Definition for a binary tree node.
  * function TreeNode(val, left, right) {
