@@ -28,6 +28,7 @@ LeetCode Profile: https://leetcode.com/timothyshores/
 |[509. Fibonacci Number](https://leetcode.com/problems/fibonacci-number/)|Easy|[JavaScript](509.%20Fibonacci%20Number.js)
 |[589. N-ary Tree Preorder Traversal](https://leetcode.com/problems/n-ary-tree-preorder-traversal/)|Easy|[JavaScript](589.%20N-ary%20Tree%20Preorder%20Traversal.js)
 |[701. Insert into a Binary Search Tree](https://leetcode.com/problems/insert-into-a-binary-search-tree/)|Medium|[JavaScript](701.%20Insert%20into%20a%20Binary%20Search%20Tree.js)
+|[739. Daily Temperatures](https://leetcode.com/problems/daily-temperatures/)|Medium|[JavaScript](739.%20Daily%20Temperatures.js)
 |[771. Jewels And Stones](https://leetcode.com/problems/jewels-and-stones/)|Easy|[JavaScript](771.%20Jewels%20And%20Stones.js)
 |[796. Rotate String](https://leetcode.com/problems/rotate-string/)|Easy|[JavaScript](796.%20Rotate%20String.js)
 |[836. Rectangle Overlap](https://leetcode.com/problems/rectangle-overlap/description/)|Easy|[JavaScript](836.%20Rectangle%20Overlap.js)
