@@ -91,4 +91,40 @@ Approach 1:
  * @param {number} val
  * @return {TreeNode}
  */
-const insertIntoBST = (root, val) => {};
+const insertIntoBST = (root, val) => {
+	// If the root node is null create a new TreeNode with val and return the new TreeNode
+	if (!root) return new TreeNode(val);
+
+	// Create a pointer variable and set it to the root node
+	let node = root;
+
+	// Continue traversing the BST while current node pointer is truthy
+	while (node) {
+		// Insert a value that's less than the current node's value
+		if (val < node.val) {
+			// If current node has a left child node
+			if (node.left) {
+				// Set current node pointer to the current node's left child node
+				node = node.left;
+				continue;
+			} else {
+				// Current node does NOT have a left child node
+				node.left = new TreeNode(val);
+				return root;
+			}
+		}
+		// Insert a value that's greater than the current node's value
+		else {
+			// If current node has a right child node
+			if (node.right) {
+				// Set current node pointer to the current node's right child node
+				node = node.right;
+				continue;
+			} else {
+				// Current node does NOT have a right child node
+				node.right = new TreeNode(val);
+				return root;
+			}
+		}
+	}
+};
