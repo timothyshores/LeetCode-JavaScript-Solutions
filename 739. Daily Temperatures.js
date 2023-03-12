@@ -92,8 +92,49 @@ IMPLEMENT
 
 */
 
+class Stack extends Array {
+	peek() {
+		return this[this.length - 1];
+	}
+
+	isEmpty() {
+		return this.length === 0;
+	}
+
+	size() {
+		return this.length;
+	}
+}
+
 /**
  * @param {number[]} temperatures
  * @return {number[]}
  */
-const dailyTemperatures = (temperatures) => {};
+const dailyTemperatures = (temperatures) => {
+	// Create a results array the same size as the input temperatures array and fill with 0s
+	const result = new Array(temperatures.length).fill(0);
+
+	// Store the indices of the next hotter days in a monotonically decreasing stack
+	const stack = new Stack();
+
+	// Iterate through the input temperatures array in reverse
+	for (let i = temperatures.length - 1; i >= 0; i--) {
+		// Semantic variable name for the current temperature in backwards for loop
+		const currentTemp = temperatures[i];
+
+		// If our monotonic stack is NOT empty and the current temperature is higher then the top element in the stack
+		while (stack.size() && currentTemp >= temperatures[stack.peek()])
+			// Keep removing the top element from the stack using the pop() method
+			stack.pop();
+
+		// After while loop current temperature is now less then the top element in the stack
+		// If our monotonic stack is NOT empty then set the ith element in result array to the index of the next
+		if (stack.size()) result[i] = stack.peek() - i;
+
+		// Add the current index to the top of the stack
+		stack.push(i);
+	}
+
+	// Return results array
+	return result;
+};
