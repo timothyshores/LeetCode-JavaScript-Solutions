@@ -25,8 +25,25 @@ Constraints:
 /*
 
 EXPLORE
+- Want to return a new array that's the same length or as a the input temperatures array
+- The outputs results array is the number of days until it's a warmer day
+- If it's the last day or every day in the future is always colder rather than warmer return 0
+
+Example
+dailyTemperatures([69, 70]); // [1, 0];
+dailyTemperatures([72, 69]); // [0, 0];
 
 BRAINSTORM
+
+Approach 1: Two pointer
+
+Time Complexity: O(N^2)
+Space Complexity: O(1)
+
+Approach 2: Monotonic Decreasing Stack
+
+Time Complexity: O(N)
+Space Complexity: O(N)
 
 PLAN
 
