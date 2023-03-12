@@ -47,6 +47,47 @@ Space Complexity: O(N)
 
 PLAN
 
+Create a monotonic decreasing stack this will store and compare all daily temperatures
+The stack will store a tuple of the the temperature and an index
+
+Create a results array to return at the end of the function
+
+Iterate through the temperatures input array
+    Look at the first temperature, temperatures[0] and add the to monotonic stack
+    Look at the second temperature, temperatures[1] 
+
+    Compare the second temperature to the first temperature in the monotonic stack
+    
+    There's only three possibilities or scenarios comparing the first and second temperature
+    The second temperature can either be lower, higher or the same as the first temperature
+
+        If the second temperature is lower OR it is the same as the first temperature
+            Add the second temperature to the stack and look at the third temperature
+    
+        Else the second temperature is HIGHER then the first temperature
+            Pop off the first element and in the results array store a 1 in index 0
+
+    Look at the third, fourth, fifth until we look at the temperatures.length - 1th temperature
+
+Generalizations from earlier example comparing the first 2 elements
+
+    The stack could store up to temperatures.length elements
+    This means that all temperatures are decreasing
+    E.g. 79, 77, 76, 64, 63, 61, 59
+    Storing N elements in a stack means a worst case space complexity of O(N)
+    
+    Best case time complexity would be for an array that is constantly increasing
+    E.g. 59, 61, 62, 63, 66, 69, 74, 75
+    Ever element would pop off the previous element in the stack
+    Best case space complexity O(1) to store 1 element in the stack
+
+Could store up to temperatures.length elements in the stack if all temperatures were decreasing
+
+- We could pop off up to temperatures.length - 1 elements in the stack if all temperatures were decreasing besides the last day was the hottest daily temperature
+- If there are any elements remaining in our stack after we've viewed all temperatures
+
+Return results
+
 IMPLEMENT
 
 */
