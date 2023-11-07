@@ -71,4 +71,39 @@ for (let i = 0; i < s.length - 9; i++) {
 // Convert the duplicateSequences set into an arry and return the array
 return [...duplicateSequences];
 
+IMPLEMENT
+
 */
+
+/**
+ * @param {string} s
+ * @return {string[]}
+ */
+const findRepeatedDnaSequences = (s) => {
+	// Store all 10-letter-long sequences in input string s
+	const allSequences = new Set();
+
+	// Store 10-letter-long sequences that occur more than once in input string s
+	const duplicateSequences = new Set();
+
+	// Handle edge case where s is 10 letters long or less
+	if (s.length <= 10) return [];
+
+	// Iterate through input string s
+	for (let i = 0; i < s.length - 9; i++) {
+		// Get the current 10-letter-long sequence starting at index i
+		const currentSequence = s.substring(i, i + 10);
+
+		// Check if our all sequences set has the current sequence
+		if (allSequences.has(currentSequence)) {
+			// currentSequence is a duplicate and occures more than once
+			duplicateSequences.add(currentSequence);
+		} else {
+			// currentSequence is unique. Add to our all sequences set
+			allSequences.add(currentSequence);
+		}
+	}
+
+	// Convert the duplicateSequences set into an arry and return the array
+	return [...duplicateSequences];
+};
