@@ -17,6 +17,7 @@ LeetCode Profile: https://leetcode.com/timothyshores/
 |[144. Binary Tree Preorder Traversal](https://leetcode.com/problems/binary-tree-preorder-traversal/)|Easy|[JavaScript](144.%20Binary%20Tree%20Preorder%20Traversal.js)
 |[155. Min Stack](https://leetcode.com/problems/min-stack/)|Medium|[JavaScript](155.%20Min%20Stack.js)
 |[172. Factorial Trailing Zeroes](https://leetcode.com/problems/factorial-trailing-zeroes/)|Medium|[JavaScript](172.%20Factorial%20Trailing%20Zeroes.js)
+|[187. Repeated DNA Sequences](https://leetcode.com/problems/repeated-dna-sequences/)|Medium|[JavaScript](187.%20Repeated%20DNA%20Sequences.js)
 |[217. Contains Duplicate](https://leetcode.com/problems/contains-duplicate/)|Easy|[JavaScript](217.%20Contains%20Duplicate.js)
 |[232. Implement Queue using Stacks](https://leetcode.com/problems/implement-queue-using-stacks/)|Easy|[JavaScript](232.%20Implement%20Queue%20using%20Stacks.js)
 |[242. Valid Anagram](https://leetcode.com/problems/valid-anagram/)|Easy|[JavaScript](242.%20Valid%20Anagram.js)
