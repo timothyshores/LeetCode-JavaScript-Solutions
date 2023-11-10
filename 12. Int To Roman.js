@@ -21,3 +21,34 @@ C can be placed before D (500) and M (1000) to make 400 and 900.
 Given an integer, convert it to a roman numeral.
 
 */
+
+const INT_TO_ROMAN_NUMERALS_LOOKUP_TABLE = [
+	[1000, "M"],
+	[900, "CM"],
+	[500, "D"],
+	[400, "CD"],
+	[100, "C"],
+	[90, "XC"],
+	[50, "L"],
+	[40, "XL"],
+	[10, "X"],
+	[9, "IX"],
+	[5, "V"],
+	[4, "IV"],
+	[1, "I"],
+];
+
+const intToRoman = (intToConvert) => {
+	let romanNumeralResults = "";
+
+	for (let [
+		currentInt,
+		currentRomanNumeral,
+	] of INT_TO_ROMAN_NUMERALS_LOOKUP_TABLE) {
+		let count = Math.floor(intToConvert / currentInt);
+		romanNumeralResults += currentRomanNumeral.repeat(count);
+		intToConvert %= currentInt;
+	}
+
+	return romanNumeralResults;
+};
