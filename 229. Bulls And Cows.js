@@ -37,3 +37,37 @@ Constraints:
     secret and guess consist of digits only.
 
 */
+
+/**
+ * @param {string} secret
+ * @param {string} guess
+ * @return {string}
+ */
+const getHint = (secret, guess) => {
+	const digitCounter = {};
+	let bulls = 0; // digits in the guess that are in the correct position
+	let cows = 0; // digits in the guess that are in your secret number but are located in the wrong position
+
+	for (let i = 0; i < secret.length; i++) {
+		const secretDigit = secret[i];
+		const guessedDigit = guess[i];
+
+		if (secretDigit === guessedDigit) {
+			bulls++;
+		} else {
+			// Currently secret digit is a previously guessed digit
+			if (digitCounter[secretDigit] < 0) cows++;
+
+			// Currently guessed digit is a previous secret digit
+			if (digitCounter[guessedDigit] > 0) cows++;
+
+			// Increment the value of the secret digit key
+			digitCounter[secretDigit] = (digitCounter[secretDigit] || 0) + 1;
+
+			// Decrement the value of the guessed digit key
+			digitCounter[guessedDigit] = (digitCounter[guessedDigit] || 0) - 1;
+		}
+	}
+
+	return `${bulls.toString()}A${cows.toString()}B`;
+};
