@@ -10,6 +10,7 @@ LeetCode Profile: https://leetcode.com/timothyshores/
 |[12. Int To Roman](https://leetcode.com/problems/integer-to-roman/)|Medium|[JavaScript](12.%20Int%20To%20Roman.js)
 |[38. Count and Say](https://leetcode.com/problems/count-and-say/)|Medium|[JavaScript](38.%20Count%20and%20Say.js)
 |[50. Pow(x, n)](https://leetcode.com/problems/powx-n/)|Medium|[JavaScript](50.%20Pow(x,n).js)
+|[78. Subsets](https://leetcode.com/problems/subsets/)|Medium|[JavaScript](78.%20Subsets.js)
 |[83. Remove Duplicates from Sorted List](https://leetcode.com/problems/remove-duplicates-from-sorted-list/)|Easy|[JavaScript](83.%20Remove%20Duplicates%20from%20Sorted%20List.js)
 |[111. Minimum Depth of Binary Tree](https://leetcode.com/problems/minimum-depth-of-binary-tree/)|Easy|[JavaScript](111.%20Minimum%20Depth%20of%20Binary%20Tree.js)
 |[121. Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)|Easy|[JavaScript](121.%20Best%20Time%20to%20Buy%20and%20Sell%20Stock.js)

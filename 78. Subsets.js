@@ -26,4 +26,25 @@ Constraints:
  * @param {number[]} nums
  * @return {number[][]}
  */
-const subsets = (nums) => {};
+const subsets = (nums) => {
+	const allSubsets = [];
+
+	const helper = (index = 0, subset = []) => {
+		// Base case
+		if (index === nums.length) {
+			allSubsets.push(...subset);
+			return;
+		}
+
+		// Recursive case 1: include the current element
+		subset.push(nums[index]);
+		helper(index + 1, subset);
+
+		// Recursive case 2: exclude the current element
+		subset.pop();
+		helper(index + 1, subset);
+	};
+
+	helper();
+	return allSubsets;
+};
