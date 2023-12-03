@@ -1,27 +1,38 @@
-// Given two strings s and t, return true if t is an anagram of s, and false otherwise.
+/*
 
-// An Anagram is a word or phrase formed by rearranging the letters of a different word or phrase, typically using all the original letters exactly once.
+Given two strings s and t, return true if t is an anagram of s, and false otherwise.
 
-// Example 1:
-// Input: s = "anagram", t = "nagaram"
-// Output: true
+An Anagram is a word or phrase formed by rearranging the letters of a different word or phrase, typically using all the original letters exactly once.
 
-// Example 2:
-// Input: s = "rat", t = "car"
-// Output: false
+Example 1:
+    Input: s = "anagram", t = "nagaram"
+    Output: true
 
-// Constraints:
-// 1 <= s.length, t.length <= 5 * 104
-// s and t consist of lowercase English letters.
+Example 2:
+    Input: s = "rat", t = "car"
+    Output: false
 
-// Follow up: What if the inputs contain Unicode characters? How would you adapt your solution to such a case?
+Constraints:
+    1 <= s.length, t.length <= 5 * 104
+    s and t consist of lowercase English letters.
 
+Follow up: What if the inputs contain Unicode characters? How would you adapt your solution to such a case?
+
+*/
+
+
+/* 
+
+Approach 1: Frequency counter pattern
+Time: O(N) to iterate through str1 & str 2
+Space: O(m) where m = str1.length to store the frequency count of each char in str1 into a JS obj
+
+*/
 /**
  * @param {string} str1
  * @param {string} str2
  * @return {boolean}
  */
-
 const isAnagram = (str1, str2) => {
 	// Store the frequency count of each character in an object
 	const count = {};
