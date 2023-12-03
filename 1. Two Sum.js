@@ -31,25 +31,22 @@
  * @return {number[]}
  */
 const twoSum = (nums, target) => {
-	// Track the compliment number that sum to target and the index of the initial value
-	let pairings = {};
-	// Track the current number while looping through nums and first index of the current value's pair
-	let number, firstIndex;
+	// Store the nums as the keys and indices as the values
+	const differenceMap = {};
 
-	// Loop through nums one time. Linear O(n) time complexity
-	for (let currentIndex = 0; currentIndex < nums.length; currentIndex++) {
-		// Set number to the value of nums at currentIndex
-		number = nums[currentIndex];
-		// Set first index to the value of pairings at the key nums[currentIndex]
-		firstIndex = pairings[number];
+	// Iterate through nums array
+	for (let i = 0; i < nums.length; i++) {
+		// Store current number and number that will sum to target
+		const currentNum = nums[i];
+		const missingAddend = target - currentNum;
 
-		// If a number has a previous number in the nums array that adds up to target
-		if (number in pairings) {
-			// Return firstIndex of the number that adds up to target and currentIndex
-			return [firstIndex, currentIndex];
+		// When we've previously seen the other addend that will sum to target
+		if (missingAddend in differenceMap) {
+			// Return the current index and index of the other addend that will sum to target
+			return [i, differenceMap[missingAddend]];
 		} else {
-			// Set the key as the missing number that adds up to target and value as currentIndex
-			pairings[target - number] = currentIndex;
+			// Add the current num and index to the differenceMap object
+			differenceMap[currentNum] = i;
 		}
 	}
 };
