@@ -19,3 +19,44 @@ Constraints:
     -1000 <= Node.val <= 1000
 
 */
+
+/**
+ * Definition for a binary tree node.
+ * function TreeNode(val, left, right) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.left = (left===undefined ? null : left)
+ *     this.right = (right===undefined ? null : right)
+ * }
+ */
+
+/**
+ * @param {TreeNode} root
+ * @return {number[][]}
+ */
+const levelOrder = (root) => {
+	if (!root) return [];
+
+	const nodesToVisit = [[root, 0]];
+	const treeValuesByLevel = [];
+
+	while (nodesToVisit.length > 0) {
+		const currentTuple = nodesToVisit.shift();
+		const [currentNode, currentLevel] = currentTuple;
+		if (currentNode.left) {
+			nodesToVisit.push([currentNode.left, currentLevel + 1]);
+		}
+		if (currentNode.right) {
+			nodesToVisit.push([currentNode.right, currentLevel + 1]);
+		}
+		if (Array.isArray(treeValuesByLevel[currentLevel])) {
+			treeValuesByLevel[currentLevel] = [
+				...treeValuesByLevel[currentLevel],
+				currentNode.val,
+			];
+		} else {
+			treeValuesByLevel[currentLevel] = [currentNode.val];
+		}
+	}
+
+	return treeValuesByLevel;
+};
