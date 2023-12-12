@@ -19,3 +19,42 @@ Constraints:
     -100 <= Node.val <= 100
 
 */
+
+/**
+ * Definition for a binary tree node.
+ * function TreeNode(val, left, right) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.left = (left===undefined ? null : left)
+ *     this.right = (right===undefined ? null : right)
+ * }
+ */
+/**
+ * @param {TreeNode} root
+ * @return {number[][]}
+ */
+const zigzagLevelOrder = (root) => {
+	if (!root) return [];
+
+	let queue = [root];
+	const allLevelsValues = [];
+	let shouldReverse = false;
+
+	while (queue.length) {
+		const nextLevelNodes = [];
+		const currentLevelValues = [];
+
+		for (const node of queue) {
+			if (node.left) nextLevelNodes.push(node.left);
+			if (node.right) nextLevelNodes.push(node.right);
+			shouldReverse
+				? currentLevelValues.unshift(node.val)
+				: currentLevelValues.push(node.val);
+		}
+
+		shouldReverse = !shouldReverse;
+		allLevelsValues.push(currentLevelValues);
+		queue = nextLevelNodes;
+	}
+
+	return allLevelsValues;
+};
