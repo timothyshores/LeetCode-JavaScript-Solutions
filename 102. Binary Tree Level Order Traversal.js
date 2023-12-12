@@ -33,7 +33,7 @@ Constraints:
  * @param {TreeNode} root
  * @return {number[][]}
  */
-const levelOrder = (root) => {
+const levelOrderInitialSolution = (root) => {
 	if (!root) return [];
 
 	const nodesToVisit = [[root, 0]];
@@ -59,4 +59,31 @@ const levelOrder = (root) => {
 	}
 
 	return treeValuesByLevel;
+};
+
+/**
+ * @param {TreeNode} root
+ * @return {number[][]}
+ */
+const levelOrderRefactoredSolution = (root) => {
+	if (!root) return [];
+
+	let queue = [root];
+	const allLevelsValues = [];
+
+	while (queue.length) {
+		const nextLevelNodes = [];
+		const currentLevelValues = [];
+
+		for (const node of queue) {
+			if (node.left) nextLevelNodes.push(node.left);
+			if (node.right) nextLevelNodes.push(node.right);
+			currentLevelValues.push(node.val);
+		}
+
+		allLevelsValues.push(currentLevelValues);
+		queue = nextLevelNodes;
+	}
+
+	return allLevelsValues;
 };
