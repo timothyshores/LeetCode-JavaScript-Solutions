@@ -23,31 +23,10 @@ Constraints:
  * }
  */
 
-/**
- * Check if two nodes are symmetric.
- * @param {TreeNode} left
- * @param {TreeNode} right
- * @return {boolean}
- */
-const areNodesSymmetric = (left, right) => {
-    return (!left && !right) || (left && right && left.val === right.val);
-};
+// Helper function returns true when two nodes are symmetric.
+const areNodesSymmetric = (left, right) => left && right && left.val === right.val;
 
-/**
- * Check if a binary tree is symmetric.
- * @param {TreeNode} root - The root of the binary tree.
- * @return {boolean} - True if the tree is symmetric, false otherwise.
- */
 const isSymmetric = (root) => {
-    // Edge case: empty or null tree
-    if (!root) return true;
-
-    /**
-     * Helper function to check symmetry recursively.
-     * @param {TreeNode} left
-     * @param {TreeNode} right
-     * @return {boolean}
-     */
     const helper = (left, right) => {
         // Base case: the left and right nodes do NOT exist
         if (!left && !right) return true;
@@ -58,6 +37,6 @@ const isSymmetric = (root) => {
         // Recursive case: call the function on the left and right child nodes
         return helper(left.left, right.right) && helper(left.right, right.left);
     };
-
-    return helper(root.left, root.right);
+    
+    return helper(root, root);
 };
