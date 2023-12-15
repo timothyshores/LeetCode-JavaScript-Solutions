@@ -63,6 +63,25 @@ Iterative BFS
 
 */
 
+// Algorithm 1: Iterative Breadth First Search
+const findTargetBfs = (root, k) => {
+	const prevValues = new Set();
+	const nodesToVisit = [root];
+
+	while (nodesToVisit.length > 0) {
+		const currentNode = nodesToVisit.pop();
+
+		if (prevValues.has(k - currentNode.val)) return true;
+		prevValues.add(currentNode.val);
+
+		if (currentNode.left) nodesToVisit.unshift(currentNode.left);
+		if (currentNode.right) nodesToVisit.unshift(currentNode.right);
+	}
+
+	return false;
+};
+
+// Algorithm 2: Recursive Depth First Search (DFS)
 const findTargetDfs = (root, k) => {
 	const prevValues = new Set();
 
