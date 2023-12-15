@@ -54,6 +54,7 @@ LeetCode Profile: https://leetcode.com/timothyshores/
 |[1528. Shuffle String](https://leetcode.com/problems/shuffle-string/)|Easy|[JavaScript](1528.%20Shuffle%20String.js) 
 |[1572. Matrix Diagonal Sum](https://leetcode.com/problems/matrix-diagonal-sum/)|Easy|[JavaScript](1572.%20Matrix%20Diagonal%20Sum.js)
 |[1598. Crawler Log Folder](https://leetcode.com/problems/crawler-log-folder/)|Easy|[JavaScript](1598.%20Crawler%20Log%20Folder.js)
+|[1614. Maximum Nesting Depth of the Parentheses](https://leetcode.com/problems/maximum-nesting-depth-of-the-parentheses/)|Easy|[JavaScript](1614.%20Maximum%20Nesting%20Depth%20of%20the%20Parentheses.js)
 |[1662. Check If Two String Arrays are Equivalent](https://leetcode.com/problems/check-if-two-string-arrays-are-equivalent/)|Easy|[JavaScript](1662.%20Check%20If%20Two%20String%20Arrays%20are%20Equivalent.js) 
 |[1672. Richest Customer Wealth](https://leetcode.com/problems/richest-customer-wealth/)|Easy|[JavaScript](1672.%20Richest%20Customer%20Wealth.js) 
 |[1678. Goal Parser Interpretation](https://leetcode.com/problems/goal-parser-interpretation/)|Easy|[JavaScript](1678.%20Goal%20Parser%20Interpretation.js) 
