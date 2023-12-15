@@ -18,11 +18,8 @@ Constraints:
 
 */
 
-/**
- * @param {TreeNode} root
- * @return {number}
- */
-const maxDepth = (root) => {
+// Recursive DFS
+const maxDepthDFS = (root) => {
     const dfs = (node) => {
         if (!node) return 0;
 
@@ -32,4 +29,27 @@ const maxDepth = (root) => {
         return 1 + Math.max(leftSubtreeDepth, rightSubtreeDepth);
     }
 	return dfs(root);
+};
+
+// Iterative BFS using 1 queue and Array.splice()
+const bfsOneQueueSplice = (root) => {
+    if (!root) return 0;
+
+    const queue = [root];  
+    let maximumDepth = 0; 
+
+    while (queue.length > 0) { 
+        const currentLevelLength = queue.length;
+
+        for (let i = 0; i < currentLevelLength; i++) {
+            const currentNode = queue[i];
+            if (currentNode.left) queue.push(currentNode.left);
+            if (currentNode.right) queue.push(currentNode.right);
+        }
+
+        queue.splice(0, currentLevelLength);
+        maximumDepth += 1;
+    }
+
+    return maximumDepth;
 };
