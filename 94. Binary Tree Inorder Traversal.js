@@ -20,6 +20,16 @@ Constraints:
 
 Follow up: Recursive solution is trivial, could you do it iteratively?
 
+🧠 BRAINSTORM
+
+Algorithm 1: Recursive DFS
+Time: O(N) where N is the number of nodes
+Space: O(N) where N is the number of nodes
+
+Algorithm 2: Iterative using a while loop and a stack
+Time: O(N) where N is the number of nodes
+Space: O(N) where N is the number of nodes
+
 */
 
 /**
