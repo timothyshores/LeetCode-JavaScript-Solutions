@@ -62,3 +62,16 @@ Iterative BFS
         - Return false
 
 */
+
+const findTargetDfs = (root, k) => {
+	const prevValues = new Set();
+
+	const dfs = (node) => {
+		if (!node) return false;
+		if (prevValues.has(k - node.val)) return true;
+		prevValues.add(node.val);
+		return dfs(node.left) || dfs(node.right);
+	};
+
+	return dfs(root);
+};
