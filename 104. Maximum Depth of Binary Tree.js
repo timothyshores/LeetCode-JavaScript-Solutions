@@ -18,40 +18,44 @@ Constraints:
 
 */
 
-// Recursive DFS
-const maxDepthDFS = (root) => {
-    const dfs = (node) => {
-        if (!node) return 0;
+// Recursive DFS one liner using ternary operator
+const dfsOneLiner = (root) =>
+	root ? 1 + Math.max(maxDepth(root.left), maxDepth(root.right)) : 0;
 
-        const leftSubtreeDepth = dfs(node.left);
-        const rightSubtreeDepth = dfs(node.right);
+// Recursive DFS with helper function
+const dfsWithHelper = (root) => {
+	const dfs = (node) => {
+		if (!node) return 0;
 
-        return 1 + Math.max(leftSubtreeDepth, rightSubtreeDepth);
-    }
+		const leftSubtreeDepth = dfs(node.left);
+		const rightSubtreeDepth = dfs(node.right);
+
+		return 1 + Math.max(leftSubtreeDepth, rightSubtreeDepth);
+	};
 	return dfs(root);
 };
 
 // Iterative BFS using 1 queue and Array.splice()
 const bfsOneQueueSplice = (root) => {
-    if (!root) return 0;
+	if (!root) return 0;
 
-    const queue = [root];  
-    let maximumDepth = 0; 
+	const queue = [root];
+	let maximumDepth = 0;
 
-    while (queue.length > 0) { 
-        const currentLevelLength = queue.length;
+	while (queue.length > 0) {
+		const currentLevelLength = queue.length;
 
-        for (let i = 0; i < currentLevelLength; i++) {
-            const currentNode = queue[i];
-            if (currentNode.left) queue.push(currentNode.left);
-            if (currentNode.right) queue.push(currentNode.right);
-        }
+		for (let i = 0; i < currentLevelLength; i++) {
+			const currentNode = queue[i];
+			if (currentNode.left) queue.push(currentNode.left);
+			if (currentNode.right) queue.push(currentNode.right);
+		}
 
-        queue.splice(0, currentLevelLength);
-        maximumDepth += 1;
-    }
+		queue.splice(0, currentLevelLength);
+		maximumDepth += 1;
+	}
 
-    return maximumDepth;
+	return maximumDepth;
 };
 
 // BFS using 1 queue and Array.shift()
