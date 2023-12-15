@@ -17,3 +17,19 @@ Constraints:
     -100 <= Node.val <= 100
 
 */
+
+/**
+ * @param {TreeNode} root
+ * @return {number}
+ */
+const maxDepth = (root) => {
+    const dfs = (node) => {
+        if (!node) return 0;
+
+        const leftSubtreeDepth = dfs(node.left);
+        const rightSubtreeDepth = dfs(node.right);
+
+        return 1 + Math.max(leftSubtreeDepth, rightSubtreeDepth);
+    }
+	return dfs(root);
+};
