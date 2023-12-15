@@ -31,6 +31,29 @@ const maxDepthDFS = (root) => {
 	return dfs(root);
 };
 
+// Iterative BFS using 1 queue and Array.splice()
+const bfsOneQueueSplice = (root) => {
+    if (!root) return 0;
+
+    const queue = [root];  
+    let maximumDepth = 0; 
+
+    while (queue.length > 0) { 
+        const currentLevelLength = queue.length;
+
+        for (let i = 0; i < currentLevelLength; i++) {
+            const currentNode = queue[i];
+            if (currentNode.left) queue.push(currentNode.left);
+            if (currentNode.right) queue.push(currentNode.right);
+        }
+
+        queue.splice(0, currentLevelLength);
+        maximumDepth += 1;
+    }
+
+    return maximumDepth;
+};
+
 // BFS using 1 queue and Array.shift()
 const bfsOneQueueShift = (root) => {
 	if (!root) return 0;
@@ -55,25 +78,26 @@ const bfsOneQueueShift = (root) => {
 	return maximumDepth;
 };
 
-// Iterative BFS using 1 queue and Array.splice()
-const bfsOneQueueSplice = (root) => {
-    if (!root) return 0;
+// BFS using 2 queues
+const bfsTwoQueues = (root) => {
+	if (!root) return 0;
 
-    const queue = [root];  
-    let maximumDepth = 0; 
+	const currLevel = [root];
+	let maximumDepth = 0;
 
-    while (queue.length > 0) { 
-        const currentLevelLength = queue.length;
+	while (currLevel.length > 0) {
+		const nextLevel = [];
 
-        for (let i = 0; i < currentLevelLength; i++) {
-            const currentNode = queue[i];
-            if (currentNode.left) queue.push(currentNode.left);
-            if (currentNode.right) queue.push(currentNode.right);
-        }
+		for (let i = 0; i < currLevel.length; i++) {
+			const currentNode = currLevel[i];
+			if (currentNode.left) nextLevel.push(currentNode.left);
+			if (currentNode.right) nextLevel.push(currentNode.right);
+		}
 
-        queue.splice(0, currentLevelLength);
-        maximumDepth += 1;
-    }
+		currLevel.length = 0;
+		currLevel.push(...nextLevel);
+		maximumDepth += 1;
+	}
 
-    return maximumDepth;
+	return maximumDepth;
 };
