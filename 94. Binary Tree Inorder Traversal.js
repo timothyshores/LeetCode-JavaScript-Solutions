@@ -40,3 +40,11 @@ Space: O(N) where N is the number of nodes
  *     this.right = (right===undefined ? null : right)
  * }
  */
+const inorderTraversalDfs = (root) =>
+	root
+		? [
+				...inorderTraversal(root.left),
+				root.val,
+				...inorderTraversal(root.right),
+		  ]
+		: [];
