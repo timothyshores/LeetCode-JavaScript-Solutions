@@ -12,6 +12,7 @@ LeetCode Profile: https://leetcode.com/timothyshores/
 |[50. Pow(x, n)](https://leetcode.com/problems/powx-n/)|Medium|[JavaScript](50.%20Pow(x,n).js)
 |[78. Subsets](https://leetcode.com/problems/subsets/)|Medium|[JavaScript](78.%20Subsets.js)
 |[83. Remove Duplicates from Sorted List](https://leetcode.com/problems/remove-duplicates-from-sorted-list/)|Easy|[JavaScript](83.%20Remove%20Duplicates%20from%20Sorted%20List.js)
+|[94. Binary Tree Inorder Traversal](https://leetcode.com/problems/binary-tree-inorder-traversal/)|Easy|[JavaScript](94.%20Binary%20Tree%20Inorder%20Traversal.js)
 |[101. Symmetric Tree](https://leetcode.com/problems/symmetric-tree/)|Easy|[JavaScript](101.%20Symmetric%20Tree.js)
 |[102. Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/)|Medium|[JavaScript](102.%20Binary%20Tree%20Level%20Order%20Traversal)
 |[103. Binary Tree Zigzag Level Order Traversal](https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/)|Medium|[JavaScript](103.%20Binary%20Tree%20Zigzag%20Level%20Order%20Traversal.js)
