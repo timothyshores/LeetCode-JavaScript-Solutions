@@ -28,6 +28,7 @@ LeetCode Profile: https://leetcode.com/timothyshores/
 |[217. Contains Duplicate](https://leetcode.com/problems/contains-duplicate/)|Easy|[JavaScript](217.%20Contains%20Duplicate.js)
 |[232. Implement Queue using Stacks](https://leetcode.com/problems/implement-queue-using-stacks/)|Easy|[JavaScript](232.%20Implement%20Queue%20using%20Stacks.js)
 |[242. Valid Anagram](https://leetcode.com/problems/valid-anagram/)|Easy|[JavaScript](242.%20Valid%20Anagram.js)
+|[278. First Bad Version](https://leetcode.com/problems/first-bad-version/)|Easy|[JavaScript](278.%20First%20Bad%20Version.js)
 |[287. Find the Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/)|Medium|[JavaScript](287.%20Find%20the%20Duplicate%20Number.js)
 |[229. Bulls And Cows](https://leetcode.com/problems/bulls-and-cows)|Medium|[JavaScript](229.%20Bulls%20And%20Cows.js)
 |[326. Power of Three](https://leetcode.com/problems/power-of-three/)|Easy|[JavaScript](326.%20Power%20of%20Three.js)

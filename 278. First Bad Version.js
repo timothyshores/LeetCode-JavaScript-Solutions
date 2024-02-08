@@ -52,3 +52,32 @@ const solution1 = (isBadVersion) => {
 	 */
 	return (n) => recursiveBinarySearch(n, isBadVersion);
 };
+
+const iterativeBinarySearch = (n, isBadVersion) => {
+	let low = 1;
+	let high = n;
+
+	while (low < high) {
+		const middle = Math.floor((low + high) / 2);
+
+		if (isBadVersion(middle)) {
+			high = middle;
+		} else {
+			low = middle + 1;
+		}
+	}
+
+	return low;
+};
+
+/**
+ * @param {function} isBadVersion()
+ * @return {function}
+ */
+const solution2 = (isBadVersion) => {
+	/**
+	 * @param {integer} n Total versions
+	 * @return {integer} The first bad version
+	 */
+	return (n) => iterativeBinarySearch(n, isBadVersion);
+};
