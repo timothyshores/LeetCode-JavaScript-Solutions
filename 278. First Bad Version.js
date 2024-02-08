@@ -28,3 +28,27 @@ Constraints:
     1 <= bad <= n <= 231 - 1
 
 */
+
+const recursiveBinarySearch = (n, isBadVersion, low = 1, high = n) => {
+	// Base case
+	if (low === high) return low;
+
+	const middle = Math.floor((low + high) / 2);
+
+	// Recursive cases
+	return isBadVersion(middle)
+		? binarySearch(n, isBadVersion, low, middle)
+		: binarySearch(n, isBadVersion, middle + 1, high);
+};
+
+/**
+ * @param {function} isBadVersion()
+ * @return {function}
+ */
+const solution1 = (isBadVersion) => {
+	/**
+	 * @param {integer} n Total versions
+	 * @return {integer} The first bad version
+	 */
+	return (n) => recursiveBinarySearch(n, isBadVersion);
+};
