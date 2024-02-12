@@ -25,3 +25,30 @@ Constraints:
     1 <= n <= 104
 
 */
+
+/**
+ * @param {number} num
+ * @return {string}
+ */
+const helper = (num) =>
+	num % 15 === 0
+		? "FizzBuzz"
+		: num % 3 === 0
+		? "Fizz"
+		: num % 5 === 0
+		? "Buzz"
+		: `${num}`;
+
+/**
+ * @param {number} n
+ * @return {string[]}
+ */
+const fizzBuzz = (n) => {
+	const arr = [];
+
+	for (let i = 1; i <= n; i++) {
+		arr.push(helper(i));
+	}
+
+	return arr;
+};
