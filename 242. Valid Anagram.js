@@ -60,3 +60,21 @@ const isAnagram = (str1, str2) => {
 	// Sum all of the values in count, if the sum is 0 then str1 and str2 are anagrams
 	return Object.values(count).reduce((a, b) => a + b, 0) == 0;
 };
+
+/* 
+
+Approach 2: Split each string into an array and then sort each array using built it String.sort() method and compare
+Time: O(N log N) to sort each string by character
+Space: O(N) technically 2N to store string arrays sorted by character
+
+*/
+/**
+ * @param {string} str1
+ * @param {string} str2
+ * @return {boolean}
+ */
+const isAnagramUsingSort = (str1, str2) => {
+    const sortedStr1 = str1.split("").sort();
+    const sortedStr2 = str2.split("").sort();
+    return JSON.stringify(sortedStr1) === JSON.stringify(sortedStr2);
+}
