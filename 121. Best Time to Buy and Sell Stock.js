@@ -19,16 +19,14 @@
  * @param {number[]} prices
  * @return {number}
  */
-const maxProfit = (prices) => {
-	if (prices.length < 2) return 0;
+const maxProfit = prices => {
+    let minPrice = Infinity;
+    let maxProfit = -Infinity;
 
-	let maxProfit = 0;
-	let currentMin = Infinity;
+    for (const currPrice of prices) {
+        minPrice = Math.min(minPrice, currPrice);
+        maxProfit = Math.max(currPrice - minPrice, maxProfit);
+    }
 
-	for (currentPrice of prices) {
-		currentMin = Math.min(currentMin, currentPrice);
-		maxProfit = Math.max(maxProfit, currentPrice - currentMin);
-	}
-
-	return maxProfit > 0 ? maxProfit : 0;
+    return maxProfit;
 };
