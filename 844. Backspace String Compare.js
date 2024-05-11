@@ -32,3 +32,21 @@ s and t only contain lowercase letters and '#' characters.
 Follow up: Can you solve it in O(n) time and O(1) space?
 
 */
+
+const formatString = (str) => {
+  const stack = [];
+
+  for (const char of str) {
+    if (char == "#") stack.pop();
+    else stack.push(char);
+  }
+
+  return stack.join("");
+};
+
+/**
+ * @param {string} s
+ * @param {string} t
+ * @return {boolean}
+ */
+const backspaceCompare = (s, t) => formatString(s) === formatString(t);
