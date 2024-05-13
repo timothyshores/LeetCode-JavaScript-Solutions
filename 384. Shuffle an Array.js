@@ -24,3 +24,22 @@ Constraints:
 - At most 10,000 calls in total will be made to reset and shuffle.
 
 */
+
+class Solution {
+  constructor(nums) {
+    this.nums = nums;
+  }
+
+  reset = () => this.nums;
+
+  shuffle = () => {
+    let shuffled = [...this.nums];
+
+    for (let i = shuffled.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
+
+    return shuffled;
+  };
+}
