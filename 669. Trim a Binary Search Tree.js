@@ -38,4 +38,17 @@ Constraints:
  * @param {number} high
  * @return {TreeNode}
  */
-const trimBST = (root, low, high) => {};
+const trimBST = (root, low, high) => {
+  const dfs = (node) => {
+    if (!node) return null;
+
+    if (node.val < low) return dfs(node.right);
+    if (node.val > high) return dfs(node.left);
+
+    node.left = dfs(node.left);
+    node.right = dfs(node.right);
+    return node;
+  };
+
+  return dfs(root);
+};
