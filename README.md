@@ -20,7 +20,7 @@ LeetCode Profile: https://leetcode.com/timothyshores/
 |[104. Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/)|Easy|[JavaScript](104.%20Maximum%20Depth%20of%20Binary%20Tree.js)
 |[111. Minimum Depth of Binary Tree](https://leetcode.com/problems/minimum-depth-of-binary-tree/)|Easy|[JavaScript](111.%20Minimum%20Depth%20of%20Binary%20Tree.js)
 |[121. Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)|Easy|[JavaScript](121.%20Best%20Time%20to%20Buy%20and%20Sell%20Stock.js)
-|[125. Valid Palindrome](https://leetcode.com/problems/valid-palindrome/)|Easy|[JavaScript](125.%20Valid Palindrome.js)
+|[125. Valid Palindrome](https://leetcode.com/problems/valid-palindrome/)|Easy|[JavaScript](125.%20Valid%20Palindrome.js)
 |[136. Single Number](https://leetcode.com/problems/single-number/)|Easy|[JavaScript](136.%20Single%20Number.js)
 |[144. Binary Tree Preorder Traversal](https://leetcode.com/problems/binary-tree-preorder-traversal/)|Easy|[JavaScript](144.%20Binary%20Tree%20Preorder%20Traversal.js)
 |[155. Min Stack](https://leetcode.com/problems/min-stack/)|Medium|[JavaScript](155.%20Min%20Stack.js)
