@@ -23,4 +23,4 @@ const checkIfPangram = (sentence) =>
 	alphabets.every((char) => sentence.toLowerCase().includes(char));
 
 // Second Solution
-const checkIfPangram = (sentence) => new Set(sentence).size === 26;
+const checkIfPangramSet = (sentence) => new Set(sentence).size === 26;
