@@ -42,12 +42,12 @@ const trimBST = (root, low, high) => {
   const dfs = (node) => {
     if (!node) return null;
 
-    if (node.val < low) return dfs(node.right);
-    if (node.val > high) return dfs(node.left);
-
     node.left = dfs(node.left);
     node.right = dfs(node.right);
-    return node;
+
+    if (node.val < low) return dfs(node.right);
+    else if (node.val > high) return dfs(node.left);
+    else return node;
   };
 
   return dfs(root);
