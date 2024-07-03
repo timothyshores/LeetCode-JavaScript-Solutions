@@ -30,6 +30,7 @@ LeetCode Profile: https://leetcode.com/timothyshores/
 |[232. Implement Queue using Stacks](https://leetcode.com/problems/implement-queue-using-stacks/)|Easy|[JavaScript](232.%20Implement%20Queue%20using%20Stacks.js)
 |[238. Product of Array Except Self](https://leetcode.com/problems/move-zeroes/description/)|Easy|[JavaScript](238.%20Product%20of%20Array%20Except%20Self.js)
 |[242. Valid Anagram](https://leetcode.com/problems/valid-anagram/)|Easy|[JavaScript](242.%20Valid%20Anagram.js)
+|[258. Add Digits.js](https://leetcode.com/problems/add-digits/)|Easy|[JavaScript](258.%20Add%20Digits.js)
 |[278. First Bad Version](https://leetcode.com/problems/first-bad-version/)|Easy|[JavaScript](278.%20First%20Bad%20Version.js)
 |[283. Move Zeroes](https://leetcode.com/problems/move-zeroes/)|Easy|[JavaScript](283.%20Move%20Zeroes.js)
 |[287. Find the Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/)|Medium|[JavaScript](287.%20Find%20the%20Duplicate%20Number.js)

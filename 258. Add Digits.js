@@ -23,8 +23,10 @@ Follow up: Could you do it without any loop/recursion in O(1) runtime?
 
 */
 
+const sumDigitsFromNum = (num) => [...num.toString()].map((num) => Number(num)).reduce((a, b) => a + b, 0);
+
 /**
  * @param {number} num
  * @return {number}
  */
-const addDigits = (num) => {};
+const addDigits = (num) => (num < 10 ? num : addDigits(sumDigitsFromNum(num)));
