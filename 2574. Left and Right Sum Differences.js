@@ -32,8 +32,51 @@ Constraints:
 
 */
 
+// Helper function to create left sum array
+const createLeftSumArray = (arr) => {
+  const leftSumArray = [0];
+
+  for (let i = 0; i < arr.length - 1; i++) {
+    const curr = arr[i];
+    const prev = leftSumArray[leftSumArray.length - 1];
+    leftSumArray.push(curr + prev);
+  }
+
+  return leftSumArray;
+};
+
+// Helper function to create right sum array
+const createRightSumArray = (arr) => {
+  const rightSumArray = [0];
+
+  for (let i = arr.length - 1; i > 0; i--) {
+    const curr = arr[i];
+    const prev = rightSumArray[rightSumArray.length - 1];
+    rightSumArray.push(curr + prev);
+  }
+
+  return rightSumArray.reverse();
+};
+
 /**
  * @param {number[]} nums
  * @return {number[]}
  */
-const leftRightDifference = (nums) => {};
+const leftRightDifference = (nums) => {
+  // Create left and right sum arrays
+  const leftSumArray = createLeftSumArray(nums);
+  const rightSumArray = createRightSumArray(nums);
+
+  // Initialize an empty array called answer
+  const answer = [];
+
+  // Iterate through all numbers in nums array
+  for (let i = 0; i < nums.length; i++) {
+    // Calculate the difference between the left and right sum arrays in index i
+    const difference = leftSumArray[i] - rightSumArray[i];
+    // Push the absolute difference into the answer array
+    answer.push(Math.abs(difference));
+  }
+
+  return answer;
+};
