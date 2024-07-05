@@ -20,14 +20,14 @@
 // 1 <= nums.length <= 1000
 // -10^6 <= nums[i] <= 10^6
 
+/**
+ * @param {number[]} nums
+ * @return {number[]}
+ */
 const runningSum = (nums) => {
-	let prev = 0;
-	const sum = [];
+  for (let i = 1; i < nums.length; i++) {
+    nums[i] += nums[i - 1];
+  }
 
-	for (const index in nums) {
-		sum[index] = nums[index] + prev;
-		prev = nums[index] + prev;
-	}
-
-	return sum;
+  return nums;
 };
