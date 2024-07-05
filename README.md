@@ -69,6 +69,7 @@ LeetCode Profile: https://leetcode.com/timothyshores/
 |[1662. Check If Two String Arrays are Equivalent](https://leetcode.com/problems/check-if-two-string-arrays-are-equivalent/)|Easy|[JavaScript](1662.%20Check%20If%20Two%20String%20Arrays%20are%20Equivalent.js) 
 |[1672. Richest Customer Wealth](https://leetcode.com/problems/richest-customer-wealth/)|Easy|[JavaScript](1672.%20Richest%20Customer%20Wealth.js) 
 |[1678. Goal Parser Interpretation](https://leetcode.com/problems/goal-parser-interpretation/)|Easy|[JavaScript](1678.%20Goal%20Parser%20Interpretation.js) 
+|[1732. Find the Highest Altitude.js](https://leetcode.com/problems/find-the-highest-altitude/)|Easy|[JavaScript](1732.%20Find%20the%20Highest%20Altitude.js) 
 |[1791. Find Center of Star Graph](https://leetcode.com/problems/find-center-of-star-graph/)|Easy|[JavaScript](1791.%20Find%20Center%20of%2Star%20Graph.js) 
 |[1832. Check if the Sentence Is Pangram](https://leetcode.com/problems/check-if-the-sentence-is-pangram/)|Easy|[JavaScript](1832.%20Check%20if%20the%20Sentence%20Is%20Pangram.js) 
 |[1859. Sorting the Sentence](https://leetcode.com/problems/sorting-the-sentence/)|Easy|[JavaScript](1859.%20Sorting%20the%20Sentence.js) 
