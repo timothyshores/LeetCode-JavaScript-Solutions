@@ -42,4 +42,18 @@ Constraints:
  * @param {number[]} nums
  * @return {number}
  */
-const minStartValue = (nums) => {};
+const minStartValue = (nums) => {
+  let startValue = 1;
+  let sum = 1;
+
+  for (const num of nums) {
+    sum += num;
+
+    if (sum < 1) {
+      startValue += 1 - sum;
+      sum = 1;
+    }
+  }
+
+  return startValue;
+};

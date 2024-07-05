@@ -58,6 +58,7 @@ LeetCode Profile: https://leetcode.com/timothyshores/
 |[1207. Unique Number of Occurrences](https://leetcode.com/problems/unique-number-of-occurrences/)|Easy|[JavaScript](1207.%20Unique%20Number%20of%20Occurrences.js)
 |[1281. Subtract the Product and Sum of Digits of an Integer](https://leetcode.com/problems/subtract-the-product-and-sum-of-digits-of-an-integer/)|Easy|[JavaScript](1281.%20Subtract%20the%20Product%20and%20Sum%20of%20Digits%20of%20an%20Integer.js)
 |[1365. How Many Numbers Are Smaller Than the Current Number](https://leetcode.com/problems/how-many-numbers-are-smaller-than-the-current-number/)|Easy|[JavaScript](1365.%20How%20Many%20Numbers%20Are%20Smaller%20Than%20the%20Current%20Number.js)
+|[1413. Minimum Value to Get Positive Step by Step Sum]()|Easy|[JavaScript](1413.%20Minimum%20Value%20to%20Get%20Positive%20Step%20by%20Step%20Sum.js)
 |[1431. Kids With the Greatest Number of Candies](https://leetcode.com/problems/kids-with-the-greatest-number-of-candies/)|Easy|[JavaScript](1431.%20Kids%20With%20the%20Greatest%20Number%20of%20Candies.js) 
 |[1470. Shuffle The Array](https://leetcode.com/problems/shuffle-the-array/)|Easy|[JavaScript](1470.%20Shuffle%20The%20Array.js) 
 |[1480. Running Sum of 1d Array](https://leetcode.com/problems/running-sum-of-1d-array/)|Easy|[JavaScript](1480.%20Running%20Sum%20of%201d%20Array.js) 
