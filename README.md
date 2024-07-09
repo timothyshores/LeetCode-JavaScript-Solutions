@@ -51,7 +51,8 @@ LeetCode Profile: https://leetcode.com/timothyshores/
 |[844. Backspace String Compare](https://leetcode.com/problems/backspace-string-compare/)|Easy|[JavaScript](844.%20Backspace%20String%20Compare.js.js)
 |[836. Rectangle Overlap](https://leetcode.com/problems/rectangle-overlap/)|Easy|[JavaScript](836.%20Rectangle%20Overlap.js)
 |[896. Monotonic Array](https://leetcode.com/problems/monotonic-array/)|Easy|[JavaScript](896.%20Monotonic%20Array.js)
-|[938. Range Sum of BST](https://leetcode.com/problems/range-sum-of-bst/)|Medium|[JavaScript](938.%20Range%20Sum%20of%20BST.js) 
+|[938. Range Sum of BST](https://leetcode.com/problems/range-sum-of-bst/)|Medium|[JavaScript](938.%20Range%20Sum%20of%20BST.js)
+|[965. Univalued Binary Tree.js](https://leetcode.com/problems/univalued-binary-tree/)|Easy|[JavaScript](965.%20Univalued%20Binary%20Tree.js)
 |[1047. Remove All Adjacent Duplicates In String](https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string/description/)|Easy|[JavaScript](1047.%20Remove%20All%20Adjacent%20Duplicates%20In%20String.js 
 |[1108. Defanging An IP Address](https://leetcode.com/problems/defanging-an-ip-address/)|Easy|[JavaScript](1108.%20Defanging%20An%20IP%20Address.js)
 |[1170. Compare Strings by Frequency of the Smallest Character](https://leetcode.com/problems/compare-strings-by-frequency-of-the-smallest-character/)|Medium|[JavaScript](1170.%20Compare%20Strings%20by%20Frequency%20of%20the%20Smallest%20Character.js)
