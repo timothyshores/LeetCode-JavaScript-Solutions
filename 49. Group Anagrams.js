@@ -25,45 +25,28 @@ Constraints:
 
 */
 
-/**
- * Convert frequency counter object into sorted string
- * @param {object} obj
- * @return {string}
- */
-const createStringFromObj = (obj) => {
-	return Object.keys(obj)
-		.sort()
-		.map((key) => `${key}${obj[key]}`)
-		.join('');
-};
+const encodeWord = (word) => {
+  const charCount = new Array(26).fill(0);
 
-/**
- * Convert string into a hash using frequency counter pattern and sort
- * @param {string} str
- * @return {string}
- */
-const hashStr = (str) => {
-	const frequencyCounter = {};
+  for (const char of word) {
+    charCount[char.charCodeAt(0) - "a".charCodeAt(0)]++;
+  }
 
-	for (const char of str) {
-		frequencyCounter[char] = (frequencyCounter[char] || 0) + 1;
-	}
-
-	return createStringFromObj(frequencyCounter);
+  return charCount.join(",");
 };
 
 /**
  * @param {string[]} strs
  * @return {string[][]}
  */
-const groupAnagrams = (strs) => {
-	const results = {};
+const groupAnagrams = (words) => {
+  const anagramMap = {};
 
-	for (const str of strs) {
-		const key = hashStr(str);
-		results[key] = results[key] || [];
-		results[key].push(str);
-	}
+  for (const word of words) {
+    const encodedWord = encodeWord(word);
+    anagramMap[encodedWord] = anagramMap[encodedWord] || [];
+    anagramMap[encodedWord].push(word);
+  }
 
-	return Object.values(results);
+  return Object.values(anagramMap);
 };
