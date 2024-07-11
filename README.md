@@ -37,6 +37,7 @@ LeetCode Profile: https://leetcode.com/timothyshores/
 |[229. Bulls And Cows](https://leetcode.com/problems/bulls-and-cows)|Medium|[JavaScript](229.%20Bulls%20And%20Cows.js)
 |[326. Power of Three](https://leetcode.com/problems/power-of-three/)|Easy|[JavaScript](326.%20Power%20of%20Three.js)
 |[345. Reverse Vowels of a String](https://leetcode.com/problems/reverse-vowels-of-a-string/)|Easy|[JavaScript](345.%20Reverse%20Vowels%20of%20a%20String.js)
+|[347. Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/)|Medium|[JavaScript](347.%20Top%20K%20Frequent%20Elements.js)
 |[384. Shuffle an Array](https://leetcode.com/problems/shuffle-an-array/)|Medium|[JavaScript](384.%20Shuffle%20an%20Array.js)
 |[387. First Unique Character in a String](https://leetcode.com/problems/first-unique-character-in-a-string/)|Easy|[JavaScript](387.%20First%20Unique%20Character%20in%20a%20String.js)
 |[482. License Key Formatting](https://leetcode.com/problems/license-key-formatting/)|Easy|[JavaScript](482.%20License%20Key%20Formatting.js)
