@@ -50,3 +50,13 @@ const twoSum = (nums, target) => {
 		}
 	}
 };
+
+// Shortened syntax solution
+const twoSumShort = (nums, target) => {
+    const numsMap = {};
+
+    for (const i in nums) {
+        if (nums[i] in numsMap) return [i, numsMap[nums[i]]]
+        numsMap[target - nums[i]] = i;
+    }
+};
