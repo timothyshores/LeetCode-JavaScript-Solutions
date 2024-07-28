@@ -28,7 +28,11 @@ Constraints:
 
 */
 
-/**
+
+
+/** 
+ * Initial solution using if statements
+ * 
  * @param {string} s
  * @return {boolean}
  */
@@ -43,4 +47,30 @@ const isValid = (s) => {
 	}
 
 	return stack.length === 0;
+};
+
+/**
+ * Solution using map to match using a hash map to map opening with it's corresponding closing bracket 
+ * 
+ * @param {string} s
+ * @return {boolean}
+ */
+const isValidMap = s => {
+  // Keys are opening brackets and values are it's corresponding closing bracket
+  const map = {
+    "(": ")",
+    "{": "}",
+    "[": "]",
+  };
+
+  const stack = [];
+
+  for (const bracket of s) {
+    // if bracket is an opening bracket, push it's closing bracket to the stack
+    if (bracket in map) stack.push(map[bracket]);
+    // else pop from stack if it's not equal to the current closing bracket return false
+    else if (stack.pop() !== bracket) return false;
+  }
+
+  return stack.length === 0;
 };
