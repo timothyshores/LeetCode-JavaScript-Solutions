@@ -21,6 +21,7 @@ LeetCode Profile: https://leetcode.com/timothyshores/
 |[111. Minimum Depth of Binary Tree](https://leetcode.com/problems/minimum-depth-of-binary-tree/)|Easy|[JavaScript](111.%20Minimum%20Depth%20of%20Binary%20Tree.js)
 |[121. Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)|Easy|[JavaScript](121.%20Best%20Time%20to%20Buy%20and%20Sell%20Stock.js)
 |[125. Valid Palindrome](https://leetcode.com/problems/valid-palindrome/)|Easy|[JavaScript](125.%20Valid%20Palindrome.js)
+|[128. Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/)|Medium|[JavaScript](128.%20Longest%20Consecutive%20Sequence.js)
 |[136. Single Number](https://leetcode.com/problems/single-number/)|Easy|[JavaScript](136.%20Single%20Number.js)
 |[144. Binary Tree Preorder Traversal](https://leetcode.com/problems/binary-tree-preorder-traversal/)|Easy|[JavaScript](144.%20Binary%20Tree%20Preorder%20Traversal.js)
 |[155. Min Stack](https://leetcode.com/problems/min-stack/)|Medium|[JavaScript](155.%20Min%20Stack.js)
@@ -54,7 +55,7 @@ LeetCode Profile: https://leetcode.com/timothyshores/
 |[896. Monotonic Array](https://leetcode.com/problems/monotonic-array/)|Easy|[JavaScript](896.%20Monotonic%20Array.js)
 |[938. Range Sum of BST](https://leetcode.com/problems/range-sum-of-bst/)|Medium|[JavaScript](938.%20Range%20Sum%20of%20BST.js)
 |[965. Univalued Binary Tree.js](https://leetcode.com/problems/univalued-binary-tree/)|Easy|[JavaScript](965.%20Univalued%20Binary%20Tree.js)
-|[1047. Remove All Adjacent Duplicates In String](https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string/description/)|Easy|[JavaScript](1047.%20Remove%20All%20Adjacent%20Duplicates%20In%20String.js 
+|[1047. Remove All Adjacent Duplicates In String](https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string/description/)|Easy|[JavaScript](1047.%20Remove%20All%20Adjacent%20Duplicates%20In%20String.js)
 |[1108. Defanging An IP Address](https://leetcode.com/problems/defanging-an-ip-address/)|Easy|[JavaScript](1108.%20Defanging%20An%20IP%20Address.js)
 |[1170. Compare Strings by Frequency of the Smallest Character](https://leetcode.com/problems/compare-strings-by-frequency-of-the-smallest-character/)|Medium|[JavaScript](1170.%20Compare%20Strings%20by%20Frequency%20of%20the%20Smallest%20Character.js)
 |[1207. Unique Number of Occurrences](https://leetcode.com/problems/unique-number-of-occurrences/)|Easy|[JavaScript](1207.%20Unique%20Number%20of%20Occurrences.js)

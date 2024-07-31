@@ -27,6 +27,6 @@
  * @return {boolean}
  */
 const isPalindrome = (s) => {
-	s = s.replace(/[^a-z0-9]/gi, "").toLowerCase();
-	return s === s.split("").reverse().join("");
+  s = s.toLowerCase().replace(/[^a-z0-9]/g, "");
+  return s === s.split("").reverse().join("");
 };
